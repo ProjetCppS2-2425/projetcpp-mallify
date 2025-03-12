@@ -82,6 +82,7 @@ public:
     QToolButton *camera_emp;
     QWidget *list_emp;
     QGridLayout *grid6;
+<<<<<<< Updated upstream
     QPushButton *export_emp;
     QPushButton *import_emp;
     QLabel *rows_selected;
@@ -111,6 +112,46 @@ public:
     QCheckBox *a4;
     QCheckBox *a3;
     QLabel *label_13;
+=======
+    QTableView *table_emp;
+    QPushButton *export_emp;
+    QPushButton *import_emp;
+    QPushButton *delete_emp;
+    QLabel *rows_selected;
+    QWidget *emp_form;
+    QGridLayout *grid19;
+    QSpacerItem *horizontalSpacer;
+    QPushButton *update_emp;
+    QGridLayout *gridLayout_3;
+    QLabel *email_label;
+    QLabel *phone_label;
+    QLineEdit *phone;
+    QLineEdit *email;
+    QLabel *cin_label;
+    QGridLayout *gridLayout_9;
+    QLabel *label_102;
+    QLabel *label_20;
+    QDateEdit *hire_date;
+    QDoubleSpinBox *customer_feedback;
+    QGridLayout *gridLayout_4;
+    QCheckBox *a4;
+    QLabel *label_13;
+    QCheckBox *a3;
+    QCheckBox *a6;
+    QCheckBox *a5;
+    QCheckBox *a2;
+    QCheckBox *a1;
+    QGridLayout *gridLayout_2;
+    QLabel *first_name_label;
+    QLabel *last_name_label;
+    QLineEdit *first_name;
+    QLineEdit *last_name;
+    QVBoxLayout *verticalLayout;
+    QLineEdit *cin;
+    QLabel *label_6;
+    QComboBox *position;
+    QPushButton *add_emp;
+>>>>>>> Stashed changes
     QGridLayout *gridLayout_5;
     QLabel *label_17;
     QLabel *label_14;
@@ -120,6 +161,7 @@ public:
     QSpinBox *hours_worked;
     QSpinBox *absences;
     QSpinBox *lateness;
+<<<<<<< Updated upstream
     QHBoxLayout *horizontalLayout_2;
     QGridLayout *gridLayout_9;
     QLabel *label_102;
@@ -130,6 +172,10 @@ public:
     QPushButton *add_emp;
     QPushButton *update_emp;
     QPushButton *reset_emp;
+=======
+    QPushButton *reset_emp;
+    QLabel *pfp;
+>>>>>>> Stashed changes
     QWidget *tab_2;
     QWidget *complaint_page;
     QGridLayout *gridLayout_17;
@@ -144,6 +190,7 @@ public:
     QTextEdit *textEdit;
     QGroupBox *groupBox_21;
     QGridLayout *grid25;
+<<<<<<< Updated upstream
     QLabel *label_3;
     QLineEdit *current_password;
     QLabel *label_10;
@@ -153,6 +200,17 @@ public:
     QPushButton *change_password_profile;
     QPushButton *forget_password_profile;
     QLabel *label_12;
+=======
+    QLabel *current_password_label;
+    QLineEdit *current_password;
+    QLabel *new_password_label;
+    QLineEdit *new_password;
+    QLabel *confirm_password_label;
+    QLineEdit *confirm_password;
+    QPushButton *change_password_profile;
+    QPushButton *forget_password_profile;
+    QLabel *lihowa;
+>>>>>>> Stashed changes
     QComboBox *profile_light_mod;
     QWidget *service_page;
     QGridLayout *gridLayout;
@@ -172,7 +230,11 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
+<<<<<<< Updated upstream
         MainWindow->resize(1214, 764);
+=======
+        MainWindow->resize(1214, 787);
+>>>>>>> Stashed changes
         QSizePolicy sizePolicy(QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Expanding);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
@@ -304,9 +366,12 @@ public:
         h0->setObjectName("h0");
         sidebar_btn = new QToolButton(topbar);
         sidebar_btn->setObjectName("sidebar_btn");
+<<<<<<< Updated upstream
         QIcon icon;
         icon.addFile(QString::fromUtf8("icons/sidebar.svg"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
         sidebar_btn->setIcon(icon);
+=======
+>>>>>>> Stashed changes
 
         h0->addWidget(sidebar_btn);
 
@@ -319,9 +384,12 @@ public:
 
         profile_btn = new QToolButton(topbar);
         profile_btn->setObjectName("profile_btn");
+<<<<<<< Updated upstream
         QIcon icon1;
         icon1.addFile(QString::fromUtf8("icons/pfp.jpg"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
         profile_btn->setIcon(icon1);
+=======
+>>>>>>> Stashed changes
 
         h0->addWidget(profile_btn);
 
@@ -330,8 +398,13 @@ public:
 
         container = new QStackedWidget(centralwidget);
         container->setObjectName("container");
+<<<<<<< Updated upstream
         sizePolicy.setHeightForWidth(container->sizePolicy().hasHeightForWidth());
         container->setSizePolicy(sizePolicy);
+=======
+        sizePolicy1.setHeightForWidth(container->sizePolicy().hasHeightForWidth());
+        container->setSizePolicy(sizePolicy1);
+>>>>>>> Stashed changes
         employer_page = new QWidget();
         employer_page->setObjectName("employer_page");
         sizePolicy.setHeightForWidth(employer_page->sizePolicy().hasHeightForWidth());
@@ -342,6 +415,11 @@ public:
         grid1->setContentsMargins(11, 11, 11, 11);
         tabWidget = new QTabWidget(employer_page);
         tabWidget->setObjectName("tabWidget");
+<<<<<<< Updated upstream
+=======
+        sizePolicy.setHeightForWidth(tabWidget->sizePolicy().hasHeightForWidth());
+        tabWidget->setSizePolicy(sizePolicy);
+>>>>>>> Stashed changes
         tab_1 = new QWidget();
         tab_1->setObjectName("tab_1");
         gridLayout_6 = new QGridLayout(tab_1);
@@ -358,15 +436,25 @@ public:
         resetfilter_emp->setObjectName("resetfilter_emp");
         sizePolicy3.setHeightForWidth(resetfilter_emp->sizePolicy().hasHeightForWidth());
         resetfilter_emp->setSizePolicy(sizePolicy3);
+<<<<<<< Updated upstream
         QIcon icon2(QIcon::fromTheme(QIcon::ThemeIcon::SyncSynchronizing));
         resetfilter_emp->setIcon(icon2);
+=======
+        QIcon icon(QIcon::fromTheme(QIcon::ThemeIcon::SyncSynchronizing));
+        resetfilter_emp->setIcon(icon);
+>>>>>>> Stashed changes
 
         grid5->addWidget(resetfilter_emp);
 
         unselect_btn = new QToolButton(searchform_emp);
         unselect_btn->setObjectName("unselect_btn");
+<<<<<<< Updated upstream
         QIcon icon3(QIcon::fromTheme(QString::fromUtf8("application-exit")));
         unselect_btn->setIcon(icon3);
+=======
+        QIcon icon1(QIcon::fromTheme(QString::fromUtf8("application-exit")));
+        unselect_btn->setIcon(icon1);
+>>>>>>> Stashed changes
 
         grid5->addWidget(unselect_btn);
 
@@ -377,15 +465,25 @@ public:
 
         emp_search_btn = new QToolButton(searchform_emp);
         emp_search_btn->setObjectName("emp_search_btn");
+<<<<<<< Updated upstream
         QIcon icon4(QIcon::fromTheme(QIcon::ThemeIcon::EditFind));
         emp_search_btn->setIcon(icon4);
+=======
+        QIcon icon2(QIcon::fromTheme(QIcon::ThemeIcon::EditFind));
+        emp_search_btn->setIcon(icon2);
+>>>>>>> Stashed changes
 
         grid5->addWidget(emp_search_btn);
 
         camera_emp = new QToolButton(searchform_emp);
         camera_emp->setObjectName("camera_emp");
+<<<<<<< Updated upstream
         QIcon icon5(QIcon::fromTheme(QIcon::ThemeIcon::AddressBookNew));
         camera_emp->setIcon(icon5);
+=======
+        QIcon icon3(QIcon::fromTheme(QIcon::ThemeIcon::AddressBookNew));
+        camera_emp->setIcon(icon3);
+>>>>>>> Stashed changes
 
         grid5->addWidget(camera_emp);
 
@@ -400,6 +498,7 @@ public:
         grid6->setSpacing(7);
         grid6->setObjectName("grid6");
         grid6->setContentsMargins(11, 11, 11, 11);
+<<<<<<< Updated upstream
         export_emp = new QPushButton(list_emp);
         export_emp->setObjectName("export_emp");
         sizePolicy1.setHeightForWidth(export_emp->sizePolicy().hasHeightForWidth());
@@ -431,6 +530,8 @@ public:
 
         grid6->addWidget(delete_emp, 2, 0, 1, 1);
 
+=======
+>>>>>>> Stashed changes
         table_emp = new QTableView(list_emp);
         table_emp->setObjectName("table_emp");
         QFont font;
@@ -450,11 +551,46 @@ public:
 
         grid6->addWidget(table_emp, 1, 0, 1, 3);
 
+<<<<<<< Updated upstream
+=======
+        export_emp = new QPushButton(list_emp);
+        export_emp->setObjectName("export_emp");
+        sizePolicy1.setHeightForWidth(export_emp->sizePolicy().hasHeightForWidth());
+        export_emp->setSizePolicy(sizePolicy1);
+
+        grid6->addWidget(export_emp, 2, 1, 1, 1);
+
+        import_emp = new QPushButton(list_emp);
+        import_emp->setObjectName("import_emp");
+        sizePolicy1.setHeightForWidth(import_emp->sizePolicy().hasHeightForWidth());
+        import_emp->setSizePolicy(sizePolicy1);
+
+        grid6->addWidget(import_emp, 2, 2, 1, 1);
+
+        delete_emp = new QPushButton(list_emp);
+        delete_emp->setObjectName("delete_emp");
+        sizePolicy1.setHeightForWidth(delete_emp->sizePolicy().hasHeightForWidth());
+        delete_emp->setSizePolicy(sizePolicy1);
+
+        grid6->addWidget(delete_emp, 2, 0, 1, 1);
+
+        rows_selected = new QLabel(list_emp);
+        rows_selected->setObjectName("rows_selected");
+        QSizePolicy sizePolicy4(QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Preferred);
+        sizePolicy4.setHorizontalStretch(0);
+        sizePolicy4.setVerticalStretch(0);
+        sizePolicy4.setHeightForWidth(rows_selected->sizePolicy().hasHeightForWidth());
+        rows_selected->setSizePolicy(sizePolicy4);
+
+        grid6->addWidget(rows_selected, 0, 0, 1, 3);
+
+>>>>>>> Stashed changes
 
         gridLayout_6->addWidget(list_emp, 1, 0, 1, 1);
 
         emp_form = new QWidget(tab_1);
         emp_form->setObjectName("emp_form");
+<<<<<<< Updated upstream
         grid19 = new QGridLayout(emp_form);
         grid19->setObjectName("grid19");
         pfp = new QLabel(emp_form);
@@ -463,10 +599,154 @@ public:
         pfp->setSizePolicy(sizePolicy);
 
         grid19->addWidget(pfp, 0, 0, 1, 3);
+=======
+        sizePolicy.setHeightForWidth(emp_form->sizePolicy().hasHeightForWidth());
+        emp_form->setSizePolicy(sizePolicy);
+        grid19 = new QGridLayout(emp_form);
+        grid19->setObjectName("grid19");
+        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        grid19->addItem(horizontalSpacer, 8, 0, 1, 3);
+
+        update_emp = new QPushButton(emp_form);
+        update_emp->setObjectName("update_emp");
+        sizePolicy1.setHeightForWidth(update_emp->sizePolicy().hasHeightForWidth());
+        update_emp->setSizePolicy(sizePolicy1);
+
+        grid19->addWidget(update_emp, 9, 1, 1, 1);
+
+        gridLayout_3 = new QGridLayout();
+        gridLayout_3->setSpacing(2);
+        gridLayout_3->setObjectName("gridLayout_3");
+        email_label = new QLabel(emp_form);
+        email_label->setObjectName("email_label");
+        sizePolicy1.setHeightForWidth(email_label->sizePolicy().hasHeightForWidth());
+        email_label->setSizePolicy(sizePolicy1);
+
+        gridLayout_3->addWidget(email_label, 0, 0, 1, 1);
+
+        phone_label = new QLabel(emp_form);
+        phone_label->setObjectName("phone_label");
+        sizePolicy1.setHeightForWidth(phone_label->sizePolicy().hasHeightForWidth());
+        phone_label->setSizePolicy(sizePolicy1);
+
+        gridLayout_3->addWidget(phone_label, 0, 1, 1, 1);
+
+        phone = new QLineEdit(emp_form);
+        phone->setObjectName("phone");
+
+        gridLayout_3->addWidget(phone, 1, 1, 1, 1);
+
+        email = new QLineEdit(emp_form);
+        email->setObjectName("email");
+
+        gridLayout_3->addWidget(email, 1, 0, 1, 1);
+
+        cin_label = new QLabel(emp_form);
+        cin_label->setObjectName("cin_label");
+        sizePolicy1.setHeightForWidth(cin_label->sizePolicy().hasHeightForWidth());
+        cin_label->setSizePolicy(sizePolicy1);
+
+        gridLayout_3->addWidget(cin_label, 2, 0, 1, 1);
+
+
+        grid19->addLayout(gridLayout_3, 3, 0, 1, 3);
+
+        gridLayout_9 = new QGridLayout();
+        gridLayout_9->setSpacing(2);
+        gridLayout_9->setObjectName("gridLayout_9");
+        label_102 = new QLabel(emp_form);
+        label_102->setObjectName("label_102");
+        sizePolicy1.setHeightForWidth(label_102->sizePolicy().hasHeightForWidth());
+        label_102->setSizePolicy(sizePolicy1);
+
+        gridLayout_9->addWidget(label_102, 0, 0, 1, 1);
+
+        label_20 = new QLabel(emp_form);
+        label_20->setObjectName("label_20");
+        sizePolicy1.setHeightForWidth(label_20->sizePolicy().hasHeightForWidth());
+        label_20->setSizePolicy(sizePolicy1);
+
+        gridLayout_9->addWidget(label_20, 0, 1, 1, 1);
+
+        hire_date = new QDateEdit(emp_form);
+        hire_date->setObjectName("hire_date");
+        sizePolicy1.setHeightForWidth(hire_date->sizePolicy().hasHeightForWidth());
+        hire_date->setSizePolicy(sizePolicy1);
+
+        gridLayout_9->addWidget(hire_date, 1, 1, 1, 1);
+
+        customer_feedback = new QDoubleSpinBox(emp_form);
+        customer_feedback->setObjectName("customer_feedback");
+        sizePolicy1.setHeightForWidth(customer_feedback->sizePolicy().hasHeightForWidth());
+        customer_feedback->setSizePolicy(sizePolicy1);
+        customer_feedback->setMaximum(5.000000000000000);
+
+        gridLayout_9->addWidget(customer_feedback, 1, 0, 1, 1);
+
+
+        grid19->addLayout(gridLayout_9, 7, 0, 1, 3);
+
+        gridLayout_4 = new QGridLayout();
+        gridLayout_4->setSpacing(2);
+        gridLayout_4->setObjectName("gridLayout_4");
+        a4 = new QCheckBox(emp_form);
+        a4->setObjectName("a4");
+        sizePolicy1.setHeightForWidth(a4->sizePolicy().hasHeightForWidth());
+        a4->setSizePolicy(sizePolicy1);
+
+        gridLayout_4->addWidget(a4, 2, 0, 1, 1);
+
+        label_13 = new QLabel(emp_form);
+        label_13->setObjectName("label_13");
+        sizePolicy1.setHeightForWidth(label_13->sizePolicy().hasHeightForWidth());
+        label_13->setSizePolicy(sizePolicy1);
+
+        gridLayout_4->addWidget(label_13, 0, 0, 1, 3);
+
+        a3 = new QCheckBox(emp_form);
+        a3->setObjectName("a3");
+        sizePolicy1.setHeightForWidth(a3->sizePolicy().hasHeightForWidth());
+        a3->setSizePolicy(sizePolicy1);
+
+        gridLayout_4->addWidget(a3, 1, 2, 1, 1);
+
+        a6 = new QCheckBox(emp_form);
+        a6->setObjectName("a6");
+        sizePolicy1.setHeightForWidth(a6->sizePolicy().hasHeightForWidth());
+        a6->setSizePolicy(sizePolicy1);
+
+        gridLayout_4->addWidget(a6, 2, 2, 1, 1);
+
+        a5 = new QCheckBox(emp_form);
+        a5->setObjectName("a5");
+        sizePolicy1.setHeightForWidth(a5->sizePolicy().hasHeightForWidth());
+        a5->setSizePolicy(sizePolicy1);
+
+        gridLayout_4->addWidget(a5, 2, 1, 1, 1);
+
+        a2 = new QCheckBox(emp_form);
+        a2->setObjectName("a2");
+        sizePolicy1.setHeightForWidth(a2->sizePolicy().hasHeightForWidth());
+        a2->setSizePolicy(sizePolicy1);
+
+        gridLayout_4->addWidget(a2, 1, 1, 1, 1);
+
+        a1 = new QCheckBox(emp_form);
+        a1->setObjectName("a1");
+        sizePolicy1.setHeightForWidth(a1->sizePolicy().hasHeightForWidth());
+        a1->setSizePolicy(sizePolicy1);
+
+        gridLayout_4->addWidget(a1, 1, 0, 1, 1);
+
+
+        grid19->addLayout(gridLayout_4, 5, 0, 1, 3);
+>>>>>>> Stashed changes
 
         gridLayout_2 = new QGridLayout();
         gridLayout_2->setSpacing(2);
         gridLayout_2->setObjectName("gridLayout_2");
+<<<<<<< Updated upstream
         label_1 = new QLabel(emp_form);
         label_1->setObjectName("label_1");
         sizePolicy1.setHeightForWidth(label_1->sizePolicy().hasHeightForWidth());
@@ -480,6 +760,21 @@ public:
         label_2->setSizePolicy(sizePolicy1);
 
         gridLayout_2->addWidget(label_2, 0, 1, 1, 1);
+=======
+        first_name_label = new QLabel(emp_form);
+        first_name_label->setObjectName("first_name_label");
+        sizePolicy1.setHeightForWidth(first_name_label->sizePolicy().hasHeightForWidth());
+        first_name_label->setSizePolicy(sizePolicy1);
+
+        gridLayout_2->addWidget(first_name_label, 0, 0, 1, 1);
+
+        last_name_label = new QLabel(emp_form);
+        last_name_label->setObjectName("last_name_label");
+        sizePolicy1.setHeightForWidth(last_name_label->sizePolicy().hasHeightForWidth());
+        last_name_label->setSizePolicy(sizePolicy1);
+
+        gridLayout_2->addWidget(last_name_label, 0, 1, 1, 1);
+>>>>>>> Stashed changes
 
         first_name = new QLineEdit(emp_form);
         first_name->setObjectName("first_name");
@@ -492,6 +787,7 @@ public:
         gridLayout_2->addWidget(last_name, 1, 1, 1, 1);
 
 
+<<<<<<< Updated upstream
         grid19->addLayout(gridLayout_2, 1, 0, 1, 3);
 
         gridLayout_3 = new QGridLayout();
@@ -523,10 +819,21 @@ public:
 
 
         grid19->addLayout(gridLayout_3, 2, 0, 1, 3);
+=======
+        grid19->addLayout(gridLayout_2, 2, 0, 1, 3);
+>>>>>>> Stashed changes
 
         verticalLayout = new QVBoxLayout();
         verticalLayout->setSpacing(2);
         verticalLayout->setObjectName("verticalLayout");
+<<<<<<< Updated upstream
+=======
+        cin = new QLineEdit(emp_form);
+        cin->setObjectName("cin");
+
+        verticalLayout->addWidget(cin);
+
+>>>>>>> Stashed changes
         label_6 = new QLabel(emp_form);
         label_6->setObjectName("label_6");
         sizePolicy1.setHeightForWidth(label_6->sizePolicy().hasHeightForWidth());
@@ -549,6 +856,7 @@ public:
         verticalLayout->addWidget(position);
 
 
+<<<<<<< Updated upstream
         grid19->addLayout(verticalLayout, 3, 0, 1, 3);
 
         gridLayout_4 = new QGridLayout();
@@ -605,14 +913,29 @@ public:
 
 
         grid19->addLayout(gridLayout_4, 4, 0, 1, 3);
+=======
+        grid19->addLayout(verticalLayout, 4, 0, 1, 3);
+
+        add_emp = new QPushButton(emp_form);
+        add_emp->setObjectName("add_emp");
+        sizePolicy1.setHeightForWidth(add_emp->sizePolicy().hasHeightForWidth());
+        add_emp->setSizePolicy(sizePolicy1);
+
+        grid19->addWidget(add_emp, 9, 0, 1, 1);
+>>>>>>> Stashed changes
 
         gridLayout_5 = new QGridLayout();
         gridLayout_5->setSpacing(2);
         gridLayout_5->setObjectName("gridLayout_5");
         label_17 = new QLabel(emp_form);
         label_17->setObjectName("label_17");
+<<<<<<< Updated upstream
         sizePolicy3.setHeightForWidth(label_17->sizePolicy().hasHeightForWidth());
         label_17->setSizePolicy(sizePolicy3);
+=======
+        sizePolicy1.setHeightForWidth(label_17->sizePolicy().hasHeightForWidth());
+        label_17->setSizePolicy(sizePolicy1);
+>>>>>>> Stashed changes
 
         gridLayout_5->addWidget(label_17, 0, 3, 1, 1);
 
@@ -666,6 +989,7 @@ public:
         gridLayout_5->addWidget(lateness, 1, 3, 1, 1);
 
 
+<<<<<<< Updated upstream
         grid19->addLayout(gridLayout_5, 5, 0, 1, 3);
 
         horizontalLayout_2 = new QHBoxLayout();
@@ -724,6 +1048,9 @@ public:
         update_emp->setSizePolicy(sizePolicy1);
 
         grid19->addWidget(update_emp, 9, 1, 1, 1);
+=======
+        grid19->addLayout(gridLayout_5, 6, 0, 1, 3);
+>>>>>>> Stashed changes
 
         reset_emp = new QPushButton(emp_form);
         reset_emp->setObjectName("reset_emp");
@@ -732,6 +1059,17 @@ public:
 
         grid19->addWidget(reset_emp, 9, 2, 1, 1);
 
+<<<<<<< Updated upstream
+=======
+        pfp = new QLabel(emp_form);
+        pfp->setObjectName("pfp");
+        sizePolicy.setHeightForWidth(pfp->sizePolicy().hasHeightForWidth());
+        pfp->setSizePolicy(sizePolicy);
+        pfp->setMargin(0);
+
+        grid19->addWidget(pfp, 0, 1, 1, 1);
+
+>>>>>>> Stashed changes
 
         gridLayout_6->addWidget(emp_form, 1, 1, 1, 1);
 
@@ -796,6 +1134,7 @@ public:
 
         groupBox_21 = new QGroupBox(profile_page);
         groupBox_21->setObjectName("groupBox_21");
+<<<<<<< Updated upstream
         sizePolicy.setHeightForWidth(groupBox_21->sizePolicy().hasHeightForWidth());
         groupBox_21->setSizePolicy(sizePolicy);
         groupBox_21->setStyleSheet(QString::fromUtf8(""));
@@ -807,30 +1146,61 @@ public:
         label_3->setSizePolicy(sizePolicy1);
 
         grid25->addWidget(label_3, 0, 0, 1, 1);
+=======
+        sizePolicy1.setHeightForWidth(groupBox_21->sizePolicy().hasHeightForWidth());
+        groupBox_21->setSizePolicy(sizePolicy1);
+        groupBox_21->setStyleSheet(QString::fromUtf8(""));
+        grid25 = new QGridLayout(groupBox_21);
+        grid25->setObjectName("grid25");
+        current_password_label = new QLabel(groupBox_21);
+        current_password_label->setObjectName("current_password_label");
+        sizePolicy1.setHeightForWidth(current_password_label->sizePolicy().hasHeightForWidth());
+        current_password_label->setSizePolicy(sizePolicy1);
+
+        grid25->addWidget(current_password_label, 0, 0, 1, 1);
+>>>>>>> Stashed changes
 
         current_password = new QLineEdit(groupBox_21);
         current_password->setObjectName("current_password");
 
         grid25->addWidget(current_password, 0, 1, 1, 1);
 
+<<<<<<< Updated upstream
         label_10 = new QLabel(groupBox_21);
         label_10->setObjectName("label_10");
         sizePolicy1.setHeightForWidth(label_10->sizePolicy().hasHeightForWidth());
         label_10->setSizePolicy(sizePolicy1);
 
         grid25->addWidget(label_10, 1, 0, 1, 1);
+=======
+        new_password_label = new QLabel(groupBox_21);
+        new_password_label->setObjectName("new_password_label");
+        sizePolicy1.setHeightForWidth(new_password_label->sizePolicy().hasHeightForWidth());
+        new_password_label->setSizePolicy(sizePolicy1);
+
+        grid25->addWidget(new_password_label, 1, 0, 1, 1);
+>>>>>>> Stashed changes
 
         new_password = new QLineEdit(groupBox_21);
         new_password->setObjectName("new_password");
 
         grid25->addWidget(new_password, 1, 1, 1, 1);
 
+<<<<<<< Updated upstream
         label_11 = new QLabel(groupBox_21);
         label_11->setObjectName("label_11");
         sizePolicy1.setHeightForWidth(label_11->sizePolicy().hasHeightForWidth());
         label_11->setSizePolicy(sizePolicy1);
 
         grid25->addWidget(label_11, 2, 0, 1, 1);
+=======
+        confirm_password_label = new QLabel(groupBox_21);
+        confirm_password_label->setObjectName("confirm_password_label");
+        sizePolicy1.setHeightForWidth(confirm_password_label->sizePolicy().hasHeightForWidth());
+        confirm_password_label->setSizePolicy(sizePolicy1);
+
+        grid25->addWidget(confirm_password_label, 2, 0, 1, 1);
+>>>>>>> Stashed changes
 
         confirm_password = new QLineEdit(groupBox_21);
         confirm_password->setObjectName("confirm_password");
@@ -851,12 +1221,21 @@ public:
 
         grid25->addWidget(forget_password_profile, 3, 1, 1, 1);
 
+<<<<<<< Updated upstream
         label_12 = new QLabel(groupBox_21);
         label_12->setObjectName("label_12");
         sizePolicy1.setHeightForWidth(label_12->sizePolicy().hasHeightForWidth());
         label_12->setSizePolicy(sizePolicy1);
 
         grid25->addWidget(label_12, 4, 0, 1, 1);
+=======
+        lihowa = new QLabel(groupBox_21);
+        lihowa->setObjectName("lihowa");
+        sizePolicy1.setHeightForWidth(lihowa->sizePolicy().hasHeightForWidth());
+        lihowa->setSizePolicy(sizePolicy1);
+
+        grid25->addWidget(lihowa, 4, 0, 1, 1);
+>>>>>>> Stashed changes
 
         profile_light_mod = new QComboBox(groupBox_21);
         profile_light_mod->addItem(QString());
@@ -970,6 +1349,7 @@ public:
         camera_emp->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
         export_emp->setText(QCoreApplication::translate("MainWindow", "Export", nullptr));
         import_emp->setText(QCoreApplication::translate("MainWindow", "Import", nullptr));
+<<<<<<< Updated upstream
         rows_selected->setText(QString());
         delete_emp->setText(QCoreApplication::translate("MainWindow", "Delete", nullptr));
         pfp->setText(QCoreApplication::translate("MainWindow", "image", nullptr));
@@ -977,6 +1357,25 @@ public:
         label_2->setText(QCoreApplication::translate("MainWindow", "Last Name", nullptr));
         label_4->setText(QCoreApplication::translate("MainWindow", "Email", nullptr));
         label_5->setText(QCoreApplication::translate("MainWindow", "Phone", nullptr));
+=======
+        delete_emp->setText(QCoreApplication::translate("MainWindow", "Delete", nullptr));
+        rows_selected->setText(QString());
+        update_emp->setText(QCoreApplication::translate("MainWindow", "Update", nullptr));
+        email_label->setText(QCoreApplication::translate("MainWindow", "Email", nullptr));
+        phone_label->setText(QCoreApplication::translate("MainWindow", "Phone", nullptr));
+        cin_label->setText(QCoreApplication::translate("MainWindow", "CIN", nullptr));
+        label_102->setText(QCoreApplication::translate("MainWindow", "Customer Feedback", nullptr));
+        label_20->setText(QCoreApplication::translate("MainWindow", "Hire Date", nullptr));
+        a4->setText(QCoreApplication::translate("MainWindow", "Transactions", nullptr));
+        label_13->setText(QCoreApplication::translate("MainWindow", "Access & Permissions", nullptr));
+        a3->setText(QCoreApplication::translate("MainWindow", "Finance", nullptr));
+        a6->setText(QCoreApplication::translate("MainWindow", "Tenants", nullptr));
+        a5->setText(QCoreApplication::translate("MainWindow", "Complaints", nullptr));
+        a2->setText(QCoreApplication::translate("MainWindow", "Services", nullptr));
+        a1->setText(QCoreApplication::translate("MainWindow", "Employers", nullptr));
+        first_name_label->setText(QCoreApplication::translate("MainWindow", "First Name", nullptr));
+        last_name_label->setText(QCoreApplication::translate("MainWindow", "Last Name", nullptr));
+>>>>>>> Stashed changes
         label_6->setText(QCoreApplication::translate("MainWindow", "Position", nullptr));
         position->setItemText(0, QCoreApplication::translate("MainWindow", "Administrator", nullptr));
         position->setItemText(1, QCoreApplication::translate("MainWindow", "Human Resources", nullptr));
@@ -986,6 +1385,7 @@ public:
         position->setItemText(5, QCoreApplication::translate("MainWindow", "Tenant Manager", nullptr));
         position->setItemText(6, QCoreApplication::translate("MainWindow", "Shops Manager", nullptr));
 
+<<<<<<< Updated upstream
         a1->setText(QCoreApplication::translate("MainWindow", "Employers", nullptr));
         a2->setText(QCoreApplication::translate("MainWindow", "Services", nullptr));
         a6->setText(QCoreApplication::translate("MainWindow", "Tenants", nullptr));
@@ -993,15 +1393,23 @@ public:
         a4->setText(QCoreApplication::translate("MainWindow", "Transactions", nullptr));
         a3->setText(QCoreApplication::translate("MainWindow", "Finance", nullptr));
         label_13->setText(QCoreApplication::translate("MainWindow", "Access & Permissions", nullptr));
+=======
+        add_emp->setText(QCoreApplication::translate("MainWindow", "Add", nullptr));
+>>>>>>> Stashed changes
         label_17->setText(QCoreApplication::translate("MainWindow", "Lateness", nullptr));
         label_14->setText(QCoreApplication::translate("MainWindow", "Hours Worked", nullptr));
         label_15->setText(QCoreApplication::translate("MainWindow", "Absences", nullptr));
         label_16->setText(QCoreApplication::translate("MainWindow", "Base Salary", nullptr));
+<<<<<<< Updated upstream
         label_102->setText(QCoreApplication::translate("MainWindow", "Customer Feedback", nullptr));
         label_20->setText(QCoreApplication::translate("MainWindow", "Hire Date", nullptr));
         add_emp->setText(QCoreApplication::translate("MainWindow", "Add", nullptr));
         update_emp->setText(QCoreApplication::translate("MainWindow", "Update", nullptr));
         reset_emp->setText(QCoreApplication::translate("MainWindow", "Reset", nullptr));
+=======
+        reset_emp->setText(QCoreApplication::translate("MainWindow", "Reset", nullptr));
+        pfp->setText(QCoreApplication::translate("MainWindow", "image", nullptr));
+>>>>>>> Stashed changes
         tabWidget->setTabText(tabWidget->indexOf(tab_1), QCoreApplication::translate("MainWindow", "List Employers", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab_2), QCoreApplication::translate("MainWindow", "Statistics", nullptr));
         groupBox_20->setTitle(QCoreApplication::translate("MainWindow", "Your Information", nullptr));
@@ -1028,12 +1436,21 @@ public:
                         "xt-indent:0px;\">Lateness:            4</p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Customer Rating:     4.8 / 5</p></body></html>", nullptr));
         groupBox_21->setTitle(QCoreApplication::translate("MainWindow", "Account Security & Preferences", nullptr));
+<<<<<<< Updated upstream
         label_3->setText(QCoreApplication::translate("MainWindow", "Current Password:", nullptr));
         label_10->setText(QCoreApplication::translate("MainWindow", "New Password:", nullptr));
         label_11->setText(QCoreApplication::translate("MainWindow", " Confirm Password:", nullptr));
         change_password_profile->setText(QCoreApplication::translate("MainWindow", "Change Password", nullptr));
         forget_password_profile->setText(QCoreApplication::translate("MainWindow", "Forget password", nullptr));
         label_12->setText(QCoreApplication::translate("MainWindow", "UI Theme:", nullptr));
+=======
+        current_password_label->setText(QCoreApplication::translate("MainWindow", "Current Password:", nullptr));
+        new_password_label->setText(QCoreApplication::translate("MainWindow", "New Password:", nullptr));
+        confirm_password_label->setText(QCoreApplication::translate("MainWindow", " Confirm Password:", nullptr));
+        change_password_profile->setText(QCoreApplication::translate("MainWindow", "Change Password", nullptr));
+        forget_password_profile->setText(QCoreApplication::translate("MainWindow", "Forget password", nullptr));
+        lihowa->setText(QCoreApplication::translate("MainWindow", "UI Theme:", nullptr));
+>>>>>>> Stashed changes
         profile_light_mod->setItemText(0, QCoreApplication::translate("MainWindow", "Light", nullptr));
         profile_light_mod->setItemText(1, QCoreApplication::translate("MainWindow", "Dark", nullptr));
 

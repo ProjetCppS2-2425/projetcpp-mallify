@@ -1,7 +1,10 @@
 QT += core gui
 QT += sql
 QT += network
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++17

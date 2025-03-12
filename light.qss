@@ -10,7 +10,11 @@
 #container QPushButton,#container QToolButton{background:#FF5C5C;color:white;border:2px solid #E55353;font-weight:bold;border-radius:5px;padding:5px 10px;font-size:13px;}
 #container QPushButton:hover,#container QToolButton:hover{background:#E55353;border:2px solid #D32F2F;}
 #container QPushButton:pressed,#container QToolButton:pressed{background:#D32F2F;}
+<<<<<<< Updated upstream
 #container QPushButton:disabled,#container QToolButton:disabled{background:#C0C0C0;color:#7A7A7A;border:2px solid #A0A0A0;cursor:not-allowed;}
+=======
+#container QPushButton:disabled,#container QToolButton:disabled{background:#C0C0C0;color:#7A7A7A;border:2px solid #A0A0A0;}
+>>>>>>> Stashed changes
 #container QLineEdit,#container QDateEdit,#container QComboBox,#container QTextEdit,#container QDoubleSpinBox,#container QSpinBox{background:white;color:#3E3E3E;border:2px solid #FF5C5C;border-radius:5px;padding:5px;font-size:13px;}
 #container QLineEdit:disabled,#container QDateEdit:disabled,#container QComboBox:disabled,#container QTextEdit:disabled,#container QDoubleSpinBox:disabled,#container QSpinBox:disabled{background:#E0E0E0;color:#A0A0A0;border:2px solid #C0C0C0;}
 #container QComboBox QAbstractItemView{background:#FFF;border:2px solid #FF5C5C;color:#3E3E3E;padding:4px;}
@@ -35,10 +39,21 @@
 #container QLabel:hover{color:#FF5C5C;}
 #container QLabel:focus{outline:2px solid #FF5C5C;border-radius:4px;padding:2px;}
 #container QLabel:disabled{color:#A0A0A0;}
+<<<<<<< Updated upstream
 #pfp_profile,#pfp{border:2px dashed #FF5C5C;border-radius:6px;padding:5px;background:#FFF;color:#3E3E3E;image: none;}
 #pfp_profile:hover,#pfp:hover{border:2px solid #E55353;background:#FAFAFA;}
 #pfp_profile:focus,#pfp:focus{border:2px solid #D32F2F;background:#F0EDE8;}
 #pfp_profile:disabled,#pfp:disabled{border:2px solid #C0C0C0;color:#A0A0A0;background:#E0E0E0;}
+=======
+#pfp{border:2px dashed #FF5C5C;border-radius:6px;padding:5px;background:#FFF;color:#3E3E3E;image: none;}
+#pfp:hover{border:2px solid #E55353;background:#FAFAFA;}
+#pfp:focus{border:2px solid #D32F2F;background:#F0EDE8;}
+#pfp:disabled{border:2px solid #C0C0C0;color:#A0A0A0;background:#E0E0E0;}
+/* Form */
+#container QLineEdit[invalid="true"] { border: 2px solid #FF6B6B; background: #FFF0F0; color: #5A5A5A; }
+#container QLineEdit[invalid="true"]:focus { border: 2px solid #FF4C4C; background: #FFE0E0; }
+#container QLabel[invalid="true"] { color: #FF6B6B; font-weight: bold; }
+>>>>>>> Stashed changes
 
 
 

@@ -3,7 +3,10 @@
 #include <QDragEnterEvent>
 #include <QDropEvent>
 #include <QEvent>
+<<<<<<< Updated upstream
 #include <QFile>
+=======
+>>>>>>> Stashed changes
 #include <QFileDialog>
 #include <QHeaderView>
 #include <QIcon>
@@ -19,8 +22,16 @@
 #include <QUrl>
 #include <QBuffer>
 #include <QRegularExpressionValidator>
+<<<<<<< Updated upstream
 #include "employer.h"
 #include<QSortFilterProxyModel>
+=======
+#include <QSortFilterProxyModel>
+#include <QProcess>
+#include "employer.h"
+#include <QStandardPaths>
+#include <QShortcut>
+>>>>>>> Stashed changes
 QT_BEGIN_NAMESPACE
 namespace Ui
 {
@@ -54,6 +65,21 @@ private slots:
     void on_update_emp_clicked();
     void on_delete_emp_clicked();
     void on_reset_emp_clicked();
+<<<<<<< Updated upstream
+=======
+    void on_first_name_textChanged(const QString &arg1);
+    void on_last_name_textChanged(const QString &arg1);
+    void on_email_editingFinished();
+    void on_phone_editingFinished();
+    void on_camera_emp_clicked();
+    void on_email_textChanged(const QString &arg1);
+    void on_phone_textChanged(const QString &arg1);
+    void on_cin_textChanged(const QString &arg1);
+    void on_change_password_profile_clicked();
+    void on_current_password_textChanged(const QString &arg1);
+    void on_new_password_textChanged(const QString &arg1);
+    void on_confirm_password_textChanged(const QString &arg1);
+>>>>>>> Stashed changes
 protected:
     void initializeAAB6(Ui::MainWindow *ui);
     void dragEnterEvent(QDragEnterEvent *event) override;

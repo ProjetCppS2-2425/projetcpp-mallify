@@ -286,15 +286,23 @@ debug/moc_mainwindow.cpp: ../../mainwindow.h \
 		C:/Qt/6.7.3/mingw_64/include/QtGui/qkeysequence.h \
 		C:/Qt/6.7.3/mingw_64/include/QtGui/QDropEvent \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/QEvent \
+<<<<<<< Updated upstream
 		C:/Qt/6.7.3/mingw_64/include/QtCore/QFile \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/qfile.h \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/qfiledevice.h \
+=======
+>>>>>>> Stashed changes
 		C:/Qt/6.7.3/mingw_64/include/QtWidgets/QFileDialog \
 		C:/Qt/6.7.3/mingw_64/include/QtWidgets/qfiledialog.h \
 		C:/Qt/6.7.3/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
 		C:/Qt/6.7.3/mingw_64/include/QtWidgets/qtwidgets-config.h \
 		C:/Qt/6.7.3/mingw_64/include/QtWidgets/qtwidgetsexports.h \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/qdir.h \
+<<<<<<< Updated upstream
+=======
+		C:/Qt/6.7.3/mingw_64/include/QtCore/qfile.h \
+		C:/Qt/6.7.3/mingw_64/include/QtCore/qfiledevice.h \
+>>>>>>> Stashed changes
 		C:/Qt/6.7.3/mingw_64/include/QtCore/qfileinfo.h \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/qdatetime.h \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/qcalendar.h \
@@ -357,6 +365,14 @@ debug/moc_mainwindow.cpp: ../../mainwindow.h \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/QBuffer \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/qbuffer.h \
 		C:/Qt/6.7.3/mingw_64/include/QtGui/QRegularExpressionValidator \
+<<<<<<< Updated upstream
+=======
+		C:/Qt/6.7.3/mingw_64/include/QtCore/QSortFilterProxyModel \
+		C:/Qt/6.7.3/mingw_64/include/QtCore/qsortfilterproxymodel.h \
+		C:/Qt/6.7.3/mingw_64/include/QtCore/qabstractproxymodel.h \
+		C:/Qt/6.7.3/mingw_64/include/QtCore/QProcess \
+		C:/Qt/6.7.3/mingw_64/include/QtCore/qprocess.h \
+>>>>>>> Stashed changes
 		../../employer.h \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/QString \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/QByteArray \
@@ -375,8 +391,12 @@ debug/moc_mainwindow.cpp: ../../mainwindow.h \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/QCryptographicHash \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/qcryptographichash.h \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/QDebug \
+<<<<<<< Updated upstream
 		C:/Qt/6.7.3/mingw_64/include/QtCore/QProcess \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/qprocess.h \
+=======
+		C:/Qt/6.7.3/mingw_64/include/QtCore/QFile \
+>>>>>>> Stashed changes
 		C:/Qt/6.7.3/mingw_64/include/QtNetwork/QNetworkAccessManager \
 		C:/Qt/6.7.3/mingw_64/include/QtNetwork/qnetworkaccessmanager.h \
 		C:/Qt/6.7.3/mingw_64/include/QtNetwork/qtnetworkglobal.h \
@@ -410,9 +430,16 @@ debug/moc_mainwindow.cpp: ../../mainwindow.h \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/quuid.h \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/QJsonObject \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/qjsonobject.h \
+<<<<<<< Updated upstream
 		C:/Qt/6.7.3/mingw_64/include/QtCore/QSortFilterProxyModel \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/qsortfilterproxymodel.h \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/qabstractproxymodel.h \
+=======
+		C:/Qt/6.7.3/mingw_64/include/QtCore/QStandardPaths \
+		C:/Qt/6.7.3/mingw_64/include/QtCore/qstandardpaths.h \
+		C:/Qt/6.7.3/mingw_64/include/QtGui/QShortcut \
+		C:/Qt/6.7.3/mingw_64/include/QtGui/qshortcut.h \
+>>>>>>> Stashed changes
 		debug/moc_predefs.h \
 		C:/Qt/6.7.3/mingw_64/bin/moc.exe
 	C:\Qt\6.7.3\mingw_64\bin\moc.exe $(DEFINES) --include C:/Users/aab62/Desktop/testing/aab6/build/Desktop_Qt_6_7_3_MinGW_64_bit-Debug/debug/moc_predefs.h -IC:/Qt/6.7.3/mingw_64/mkspecs/win32-g++ -IC:/Users/aab62/Desktop/testing/aab6 -IC:/Qt/6.7.3/mingw_64/include -IC:/Qt/6.7.3/mingw_64/include/QtWidgets -IC:/Qt/6.7.3/mingw_64/include/QtGui -IC:/Qt/6.7.3/mingw_64/include/QtSql -IC:/Qt/6.7.3/mingw_64/include/QtNetwork -IC:/Qt/6.7.3/mingw_64/include/QtCore -I. -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -IC:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include ..\..\mainwindow.h -o debug\moc_mainwindow.cpp
@@ -940,15 +967,23 @@ debug/initiate_employer.o: ../../initiate_employer.cpp ../../mainwindow.h \
 		C:/Qt/6.7.3/mingw_64/include/QtGui/qkeysequence.h \
 		C:/Qt/6.7.3/mingw_64/include/QtGui/QDropEvent \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/QEvent \
+<<<<<<< Updated upstream
 		C:/Qt/6.7.3/mingw_64/include/QtCore/QFile \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/qfile.h \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/qfiledevice.h \
+=======
+>>>>>>> Stashed changes
 		C:/Qt/6.7.3/mingw_64/include/QtWidgets/QFileDialog \
 		C:/Qt/6.7.3/mingw_64/include/QtWidgets/qfiledialog.h \
 		C:/Qt/6.7.3/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
 		C:/Qt/6.7.3/mingw_64/include/QtWidgets/qtwidgets-config.h \
 		C:/Qt/6.7.3/mingw_64/include/QtWidgets/qtwidgetsexports.h \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/qdir.h \
+<<<<<<< Updated upstream
+=======
+		C:/Qt/6.7.3/mingw_64/include/QtCore/qfile.h \
+		C:/Qt/6.7.3/mingw_64/include/QtCore/qfiledevice.h \
+>>>>>>> Stashed changes
 		C:/Qt/6.7.3/mingw_64/include/QtCore/qfileinfo.h \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/qdatetime.h \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/qcalendar.h \
@@ -1011,6 +1046,14 @@ debug/initiate_employer.o: ../../initiate_employer.cpp ../../mainwindow.h \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/QBuffer \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/qbuffer.h \
 		C:/Qt/6.7.3/mingw_64/include/QtGui/QRegularExpressionValidator \
+<<<<<<< Updated upstream
+=======
+		C:/Qt/6.7.3/mingw_64/include/QtCore/QSortFilterProxyModel \
+		C:/Qt/6.7.3/mingw_64/include/QtCore/qsortfilterproxymodel.h \
+		C:/Qt/6.7.3/mingw_64/include/QtCore/qabstractproxymodel.h \
+		C:/Qt/6.7.3/mingw_64/include/QtCore/QProcess \
+		C:/Qt/6.7.3/mingw_64/include/QtCore/qprocess.h \
+>>>>>>> Stashed changes
 		../../employer.h \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/QString \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/QByteArray \
@@ -1029,8 +1072,12 @@ debug/initiate_employer.o: ../../initiate_employer.cpp ../../mainwindow.h \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/QCryptographicHash \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/qcryptographichash.h \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/QDebug \
+<<<<<<< Updated upstream
 		C:/Qt/6.7.3/mingw_64/include/QtCore/QProcess \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/qprocess.h \
+=======
+		C:/Qt/6.7.3/mingw_64/include/QtCore/QFile \
+>>>>>>> Stashed changes
 		C:/Qt/6.7.3/mingw_64/include/QtNetwork/QNetworkAccessManager \
 		C:/Qt/6.7.3/mingw_64/include/QtNetwork/qnetworkaccessmanager.h \
 		C:/Qt/6.7.3/mingw_64/include/QtNetwork/qtnetworkglobal.h \
@@ -1064,9 +1111,16 @@ debug/initiate_employer.o: ../../initiate_employer.cpp ../../mainwindow.h \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/quuid.h \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/QJsonObject \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/qjsonobject.h \
+<<<<<<< Updated upstream
 		C:/Qt/6.7.3/mingw_64/include/QtCore/QSortFilterProxyModel \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/qsortfilterproxymodel.h \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/qabstractproxymodel.h \
+=======
+		C:/Qt/6.7.3/mingw_64/include/QtCore/QStandardPaths \
+		C:/Qt/6.7.3/mingw_64/include/QtCore/qstandardpaths.h \
+		C:/Qt/6.7.3/mingw_64/include/QtGui/QShortcut \
+		C:/Qt/6.7.3/mingw_64/include/QtGui/qshortcut.h \
+>>>>>>> Stashed changes
 		ui_mainwindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\initiate_employer.o ..\..\initiate_employer.cpp
 
@@ -1271,12 +1325,20 @@ debug/main.o: ../../main.cpp C:/Qt/6.7.3/mingw_64/include/QtWidgets/QApplication
 		C:/Qt/6.7.3/mingw_64/include/QtGui/QDragEnterEvent \
 		C:/Qt/6.7.3/mingw_64/include/QtGui/QDropEvent \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/QEvent \
+<<<<<<< Updated upstream
 		C:/Qt/6.7.3/mingw_64/include/QtCore/QFile \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/qfile.h \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/qfiledevice.h \
 		C:/Qt/6.7.3/mingw_64/include/QtWidgets/QFileDialog \
 		C:/Qt/6.7.3/mingw_64/include/QtWidgets/qfiledialog.h \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/qdir.h \
+=======
+		C:/Qt/6.7.3/mingw_64/include/QtWidgets/QFileDialog \
+		C:/Qt/6.7.3/mingw_64/include/QtWidgets/qfiledialog.h \
+		C:/Qt/6.7.3/mingw_64/include/QtCore/qdir.h \
+		C:/Qt/6.7.3/mingw_64/include/QtCore/qfile.h \
+		C:/Qt/6.7.3/mingw_64/include/QtCore/qfiledevice.h \
+>>>>>>> Stashed changes
 		C:/Qt/6.7.3/mingw_64/include/QtCore/qfileinfo.h \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/qdatetime.h \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/qcalendar.h \
@@ -1316,6 +1378,14 @@ debug/main.o: ../../main.cpp C:/Qt/6.7.3/mingw_64/include/QtWidgets/QApplication
 		C:/Qt/6.7.3/mingw_64/include/QtCore/QBuffer \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/qbuffer.h \
 		C:/Qt/6.7.3/mingw_64/include/QtGui/QRegularExpressionValidator \
+<<<<<<< Updated upstream
+=======
+		C:/Qt/6.7.3/mingw_64/include/QtCore/QSortFilterProxyModel \
+		C:/Qt/6.7.3/mingw_64/include/QtCore/qsortfilterproxymodel.h \
+		C:/Qt/6.7.3/mingw_64/include/QtCore/qabstractproxymodel.h \
+		C:/Qt/6.7.3/mingw_64/include/QtCore/QProcess \
+		C:/Qt/6.7.3/mingw_64/include/QtCore/qprocess.h \
+>>>>>>> Stashed changes
 		../../employer.h \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/QString \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/QByteArray \
@@ -1330,8 +1400,12 @@ debug/main.o: ../../main.cpp C:/Qt/6.7.3/mingw_64/include/QtWidgets/QApplication
 		C:/Qt/6.7.3/mingw_64/include/QtCore/QCryptographicHash \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/qcryptographichash.h \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/QDebug \
+<<<<<<< Updated upstream
 		C:/Qt/6.7.3/mingw_64/include/QtCore/QProcess \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/qprocess.h \
+=======
+		C:/Qt/6.7.3/mingw_64/include/QtCore/QFile \
+>>>>>>> Stashed changes
 		C:/Qt/6.7.3/mingw_64/include/QtNetwork/QNetworkAccessManager \
 		C:/Qt/6.7.3/mingw_64/include/QtNetwork/qnetworkaccessmanager.h \
 		C:/Qt/6.7.3/mingw_64/include/QtNetwork/qtnetworkglobal.h \
@@ -1365,9 +1439,16 @@ debug/main.o: ../../main.cpp C:/Qt/6.7.3/mingw_64/include/QtWidgets/QApplication
 		C:/Qt/6.7.3/mingw_64/include/QtCore/quuid.h \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/QJsonObject \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/qjsonobject.h \
+<<<<<<< Updated upstream
 		C:/Qt/6.7.3/mingw_64/include/QtCore/QSortFilterProxyModel \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/qsortfilterproxymodel.h \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/qabstractproxymodel.h
+=======
+		C:/Qt/6.7.3/mingw_64/include/QtCore/QStandardPaths \
+		C:/Qt/6.7.3/mingw_64/include/QtCore/qstandardpaths.h \
+		C:/Qt/6.7.3/mingw_64/include/QtGui/QShortcut \
+		C:/Qt/6.7.3/mingw_64/include/QtGui/qshortcut.h
+>>>>>>> Stashed changes
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\main.o ..\..\main.cpp
 
 debug/mainwindow.o: ../../mainwindow.cpp ../../mainwindow.h \
@@ -1537,15 +1618,23 @@ debug/mainwindow.o: ../../mainwindow.cpp ../../mainwindow.h \
 		C:/Qt/6.7.3/mingw_64/include/QtGui/qkeysequence.h \
 		C:/Qt/6.7.3/mingw_64/include/QtGui/QDropEvent \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/QEvent \
+<<<<<<< Updated upstream
 		C:/Qt/6.7.3/mingw_64/include/QtCore/QFile \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/qfile.h \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/qfiledevice.h \
+=======
+>>>>>>> Stashed changes
 		C:/Qt/6.7.3/mingw_64/include/QtWidgets/QFileDialog \
 		C:/Qt/6.7.3/mingw_64/include/QtWidgets/qfiledialog.h \
 		C:/Qt/6.7.3/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
 		C:/Qt/6.7.3/mingw_64/include/QtWidgets/qtwidgets-config.h \
 		C:/Qt/6.7.3/mingw_64/include/QtWidgets/qtwidgetsexports.h \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/qdir.h \
+<<<<<<< Updated upstream
+=======
+		C:/Qt/6.7.3/mingw_64/include/QtCore/qfile.h \
+		C:/Qt/6.7.3/mingw_64/include/QtCore/qfiledevice.h \
+>>>>>>> Stashed changes
 		C:/Qt/6.7.3/mingw_64/include/QtCore/qfileinfo.h \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/qdatetime.h \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/qcalendar.h \
@@ -1608,6 +1697,14 @@ debug/mainwindow.o: ../../mainwindow.cpp ../../mainwindow.h \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/QBuffer \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/qbuffer.h \
 		C:/Qt/6.7.3/mingw_64/include/QtGui/QRegularExpressionValidator \
+<<<<<<< Updated upstream
+=======
+		C:/Qt/6.7.3/mingw_64/include/QtCore/QSortFilterProxyModel \
+		C:/Qt/6.7.3/mingw_64/include/QtCore/qsortfilterproxymodel.h \
+		C:/Qt/6.7.3/mingw_64/include/QtCore/qabstractproxymodel.h \
+		C:/Qt/6.7.3/mingw_64/include/QtCore/QProcess \
+		C:/Qt/6.7.3/mingw_64/include/QtCore/qprocess.h \
+>>>>>>> Stashed changes
 		../../employer.h \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/QString \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/QByteArray \
@@ -1626,8 +1723,12 @@ debug/mainwindow.o: ../../mainwindow.cpp ../../mainwindow.h \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/QCryptographicHash \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/qcryptographichash.h \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/QDebug \
+<<<<<<< Updated upstream
 		C:/Qt/6.7.3/mingw_64/include/QtCore/QProcess \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/qprocess.h \
+=======
+		C:/Qt/6.7.3/mingw_64/include/QtCore/QFile \
+>>>>>>> Stashed changes
 		C:/Qt/6.7.3/mingw_64/include/QtNetwork/QNetworkAccessManager \
 		C:/Qt/6.7.3/mingw_64/include/QtNetwork/qnetworkaccessmanager.h \
 		C:/Qt/6.7.3/mingw_64/include/QtNetwork/qtnetworkglobal.h \
@@ -1661,9 +1762,16 @@ debug/mainwindow.o: ../../mainwindow.cpp ../../mainwindow.h \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/quuid.h \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/QJsonObject \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/qjsonobject.h \
+<<<<<<< Updated upstream
 		C:/Qt/6.7.3/mingw_64/include/QtCore/QSortFilterProxyModel \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/qsortfilterproxymodel.h \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/qabstractproxymodel.h \
+=======
+		C:/Qt/6.7.3/mingw_64/include/QtCore/QStandardPaths \
+		C:/Qt/6.7.3/mingw_64/include/QtCore/qstandardpaths.h \
+		C:/Qt/6.7.3/mingw_64/include/QtGui/QShortcut \
+		C:/Qt/6.7.3/mingw_64/include/QtGui/qshortcut.h \
+>>>>>>> Stashed changes
 		ui_mainwindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\mainwindow.o ..\..\mainwindow.cpp
 
