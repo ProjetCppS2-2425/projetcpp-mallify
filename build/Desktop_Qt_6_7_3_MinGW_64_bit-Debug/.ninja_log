@@ -1,0 +1,7 @@
+# ninja log v6
+7	1145	7622699189263337	boutique1_autogen/timestamp	38e8b321cc00250b
+7	1145	7622699189263337	boutique1_autogen/mocs_compilation.cpp	38e8b321cc00250b
+7	1145	7622699189263337	F:/QT/boutique1/build/Desktop_Qt_6_7_3_MinGW_64_bit-Debug/boutique1_autogen/timestamp	38e8b321cc00250b
+7	1145	7622699189263337	F:/QT/boutique1/build/Desktop_Qt_6_7_3_MinGW_64_bit-Debug/boutique1_autogen/mocs_compilation.cpp	38e8b321cc00250b
+1153	4735	7622699190729315	CMakeFiles/boutique1.dir/boutique1_autogen/mocs_compilation.cpp.obj	7252c427163b8d26
+1164	5434	7622699190838764	CMakeFiles/boutique1.dir/mainwindow.cpp.obj	6a931270b13673d7
