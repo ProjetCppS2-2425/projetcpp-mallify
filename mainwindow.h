@@ -29,7 +29,7 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-
+    void loadServicesToTable();
 private slots:
     void on_profile_btn_clicked();
 
@@ -53,8 +53,17 @@ private slots:
 
     void on_sidebar_btn_3_clicked();
 
+    void on_add_service_clicked();
+
+    void on_delete_service_clicked();
+
+    void on_update_service_clicked();
+
+    void on_service_table_itemSelectionChanged();
+
 private:
     Ui::MainWindow *ui;
+
 protected:
 };
 #endif // MAINWINDOW_H

@@ -251,19 +251,22 @@ public:
     QGridLayout *gridLayout_8;
     QWidget *list_emp_2;
     QGridLayout *grid6_2;
-    QPushButton *import_emp_2;
-    QPushButton *export_emp_2;
-    QPushButton *delete_emp_2;
-    QTableWidget *table_emp_2;
+    QPushButton *import_service;
+    QPushButton *export_service;
+    QPushButton *delete_service;
+    QTableWidget *service_table;
     QWidget *emp_form_2;
     QGridLayout *gridLayout_25;
-    QLineEdit *nom_2;
-    QLineEdit *prenom_2;
-    QLineEdit *role_2;
-    QLineEdit *city_2;
-    QPushButton *update_emp_2;
-    QPushButton *reset_emp_2;
-    QPushButton *add_emp_2;
+    QLineEdit *service_cost;
+    QPushButton *update_service;
+    QLineEdit *service_description;
+    QPushButton *reset_service;
+    QComboBox *internal_services;
+    QPushButton *add_service;
+    QComboBox *service_type;
+    QLineEdit *worker_phone;
+    QLineEdit *service_name;
+    QLineEdit *external_services;
     QWidget *searchform_emp_2;
     QHBoxLayout *grid5_2;
     QToolButton *resetfilter_emp_2;
@@ -324,7 +327,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
-        MainWindow->resize(1049, 612);
+        MainWindow->resize(1221, 707);
         MainWindow->setStyleSheet(QString::fromUtf8(""));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
@@ -2011,74 +2014,81 @@ public:
         list_emp_2->setSizePolicy(sizePolicy3);
         grid6_2 = new QGridLayout(list_emp_2);
         grid6_2->setObjectName("grid6_2");
-        import_emp_2 = new QPushButton(list_emp_2);
-        import_emp_2->setObjectName("import_emp_2");
-        sizePolicy2.setHeightForWidth(import_emp_2->sizePolicy().hasHeightForWidth());
-        import_emp_2->setSizePolicy(sizePolicy2);
+        import_service = new QPushButton(list_emp_2);
+        import_service->setObjectName("import_service");
+        sizePolicy2.setHeightForWidth(import_service->sizePolicy().hasHeightForWidth());
+        import_service->setSizePolicy(sizePolicy2);
 
-        grid6_2->addWidget(import_emp_2, 1, 2, 1, 1);
+        grid6_2->addWidget(import_service, 1, 2, 1, 1);
 
-        export_emp_2 = new QPushButton(list_emp_2);
-        export_emp_2->setObjectName("export_emp_2");
-        sizePolicy2.setHeightForWidth(export_emp_2->sizePolicy().hasHeightForWidth());
-        export_emp_2->setSizePolicy(sizePolicy2);
+        export_service = new QPushButton(list_emp_2);
+        export_service->setObjectName("export_service");
+        sizePolicy2.setHeightForWidth(export_service->sizePolicy().hasHeightForWidth());
+        export_service->setSizePolicy(sizePolicy2);
 
-        grid6_2->addWidget(export_emp_2, 1, 1, 1, 1);
+        grid6_2->addWidget(export_service, 1, 1, 1, 1);
 
-        delete_emp_2 = new QPushButton(list_emp_2);
-        delete_emp_2->setObjectName("delete_emp_2");
-        sizePolicy2.setHeightForWidth(delete_emp_2->sizePolicy().hasHeightForWidth());
-        delete_emp_2->setSizePolicy(sizePolicy2);
+        delete_service = new QPushButton(list_emp_2);
+        delete_service->setObjectName("delete_service");
+        sizePolicy2.setHeightForWidth(delete_service->sizePolicy().hasHeightForWidth());
+        delete_service->setSizePolicy(sizePolicy2);
 
-        grid6_2->addWidget(delete_emp_2, 1, 0, 1, 1);
+        grid6_2->addWidget(delete_service, 1, 0, 1, 1);
 
-        table_emp_2 = new QTableWidget(list_emp_2);
-        if (table_emp_2->columnCount() < 4)
-            table_emp_2->setColumnCount(4);
+        service_table = new QTableWidget(list_emp_2);
+        if (service_table->columnCount() < 7)
+            service_table->setColumnCount(7);
         QTableWidgetItem *__qtablewidgetitem40 = new QTableWidgetItem();
-        __qtablewidgetitem40->setTextAlignment(Qt::AlignLeading|Qt::AlignVCenter);
-        __qtablewidgetitem40->setFont(font3);
-        table_emp_2->setHorizontalHeaderItem(0, __qtablewidgetitem40);
+        service_table->setHorizontalHeaderItem(0, __qtablewidgetitem40);
         QTableWidgetItem *__qtablewidgetitem41 = new QTableWidgetItem();
-        table_emp_2->setHorizontalHeaderItem(1, __qtablewidgetitem41);
+        __qtablewidgetitem41->setTextAlignment(Qt::AlignLeading|Qt::AlignVCenter);
+        __qtablewidgetitem41->setFont(font3);
+        service_table->setHorizontalHeaderItem(1, __qtablewidgetitem41);
         QTableWidgetItem *__qtablewidgetitem42 = new QTableWidgetItem();
-        table_emp_2->setHorizontalHeaderItem(2, __qtablewidgetitem42);
+        service_table->setHorizontalHeaderItem(2, __qtablewidgetitem42);
         QTableWidgetItem *__qtablewidgetitem43 = new QTableWidgetItem();
-        table_emp_2->setHorizontalHeaderItem(3, __qtablewidgetitem43);
-        if (table_emp_2->rowCount() < 3)
-            table_emp_2->setRowCount(3);
+        service_table->setHorizontalHeaderItem(3, __qtablewidgetitem43);
         QTableWidgetItem *__qtablewidgetitem44 = new QTableWidgetItem();
-        table_emp_2->setVerticalHeaderItem(0, __qtablewidgetitem44);
+        service_table->setHorizontalHeaderItem(4, __qtablewidgetitem44);
         QTableWidgetItem *__qtablewidgetitem45 = new QTableWidgetItem();
-        table_emp_2->setVerticalHeaderItem(1, __qtablewidgetitem45);
+        service_table->setHorizontalHeaderItem(5, __qtablewidgetitem45);
         QTableWidgetItem *__qtablewidgetitem46 = new QTableWidgetItem();
-        table_emp_2->setItem(0, 0, __qtablewidgetitem46);
-        table_emp_2->setObjectName("table_emp_2");
-        table_emp_2->setFont(font4);
-        table_emp_2->setFocusPolicy(Qt::FocusPolicy::NoFocus);
-        table_emp_2->setStyleSheet(QString::fromUtf8(""));
-        table_emp_2->setFrameShape(QFrame::Shape::NoFrame);
-        table_emp_2->setEditTriggers(QAbstractItemView::EditTrigger::AllEditTriggers);
-        table_emp_2->setSelectionMode(QAbstractItemView::SelectionMode::ExtendedSelection);
-        table_emp_2->setSelectionBehavior(QAbstractItemView::SelectionBehavior::SelectRows);
-        table_emp_2->setShowGrid(false);
-        table_emp_2->setGridStyle(Qt::PenStyle::NoPen);
-        table_emp_2->setSortingEnabled(true);
-        table_emp_2->setWordWrap(true);
-        table_emp_2->setCornerButtonEnabled(false);
-        table_emp_2->setRowCount(3);
-        table_emp_2->horizontalHeader()->setCascadingSectionResizes(false);
-        table_emp_2->horizontalHeader()->setMinimumSectionSize(50);
-        table_emp_2->horizontalHeader()->setDefaultSectionSize(120);
-        table_emp_2->horizontalHeader()->setStretchLastSection(true);
-        table_emp_2->verticalHeader()->setVisible(false);
-        table_emp_2->verticalHeader()->setCascadingSectionResizes(false);
-        table_emp_2->verticalHeader()->setDefaultSectionSize(28);
-        table_emp_2->verticalHeader()->setHighlightSections(false);
-        table_emp_2->verticalHeader()->setProperty("showSortIndicator", QVariant(true));
-        table_emp_2->verticalHeader()->setStretchLastSection(false);
+        service_table->setHorizontalHeaderItem(6, __qtablewidgetitem46);
+        if (service_table->rowCount() < 3)
+            service_table->setRowCount(3);
+        QTableWidgetItem *__qtablewidgetitem47 = new QTableWidgetItem();
+        service_table->setVerticalHeaderItem(0, __qtablewidgetitem47);
+        QTableWidgetItem *__qtablewidgetitem48 = new QTableWidgetItem();
+        service_table->setVerticalHeaderItem(1, __qtablewidgetitem48);
+        QTableWidgetItem *__qtablewidgetitem49 = new QTableWidgetItem();
+        service_table->setItem(0, 1, __qtablewidgetitem49);
+        service_table->setObjectName("service_table");
+        service_table->setFont(font4);
+        service_table->setFocusPolicy(Qt::FocusPolicy::NoFocus);
+        service_table->setStyleSheet(QString::fromUtf8(""));
+        service_table->setFrameShape(QFrame::Shape::NoFrame);
+        service_table->setEditTriggers(QAbstractItemView::EditTrigger::AllEditTriggers);
+        service_table->setSelectionMode(QAbstractItemView::SelectionMode::ExtendedSelection);
+        service_table->setSelectionBehavior(QAbstractItemView::SelectionBehavior::SelectRows);
+        service_table->setShowGrid(false);
+        service_table->setGridStyle(Qt::PenStyle::NoPen);
+        service_table->setSortingEnabled(true);
+        service_table->setWordWrap(true);
+        service_table->setCornerButtonEnabled(false);
+        service_table->setRowCount(3);
+        service_table->horizontalHeader()->setCascadingSectionResizes(false);
+        service_table->horizontalHeader()->setMinimumSectionSize(50);
+        service_table->horizontalHeader()->setDefaultSectionSize(120);
+        service_table->horizontalHeader()->setStretchLastSection(true);
+        service_table->verticalHeader()->setVisible(false);
+        service_table->verticalHeader()->setCascadingSectionResizes(false);
+        service_table->verticalHeader()->setMinimumSectionSize(22);
+        service_table->verticalHeader()->setDefaultSectionSize(28);
+        service_table->verticalHeader()->setHighlightSections(false);
+        service_table->verticalHeader()->setProperty("showSortIndicator", QVariant(true));
+        service_table->verticalHeader()->setStretchLastSection(false);
 
-        grid6_2->addWidget(table_emp_2, 0, 0, 1, 3);
+        grid6_2->addWidget(service_table, 0, 0, 1, 3);
 
 
         gridLayout_8->addWidget(list_emp_2, 1, 0, 1, 1);
@@ -2089,59 +2099,88 @@ public:
         emp_form_2->setSizePolicy(sizePolicy3);
         gridLayout_25 = new QGridLayout(emp_form_2);
         gridLayout_25->setObjectName("gridLayout_25");
-        nom_2 = new QLineEdit(emp_form_2);
-        nom_2->setObjectName("nom_2");
-        sizePolicy2.setHeightForWidth(nom_2->sizePolicy().hasHeightForWidth());
-        nom_2->setSizePolicy(sizePolicy2);
-        nom_2->setMinimumSize(QSize(0, 0));
+        service_cost = new QLineEdit(emp_form_2);
+        service_cost->setObjectName("service_cost");
+        sizePolicy2.setHeightForWidth(service_cost->sizePolicy().hasHeightForWidth());
+        service_cost->setSizePolicy(sizePolicy2);
+        service_cost->setMinimumSize(QSize(0, 0));
 
-        gridLayout_25->addWidget(nom_2, 0, 0, 1, 3);
+        gridLayout_25->addWidget(service_cost, 1, 0, 1, 3);
 
-        prenom_2 = new QLineEdit(emp_form_2);
-        prenom_2->setObjectName("prenom_2");
-        sizePolicy2.setHeightForWidth(prenom_2->sizePolicy().hasHeightForWidth());
-        prenom_2->setSizePolicy(sizePolicy2);
-        prenom_2->setMinimumSize(QSize(0, 0));
+        update_service = new QPushButton(emp_form_2);
+        update_service->setObjectName("update_service");
+        sizePolicy2.setHeightForWidth(update_service->sizePolicy().hasHeightForWidth());
+        update_service->setSizePolicy(sizePolicy2);
 
-        gridLayout_25->addWidget(prenom_2, 1, 0, 1, 3);
+        gridLayout_25->addWidget(update_service, 7, 0, 1, 1);
 
-        role_2 = new QLineEdit(emp_form_2);
-        role_2->setObjectName("role_2");
-        sizePolicy2.setHeightForWidth(role_2->sizePolicy().hasHeightForWidth());
-        role_2->setSizePolicy(sizePolicy2);
-        role_2->setMinimumSize(QSize(0, 0));
+        service_description = new QLineEdit(emp_form_2);
+        service_description->setObjectName("service_description");
+        sizePolicy3.setHeightForWidth(service_description->sizePolicy().hasHeightForWidth());
+        service_description->setSizePolicy(sizePolicy3);
+        service_description->setMinimumSize(QSize(0, 0));
+        service_description->setAlignment(Qt::AlignmentFlag::AlignCenter);
 
-        gridLayout_25->addWidget(role_2, 2, 0, 1, 3);
+        gridLayout_25->addWidget(service_description, 6, 0, 1, 3);
 
-        city_2 = new QLineEdit(emp_form_2);
-        city_2->setObjectName("city_2");
-        sizePolicy3.setHeightForWidth(city_2->sizePolicy().hasHeightForWidth());
-        city_2->setSizePolicy(sizePolicy3);
-        city_2->setMinimumSize(QSize(0, 0));
-        city_2->setAlignment(Qt::AlignmentFlag::AlignCenter);
+        reset_service = new QPushButton(emp_form_2);
+        reset_service->setObjectName("reset_service");
+        sizePolicy2.setHeightForWidth(reset_service->sizePolicy().hasHeightForWidth());
+        reset_service->setSizePolicy(sizePolicy2);
 
-        gridLayout_25->addWidget(city_2, 3, 0, 1, 3);
+        gridLayout_25->addWidget(reset_service, 7, 1, 1, 1);
 
-        update_emp_2 = new QPushButton(emp_form_2);
-        update_emp_2->setObjectName("update_emp_2");
-        sizePolicy2.setHeightForWidth(update_emp_2->sizePolicy().hasHeightForWidth());
-        update_emp_2->setSizePolicy(sizePolicy2);
+        internal_services = new QComboBox(emp_form_2);
+        internal_services->addItem(QString());
+        internal_services->addItem(QString());
+        internal_services->addItem(QString());
+        internal_services->setObjectName("internal_services");
+        QFont font9;
+        font9.setFamilies({QString::fromUtf8("Georgia")});
+        internal_services->setFont(font9);
+        internal_services->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
 
-        gridLayout_25->addWidget(update_emp_2, 4, 0, 1, 1);
+        gridLayout_25->addWidget(internal_services, 4, 0, 1, 3);
 
-        reset_emp_2 = new QPushButton(emp_form_2);
-        reset_emp_2->setObjectName("reset_emp_2");
-        sizePolicy2.setHeightForWidth(reset_emp_2->sizePolicy().hasHeightForWidth());
-        reset_emp_2->setSizePolicy(sizePolicy2);
+        add_service = new QPushButton(emp_form_2);
+        add_service->setObjectName("add_service");
+        sizePolicy2.setHeightForWidth(add_service->sizePolicy().hasHeightForWidth());
+        add_service->setSizePolicy(sizePolicy2);
 
-        gridLayout_25->addWidget(reset_emp_2, 4, 1, 1, 1);
+        gridLayout_25->addWidget(add_service, 7, 2, 1, 1);
 
-        add_emp_2 = new QPushButton(emp_form_2);
-        add_emp_2->setObjectName("add_emp_2");
-        sizePolicy2.setHeightForWidth(add_emp_2->sizePolicy().hasHeightForWidth());
-        add_emp_2->setSizePolicy(sizePolicy2);
+        service_type = new QComboBox(emp_form_2);
+        service_type->addItem(QString());
+        service_type->addItem(QString());
+        service_type->addItem(QString());
+        service_type->setObjectName("service_type");
+        service_type->setFont(font9);
+        service_type->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
 
-        gridLayout_25->addWidget(add_emp_2, 4, 2, 1, 1);
+        gridLayout_25->addWidget(service_type, 3, 0, 1, 3);
+
+        worker_phone = new QLineEdit(emp_form_2);
+        worker_phone->setObjectName("worker_phone");
+        sizePolicy2.setHeightForWidth(worker_phone->sizePolicy().hasHeightForWidth());
+        worker_phone->setSizePolicy(sizePolicy2);
+        worker_phone->setMinimumSize(QSize(0, 0));
+        worker_phone->setMaxLength(8);
+
+        gridLayout_25->addWidget(worker_phone, 2, 0, 1, 3);
+
+        service_name = new QLineEdit(emp_form_2);
+        service_name->setObjectName("service_name");
+        sizePolicy2.setHeightForWidth(service_name->sizePolicy().hasHeightForWidth());
+        service_name->setSizePolicy(sizePolicy2);
+        service_name->setMinimumSize(QSize(0, 0));
+
+        gridLayout_25->addWidget(service_name, 0, 0, 1, 3);
+
+        external_services = new QLineEdit(emp_form_2);
+        external_services->setObjectName("external_services");
+        external_services->setFont(font9);
+
+        gridLayout_25->addWidget(external_services, 5, 0, 1, 3);
 
 
         gridLayout_8->addWidget(emp_form_2, 1, 1, 1, 1);
@@ -2267,26 +2306,26 @@ public:
         table_emp_3 = new QTableWidget(list_emp_3);
         if (table_emp_3->columnCount() < 10)
             table_emp_3->setColumnCount(10);
-        QTableWidgetItem *__qtablewidgetitem47 = new QTableWidgetItem();
-        table_emp_3->setHorizontalHeaderItem(0, __qtablewidgetitem47);
-        QTableWidgetItem *__qtablewidgetitem48 = new QTableWidgetItem();
-        table_emp_3->setHorizontalHeaderItem(1, __qtablewidgetitem48);
-        QTableWidgetItem *__qtablewidgetitem49 = new QTableWidgetItem();
-        table_emp_3->setHorizontalHeaderItem(2, __qtablewidgetitem49);
         QTableWidgetItem *__qtablewidgetitem50 = new QTableWidgetItem();
-        table_emp_3->setHorizontalHeaderItem(3, __qtablewidgetitem50);
+        table_emp_3->setHorizontalHeaderItem(0, __qtablewidgetitem50);
         QTableWidgetItem *__qtablewidgetitem51 = new QTableWidgetItem();
-        table_emp_3->setHorizontalHeaderItem(4, __qtablewidgetitem51);
+        table_emp_3->setHorizontalHeaderItem(1, __qtablewidgetitem51);
         QTableWidgetItem *__qtablewidgetitem52 = new QTableWidgetItem();
-        table_emp_3->setHorizontalHeaderItem(5, __qtablewidgetitem52);
+        table_emp_3->setHorizontalHeaderItem(2, __qtablewidgetitem52);
         QTableWidgetItem *__qtablewidgetitem53 = new QTableWidgetItem();
-        table_emp_3->setHorizontalHeaderItem(6, __qtablewidgetitem53);
+        table_emp_3->setHorizontalHeaderItem(3, __qtablewidgetitem53);
         QTableWidgetItem *__qtablewidgetitem54 = new QTableWidgetItem();
-        table_emp_3->setHorizontalHeaderItem(7, __qtablewidgetitem54);
+        table_emp_3->setHorizontalHeaderItem(4, __qtablewidgetitem54);
         QTableWidgetItem *__qtablewidgetitem55 = new QTableWidgetItem();
-        table_emp_3->setHorizontalHeaderItem(8, __qtablewidgetitem55);
+        table_emp_3->setHorizontalHeaderItem(5, __qtablewidgetitem55);
         QTableWidgetItem *__qtablewidgetitem56 = new QTableWidgetItem();
-        table_emp_3->setHorizontalHeaderItem(9, __qtablewidgetitem56);
+        table_emp_3->setHorizontalHeaderItem(6, __qtablewidgetitem56);
+        QTableWidgetItem *__qtablewidgetitem57 = new QTableWidgetItem();
+        table_emp_3->setHorizontalHeaderItem(7, __qtablewidgetitem57);
+        QTableWidgetItem *__qtablewidgetitem58 = new QTableWidgetItem();
+        table_emp_3->setHorizontalHeaderItem(8, __qtablewidgetitem58);
+        QTableWidgetItem *__qtablewidgetitem59 = new QTableWidgetItem();
+        table_emp_3->setHorizontalHeaderItem(9, __qtablewidgetitem59);
         if (table_emp_3->rowCount() < 1)
             table_emp_3->setRowCount(1);
         table_emp_3->setObjectName("table_emp_3");
@@ -2505,7 +2544,7 @@ public:
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 1049, 25));
+        menubar->setGeometry(QRect(0, 0, 1221, 26));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName("statusbar");
@@ -2514,7 +2553,7 @@ public:
         retranslateUi(MainWindow);
 
         stackedWidget->setCurrentIndex(1);
-        container->setCurrentIndex(3);
+        container->setCurrentIndex(4);
         tabWidget->setCurrentIndex(0);
         tabWidget_3->setCurrentIndex(2);
         tabWidget_4->setCurrentIndex(0);
@@ -2793,39 +2832,53 @@ public:
         current_password_input->setText(QString());
         current_password_input->setPlaceholderText(QCoreApplication::translate("MainWindow", "current password", nullptr));
         reset_btn->setText(QCoreApplication::translate("MainWindow", "Reset", nullptr));
-        import_emp_2->setText(QCoreApplication::translate("MainWindow", "Import", nullptr));
-        export_emp_2->setText(QCoreApplication::translate("MainWindow", "Export", nullptr));
-        delete_emp_2->setText(QCoreApplication::translate("MainWindow", "Delete", nullptr));
-        QTableWidgetItem *___qtablewidgetitem37 = table_emp_2->horizontalHeaderItem(0);
-        ___qtablewidgetitem37->setText(QCoreApplication::translate("MainWindow", "Name", nullptr));
-        QTableWidgetItem *___qtablewidgetitem38 = table_emp_2->horizontalHeaderItem(1);
-        ___qtablewidgetitem38->setText(QCoreApplication::translate("MainWindow", "Cost", nullptr));
-        QTableWidgetItem *___qtablewidgetitem39 = table_emp_2->horizontalHeaderItem(2);
-        ___qtablewidgetitem39->setText(QCoreApplication::translate("MainWindow", "Assigned_empolyer", nullptr));
-        QTableWidgetItem *___qtablewidgetitem40 = table_emp_2->horizontalHeaderItem(3);
-        ___qtablewidgetitem40->setText(QCoreApplication::translate("MainWindow", "Description", nullptr));
-        QTableWidgetItem *___qtablewidgetitem41 = table_emp_2->verticalHeaderItem(0);
-        ___qtablewidgetitem41->setText(QCoreApplication::translate("MainWindow", "absence 1", nullptr));
-        QTableWidgetItem *___qtablewidgetitem42 = table_emp_2->verticalHeaderItem(1);
-        ___qtablewidgetitem42->setText(QCoreApplication::translate("MainWindow", "absence 2", nullptr));
+        import_service->setText(QCoreApplication::translate("MainWindow", "Import", nullptr));
+        export_service->setText(QCoreApplication::translate("MainWindow", "Export", nullptr));
+        delete_service->setText(QCoreApplication::translate("MainWindow", "Delete", nullptr));
+        QTableWidgetItem *___qtablewidgetitem37 = service_table->horizontalHeaderItem(0);
+        ___qtablewidgetitem37->setText(QCoreApplication::translate("MainWindow", "ID", nullptr));
+        QTableWidgetItem *___qtablewidgetitem38 = service_table->horizontalHeaderItem(1);
+        ___qtablewidgetitem38->setText(QCoreApplication::translate("MainWindow", "Name", nullptr));
+        QTableWidgetItem *___qtablewidgetitem39 = service_table->horizontalHeaderItem(2);
+        ___qtablewidgetitem39->setText(QCoreApplication::translate("MainWindow", "Cost", nullptr));
+        QTableWidgetItem *___qtablewidgetitem40 = service_table->horizontalHeaderItem(3);
+        ___qtablewidgetitem40->setText(QCoreApplication::translate("MainWindow", "Type", nullptr));
+        QTableWidgetItem *___qtablewidgetitem41 = service_table->horizontalHeaderItem(4);
+        ___qtablewidgetitem41->setText(QCoreApplication::translate("MainWindow", "Status", nullptr));
+        QTableWidgetItem *___qtablewidgetitem42 = service_table->horizontalHeaderItem(5);
+        ___qtablewidgetitem42->setText(QCoreApplication::translate("MainWindow", "Assigned_empolyer", nullptr));
+        QTableWidgetItem *___qtablewidgetitem43 = service_table->horizontalHeaderItem(6);
+        ___qtablewidgetitem43->setText(QCoreApplication::translate("MainWindow", "Description", nullptr));
+        QTableWidgetItem *___qtablewidgetitem44 = service_table->verticalHeaderItem(0);
+        ___qtablewidgetitem44->setText(QCoreApplication::translate("MainWindow", "absence 1", nullptr));
+        QTableWidgetItem *___qtablewidgetitem45 = service_table->verticalHeaderItem(1);
+        ___qtablewidgetitem45->setText(QCoreApplication::translate("MainWindow", "absence 2", nullptr));
 
-        const bool __sortingEnabled2 = table_emp_2->isSortingEnabled();
-        table_emp_2->setSortingEnabled(false);
-        QTableWidgetItem *___qtablewidgetitem43 = table_emp_2->item(0, 0);
-        ___qtablewidgetitem43->setText(QCoreApplication::translate("MainWindow", "aab6", nullptr));
-        table_emp_2->setSortingEnabled(__sortingEnabled2);
+        const bool __sortingEnabled2 = service_table->isSortingEnabled();
+        service_table->setSortingEnabled(false);
+        QTableWidgetItem *___qtablewidgetitem46 = service_table->item(0, 1);
+        ___qtablewidgetitem46->setText(QCoreApplication::translate("MainWindow", "aab6", nullptr));
+        service_table->setSortingEnabled(__sortingEnabled2);
 
-        nom_2->setText(QString());
-        nom_2->setPlaceholderText(QCoreApplication::translate("MainWindow", "Service Name", nullptr));
-        prenom_2->setText(QString());
-        prenom_2->setPlaceholderText(QCoreApplication::translate("MainWindow", "Service Cost", nullptr));
-        role_2->setText(QString());
-        role_2->setPlaceholderText(QCoreApplication::translate("MainWindow", "employer", nullptr));
-        city_2->setText(QString());
-        city_2->setPlaceholderText(QCoreApplication::translate("MainWindow", "Description", nullptr));
-        update_emp_2->setText(QCoreApplication::translate("MainWindow", "Update", nullptr));
-        reset_emp_2->setText(QCoreApplication::translate("MainWindow", "Reset", nullptr));
-        add_emp_2->setText(QCoreApplication::translate("MainWindow", "Add", nullptr));
+        service_cost->setText(QString());
+        service_cost->setPlaceholderText(QCoreApplication::translate("MainWindow", "Service Cost", nullptr));
+        update_service->setText(QCoreApplication::translate("MainWindow", "Update", nullptr));
+        service_description->setText(QString());
+        service_description->setPlaceholderText(QCoreApplication::translate("MainWindow", "Description", nullptr));
+        reset_service->setText(QCoreApplication::translate("MainWindow", "Reset", nullptr));
+        internal_services->setItemText(0, QCoreApplication::translate("MainWindow", "cleaning", nullptr));
+        internal_services->setItemText(1, QCoreApplication::translate("MainWindow", "maintenance", nullptr));
+        internal_services->setItemText(2, QCoreApplication::translate("MainWindow", "security", nullptr));
+
+        add_service->setText(QCoreApplication::translate("MainWindow", "Add", nullptr));
+        service_type->setItemText(0, QCoreApplication::translate("MainWindow", "service type", nullptr));
+        service_type->setItemText(1, QCoreApplication::translate("MainWindow", "internal services", nullptr));
+        service_type->setItemText(2, QCoreApplication::translate("MainWindow", "external services", nullptr));
+
+        worker_phone->setText(QString());
+        worker_phone->setPlaceholderText(QCoreApplication::translate("MainWindow", "phone number", nullptr));
+        service_name->setText(QString());
+        service_name->setPlaceholderText(QCoreApplication::translate("MainWindow", "Service Name", nullptr));
         resetfilter_emp_2->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
         emp_search_btn_2->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
         micro_emp_2->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
@@ -2838,26 +2891,26 @@ public:
         resetfilter_emp_3->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
         emp_search_btn_3->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
         import_emp_3->setText(QCoreApplication::translate("MainWindow", "Send Email", nullptr));
-        QTableWidgetItem *___qtablewidgetitem44 = table_emp_3->horizontalHeaderItem(0);
-        ___qtablewidgetitem44->setText(QCoreApplication::translate("MainWindow", "Name", nullptr));
-        QTableWidgetItem *___qtablewidgetitem45 = table_emp_3->horizontalHeaderItem(1);
-        ___qtablewidgetitem45->setText(QCoreApplication::translate("MainWindow", "Phone Number", nullptr));
-        QTableWidgetItem *___qtablewidgetitem46 = table_emp_3->horizontalHeaderItem(2);
-        ___qtablewidgetitem46->setText(QCoreApplication::translate("MainWindow", "Shop Type", nullptr));
-        QTableWidgetItem *___qtablewidgetitem47 = table_emp_3->horizontalHeaderItem(3);
-        ___qtablewidgetitem47->setText(QCoreApplication::translate("MainWindow", "Rented Area", nullptr));
-        QTableWidgetItem *___qtablewidgetitem48 = table_emp_3->horizontalHeaderItem(4);
-        ___qtablewidgetitem48->setText(QCoreApplication::translate("MainWindow", "Zone", nullptr));
-        QTableWidgetItem *___qtablewidgetitem49 = table_emp_3->horizontalHeaderItem(5);
-        ___qtablewidgetitem49->setText(QCoreApplication::translate("MainWindow", "Role", nullptr));
-        QTableWidgetItem *___qtablewidgetitem50 = table_emp_3->horizontalHeaderItem(6);
-        ___qtablewidgetitem50->setText(QCoreApplication::translate("MainWindow", "Monthly Rent ", nullptr));
-        QTableWidgetItem *___qtablewidgetitem51 = table_emp_3->horizontalHeaderItem(7);
-        ___qtablewidgetitem51->setText(QCoreApplication::translate("MainWindow", "State Today", nullptr));
-        QTableWidgetItem *___qtablewidgetitem52 = table_emp_3->horizontalHeaderItem(8);
-        ___qtablewidgetitem52->setText(QCoreApplication::translate("MainWindow", "Lease End Date", nullptr));
-        QTableWidgetItem *___qtablewidgetitem53 = table_emp_3->horizontalHeaderItem(9);
-        ___qtablewidgetitem53->setText(QCoreApplication::translate("MainWindow", "Payment Status", nullptr));
+        QTableWidgetItem *___qtablewidgetitem47 = table_emp_3->horizontalHeaderItem(0);
+        ___qtablewidgetitem47->setText(QCoreApplication::translate("MainWindow", "Name", nullptr));
+        QTableWidgetItem *___qtablewidgetitem48 = table_emp_3->horizontalHeaderItem(1);
+        ___qtablewidgetitem48->setText(QCoreApplication::translate("MainWindow", "Phone Number", nullptr));
+        QTableWidgetItem *___qtablewidgetitem49 = table_emp_3->horizontalHeaderItem(2);
+        ___qtablewidgetitem49->setText(QCoreApplication::translate("MainWindow", "Shop Type", nullptr));
+        QTableWidgetItem *___qtablewidgetitem50 = table_emp_3->horizontalHeaderItem(3);
+        ___qtablewidgetitem50->setText(QCoreApplication::translate("MainWindow", "Rented Area", nullptr));
+        QTableWidgetItem *___qtablewidgetitem51 = table_emp_3->horizontalHeaderItem(4);
+        ___qtablewidgetitem51->setText(QCoreApplication::translate("MainWindow", "Zone", nullptr));
+        QTableWidgetItem *___qtablewidgetitem52 = table_emp_3->horizontalHeaderItem(5);
+        ___qtablewidgetitem52->setText(QCoreApplication::translate("MainWindow", "Role", nullptr));
+        QTableWidgetItem *___qtablewidgetitem53 = table_emp_3->horizontalHeaderItem(6);
+        ___qtablewidgetitem53->setText(QCoreApplication::translate("MainWindow", "Monthly Rent ", nullptr));
+        QTableWidgetItem *___qtablewidgetitem54 = table_emp_3->horizontalHeaderItem(7);
+        ___qtablewidgetitem54->setText(QCoreApplication::translate("MainWindow", "State Today", nullptr));
+        QTableWidgetItem *___qtablewidgetitem55 = table_emp_3->horizontalHeaderItem(8);
+        ___qtablewidgetitem55->setText(QCoreApplication::translate("MainWindow", "Lease End Date", nullptr));
+        QTableWidgetItem *___qtablewidgetitem56 = table_emp_3->horizontalHeaderItem(9);
+        ___qtablewidgetitem56->setText(QCoreApplication::translate("MainWindow", "Payment Status", nullptr));
         export_emp_3->setText(QCoreApplication::translate("MainWindow", "Export", nullptr));
         delete_emp_3->setText(QCoreApplication::translate("MainWindow", "Delete", nullptr));
         nom_3->setText(QString());

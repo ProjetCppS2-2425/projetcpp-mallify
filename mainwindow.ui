@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1049</width>
-    <height>612</height>
+    <width>1221</width>
+    <height>707</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -455,7 +455,7 @@
            </sizepolicy>
           </property>
           <property name="currentIndex">
-           <number>3</number>
+           <number>4</number>
           </property>
           <widget class="QWidget" name="employer_page">
            <property name="sizePolicy">
@@ -4564,7 +4564,7 @@ color: #FFFFFF;
                   </property>
                   <layout class="QGridLayout" name="grid6_2">
                    <item row="1" column="2">
-                    <widget class="QPushButton" name="import_emp_2">
+                    <widget class="QPushButton" name="import_service">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                        <horstretch>0</horstretch>
@@ -4577,7 +4577,7 @@ color: #FFFFFF;
                     </widget>
                    </item>
                    <item row="1" column="1">
-                    <widget class="QPushButton" name="export_emp_2">
+                    <widget class="QPushButton" name="export_service">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                        <horstretch>0</horstretch>
@@ -4590,7 +4590,7 @@ color: #FFFFFF;
                     </widget>
                    </item>
                    <item row="1" column="0">
-                    <widget class="QPushButton" name="delete_emp_2">
+                    <widget class="QPushButton" name="delete_service">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                        <horstretch>0</horstretch>
@@ -4603,7 +4603,7 @@ color: #FFFFFF;
                     </widget>
                    </item>
                    <item row="0" column="0" colspan="3">
-                    <widget class="QTableWidget" name="table_emp_2">
+                    <widget class="QTableWidget" name="service_table">
                      <property name="font">
                       <font>
                        <family>黑体</family>
@@ -4663,6 +4663,9 @@ color: #FFFFFF;
                      <attribute name="verticalHeaderCascadingSectionResizes">
                       <bool>false</bool>
                      </attribute>
+                     <attribute name="verticalHeaderMinimumSectionSize">
+                      <number>22</number>
+                     </attribute>
                      <attribute name="verticalHeaderDefaultSectionSize">
                       <number>28</number>
                      </attribute>
@@ -4688,6 +4691,11 @@ color: #FFFFFF;
                      <row/>
                      <column>
                       <property name="text">
+                       <string>ID</string>
+                      </property>
+                     </column>
+                     <column>
+                      <property name="text">
                        <string>Name</string>
                       </property>
                       <property name="font">
@@ -4707,6 +4715,16 @@ color: #FFFFFF;
                      </column>
                      <column>
                       <property name="text">
+                       <string>Type</string>
+                      </property>
+                     </column>
+                     <column>
+                      <property name="text">
+                       <string>Status</string>
+                      </property>
+                     </column>
+                     <column>
+                      <property name="text">
                        <string>Assigned_empolyer</string>
                       </property>
                      </column>
@@ -4715,7 +4733,7 @@ color: #FFFFFF;
                        <string>Description</string>
                       </property>
                      </column>
-                     <item row="0" column="0">
+                     <item row="0" column="1">
                       <property name="text">
                        <string>aab6</string>
                       </property>
@@ -4734,30 +4752,8 @@ color: #FFFFFF;
                    </sizepolicy>
                   </property>
                   <layout class="QGridLayout" name="gridLayout_25">
-                   <item row="0" column="0" colspan="3">
-                    <widget class="QLineEdit" name="nom_2">
-                     <property name="sizePolicy">
-                      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-                       <horstretch>0</horstretch>
-                       <verstretch>0</verstretch>
-                      </sizepolicy>
-                     </property>
-                     <property name="minimumSize">
-                      <size>
-                       <width>0</width>
-                       <height>0</height>
-                      </size>
-                     </property>
-                     <property name="text">
-                      <string/>
-                     </property>
-                     <property name="placeholderText">
-                      <string>Service Name</string>
-                     </property>
-                    </widget>
-                   </item>
                    <item row="1" column="0" colspan="3">
-                    <widget class="QLineEdit" name="prenom_2">
+                    <widget class="QLineEdit" name="service_cost">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                        <horstretch>0</horstretch>
@@ -4778,30 +4774,21 @@ color: #FFFFFF;
                      </property>
                     </widget>
                    </item>
-                   <item row="2" column="0" colspan="3">
-                    <widget class="QLineEdit" name="role_2">
+                   <item row="7" column="0">
+                    <widget class="QPushButton" name="update_service">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                        <horstretch>0</horstretch>
                        <verstretch>0</verstretch>
                       </sizepolicy>
                      </property>
-                     <property name="minimumSize">
-                      <size>
-                       <width>0</width>
-                       <height>0</height>
-                      </size>
-                     </property>
                      <property name="text">
-                      <string/>
-                     </property>
-                     <property name="placeholderText">
-                      <string>employer</string>
+                      <string>Update</string>
                      </property>
                     </widget>
                    </item>
-                   <item row="3" column="0" colspan="3">
-                    <widget class="QLineEdit" name="city_2">
+                   <item row="6" column="0" colspan="3">
+                    <widget class="QLineEdit" name="service_description">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
                        <horstretch>0</horstretch>
@@ -4825,21 +4812,8 @@ color: #FFFFFF;
                      </property>
                     </widget>
                    </item>
-                   <item row="4" column="0">
-                    <widget class="QPushButton" name="update_emp_2">
-                     <property name="sizePolicy">
-                      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-                       <horstretch>0</horstretch>
-                       <verstretch>0</verstretch>
-                      </sizepolicy>
-                     </property>
-                     <property name="text">
-                      <string>Update</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="4" column="1">
-                    <widget class="QPushButton" name="reset_emp_2">
+                   <item row="7" column="1">
+                    <widget class="QPushButton" name="reset_service">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                        <horstretch>0</horstretch>
@@ -4851,8 +4825,35 @@ color: #FFFFFF;
                      </property>
                     </widget>
                    </item>
-                   <item row="4" column="2">
-                    <widget class="QPushButton" name="add_emp_2">
+                   <item row="4" column="0" colspan="3">
+                    <widget class="QComboBox" name="internal_services">
+                     <property name="font">
+                      <font>
+                       <family>Georgia</family>
+                      </font>
+                     </property>
+                     <property name="cursor">
+                      <cursorShape>PointingHandCursor</cursorShape>
+                     </property>
+                     <item>
+                      <property name="text">
+                       <string>cleaning</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>maintenance</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>security</string>
+                      </property>
+                     </item>
+                    </widget>
+                   </item>
+                   <item row="7" column="2">
+                    <widget class="QPushButton" name="add_service">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                        <horstretch>0</horstretch>
@@ -4861,6 +4862,89 @@ color: #FFFFFF;
                      </property>
                      <property name="text">
                       <string>Add</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="3" column="0" colspan="3">
+                    <widget class="QComboBox" name="service_type">
+                     <property name="font">
+                      <font>
+                       <family>Georgia</family>
+                      </font>
+                     </property>
+                     <property name="cursor">
+                      <cursorShape>PointingHandCursor</cursorShape>
+                     </property>
+                     <item>
+                      <property name="text">
+                       <string>service type</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>internal services</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>external services</string>
+                      </property>
+                     </item>
+                    </widget>
+                   </item>
+                   <item row="2" column="0" colspan="3">
+                    <widget class="QLineEdit" name="worker_phone">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="maxLength">
+                      <number>8</number>
+                     </property>
+                     <property name="placeholderText">
+                      <string>phone number</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="0" colspan="3">
+                    <widget class="QLineEdit" name="service_name">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="placeholderText">
+                      <string>Service Name</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="5" column="0" colspan="3">
+                    <widget class="QLineEdit" name="external_services">
+                     <property name="font">
+                      <font>
+                       <family>Georgia</family>
+                      </font>
                      </property>
                     </widget>
                    </item>
@@ -5515,8 +5599,8 @@ li.checked::marker { content: &quot;\2612&quot;; }
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1049</width>
-     <height>25</height>
+     <width>1221</width>
+     <height>26</height>
     </rect>
    </property>
   </widget>
