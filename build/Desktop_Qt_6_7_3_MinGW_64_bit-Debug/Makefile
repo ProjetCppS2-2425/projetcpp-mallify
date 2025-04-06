@@ -356,7 +356,6 @@ Makefile: ../../aab6.pro C:/Qt/6.7.3/mingw_64/mkspecs/win32-g++/qmake.conf C:/Qt
 		C:/Qt/6.7.3/mingw_64/mkspecs/features/qt_config.prf \
 		C:/Qt/6.7.3/mingw_64/mkspecs/win32-g++/qmake.conf \
 		C:/Qt/6.7.3/mingw_64/mkspecs/features/spec_post.prf \
-		.qmake.stash \
 		C:/Qt/6.7.3/mingw_64/mkspecs/features/exclusive_builds.prf \
 		C:/Qt/6.7.3/mingw_64/mkspecs/features/toolchain.prf \
 		C:/Qt/6.7.3/mingw_64/mkspecs/features/default_pre.prf \
@@ -374,6 +373,7 @@ Makefile: ../../aab6.pro C:/Qt/6.7.3/mingw_64/mkspecs/win32-g++/qmake.conf C:/Qt
 		C:/Qt/6.7.3/mingw_64/mkspecs/features/moc.prf \
 		C:/Qt/6.7.3/mingw_64/mkspecs/features/win32/opengl.prf \
 		C:/Qt/6.7.3/mingw_64/mkspecs/features/uic.prf \
+		C:/Qt/6.7.3/mingw_64/mkspecs/features/win32/dumpcpp.prf \
 		C:/Qt/6.7.3/mingw_64/mkspecs/features/qmake_use.prf \
 		C:/Qt/6.7.3/mingw_64/mkspecs/features/file_copies.prf \
 		C:/Qt/6.7.3/mingw_64/mkspecs/features/win32/windows.prf \
@@ -382,12 +382,19 @@ Makefile: ../../aab6.pro C:/Qt/6.7.3/mingw_64/mkspecs/win32-g++/qmake.conf C:/Qt
 		C:/Qt/6.7.3/mingw_64/mkspecs/features/yacc.prf \
 		C:/Qt/6.7.3/mingw_64/mkspecs/features/lex.prf \
 		../../aab6.pro \
+		C:/Qt/6.7.3/mingw_64/lib/Qt6AxContainer.prl \
+		C:/Qt/6.7.3/mingw_64/lib/Qt6Charts.prl \
+		C:/Qt/6.7.3/mingw_64/lib/Qt6OpenGLWidgets.prl \
 		C:/Qt/6.7.3/mingw_64/lib/Qt6Widgets.prl \
+		C:/Qt/6.7.3/mingw_64/lib/Qt6OpenGL.prl \
+		C:/Qt/6.7.3/mingw_64/lib/Qt6Multimedia.prl \
 		C:/Qt/6.7.3/mingw_64/lib/Qt6Gui.prl \
 		C:/Qt/6.7.3/mingw_64/lib/Qt6Sql.prl \
 		C:/Qt/6.7.3/mingw_64/lib/Qt6Network.prl \
+		C:/Qt/6.7.3/mingw_64/lib/Qt6Concurrent.prl \
 		C:/Qt/6.7.3/mingw_64/lib/Qt6Core.prl \
 		C:/Qt/6.7.3/mingw_64/lib/Qt6EntryPoint.prl \
+		.qmake.stash \
 		C:/Qt/6.7.3/mingw_64/mkspecs/features/build_pass.prf
 	$(QMAKE) -o Makefile ..\..\aab6.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
 C:/Qt/6.7.3/mingw_64/mkspecs/features/spec_pre.prf:
@@ -676,7 +683,6 @@ C:/Qt/6.7.3/mingw_64/mkspecs/features/qt_functions.prf:
 C:/Qt/6.7.3/mingw_64/mkspecs/features/qt_config.prf:
 C:/Qt/6.7.3/mingw_64/mkspecs/win32-g++/qmake.conf:
 C:/Qt/6.7.3/mingw_64/mkspecs/features/spec_post.prf:
-.qmake.stash:
 C:/Qt/6.7.3/mingw_64/mkspecs/features/exclusive_builds.prf:
 C:/Qt/6.7.3/mingw_64/mkspecs/features/toolchain.prf:
 C:/Qt/6.7.3/mingw_64/mkspecs/features/default_pre.prf:
@@ -694,6 +700,7 @@ C:/Qt/6.7.3/mingw_64/mkspecs/features/resources.prf:
 C:/Qt/6.7.3/mingw_64/mkspecs/features/moc.prf:
 C:/Qt/6.7.3/mingw_64/mkspecs/features/win32/opengl.prf:
 C:/Qt/6.7.3/mingw_64/mkspecs/features/uic.prf:
+C:/Qt/6.7.3/mingw_64/mkspecs/features/win32/dumpcpp.prf:
 C:/Qt/6.7.3/mingw_64/mkspecs/features/qmake_use.prf:
 C:/Qt/6.7.3/mingw_64/mkspecs/features/file_copies.prf:
 C:/Qt/6.7.3/mingw_64/mkspecs/features/win32/windows.prf:
@@ -702,12 +709,19 @@ C:/Qt/6.7.3/mingw_64/mkspecs/features/exceptions.prf:
 C:/Qt/6.7.3/mingw_64/mkspecs/features/yacc.prf:
 C:/Qt/6.7.3/mingw_64/mkspecs/features/lex.prf:
 ../../aab6.pro:
+C:/Qt/6.7.3/mingw_64/lib/Qt6AxContainer.prl:
+C:/Qt/6.7.3/mingw_64/lib/Qt6Charts.prl:
+C:/Qt/6.7.3/mingw_64/lib/Qt6OpenGLWidgets.prl:
 C:/Qt/6.7.3/mingw_64/lib/Qt6Widgets.prl:
+C:/Qt/6.7.3/mingw_64/lib/Qt6OpenGL.prl:
+C:/Qt/6.7.3/mingw_64/lib/Qt6Multimedia.prl:
 C:/Qt/6.7.3/mingw_64/lib/Qt6Gui.prl:
 C:/Qt/6.7.3/mingw_64/lib/Qt6Sql.prl:
 C:/Qt/6.7.3/mingw_64/lib/Qt6Network.prl:
+C:/Qt/6.7.3/mingw_64/lib/Qt6Concurrent.prl:
 C:/Qt/6.7.3/mingw_64/lib/Qt6Core.prl:
 C:/Qt/6.7.3/mingw_64/lib/Qt6EntryPoint.prl:
+.qmake.stash:
 C:/Qt/6.7.3/mingw_64/mkspecs/features/build_pass.prf:
 qmake: FORCE
 	@$(QMAKE) -o Makefile ..\..\aab6.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"

@@ -57,9 +57,6 @@ constexpr auto qt_meta_stringdata_CLASSMainWindowENDCLASS = QtMocHelpers::string
     "on_add_emp_clicked",
     "on_update_emp_clicked",
     "on_delete_emp_clicked",
-<<<<<<< Updated upstream
-    "on_reset_emp_clicked"
-=======
     "on_reset_emp_clicked",
     "on_first_name_textChanged",
     "on_last_name_textChanged",
@@ -72,8 +69,11 @@ constexpr auto qt_meta_stringdata_CLASSMainWindowENDCLASS = QtMocHelpers::string
     "on_change_password_profile_clicked",
     "on_current_password_textChanged",
     "on_new_password_textChanged",
-    "on_confirm_password_textChanged"
->>>>>>> Stashed changes
+    "on_confirm_password_textChanged",
+    "on_export_emp_clicked",
+    "on_import_emp_clicked",
+    "on_tabWidget_currentChanged",
+    "on_login_btn_2_clicked"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
 #error "qtmochelpers.h not found or too old."
@@ -86,11 +86,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMainWindowENDCLASS[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-<<<<<<< Updated upstream
-      19,   14, // methods
-=======
-      31,   14, // methods
->>>>>>> Stashed changes
+      36,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -98,59 +94,42 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMainWindowENDCLASS[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-<<<<<<< Updated upstream
-       1,    0,  128,    2, 0x08,    1 /* Private */,
-       3,    0,  129,    2, 0x08,    2 /* Private */,
-       4,    0,  130,    2, 0x08,    3 /* Private */,
-       5,    0,  131,    2, 0x08,    4 /* Private */,
-       6,    1,  132,    2, 0x08,    5 /* Private */,
-       8,    0,  135,    2, 0x08,    7 /* Private */,
-       9,    0,  136,    2, 0x08,    8 /* Private */,
-      10,    0,  137,    2, 0x08,    9 /* Private */,
-      11,    0,  138,    2, 0x08,   10 /* Private */,
-      12,    0,  139,    2, 0x08,   11 /* Private */,
-      13,    0,  140,    2, 0x08,   12 /* Private */,
-      14,    0,  141,    2, 0x08,   13 /* Private */,
-      15,    0,  142,    2, 0x08,   14 /* Private */,
-      16,    0,  143,    2, 0x08,   15 /* Private */,
-      17,    0,  144,    2, 0x08,   16 /* Private */,
-      18,    0,  145,    2, 0x08,   17 /* Private */,
-      19,    0,  146,    2, 0x08,   18 /* Private */,
-      20,    0,  147,    2, 0x08,   19 /* Private */,
-      21,    0,  148,    2, 0x08,   20 /* Private */,
-=======
-       1,    0,  200,    2, 0x08,    1 /* Private */,
-       3,    0,  201,    2, 0x08,    2 /* Private */,
-       4,    0,  202,    2, 0x08,    3 /* Private */,
-       5,    0,  203,    2, 0x08,    4 /* Private */,
-       6,    1,  204,    2, 0x08,    5 /* Private */,
-       8,    0,  207,    2, 0x08,    7 /* Private */,
-       9,    0,  208,    2, 0x08,    8 /* Private */,
-      10,    0,  209,    2, 0x08,    9 /* Private */,
-      11,    0,  210,    2, 0x08,   10 /* Private */,
-      12,    0,  211,    2, 0x08,   11 /* Private */,
-      13,    0,  212,    2, 0x08,   12 /* Private */,
-      14,    0,  213,    2, 0x08,   13 /* Private */,
-      15,    0,  214,    2, 0x08,   14 /* Private */,
-      16,    0,  215,    2, 0x08,   15 /* Private */,
-      17,    0,  216,    2, 0x08,   16 /* Private */,
-      18,    0,  217,    2, 0x08,   17 /* Private */,
-      19,    0,  218,    2, 0x08,   18 /* Private */,
-      20,    0,  219,    2, 0x08,   19 /* Private */,
-      21,    0,  220,    2, 0x08,   20 /* Private */,
-      22,    1,  221,    2, 0x08,   21 /* Private */,
-      23,    1,  224,    2, 0x08,   23 /* Private */,
-      24,    0,  227,    2, 0x08,   25 /* Private */,
-      25,    0,  228,    2, 0x08,   26 /* Private */,
-      26,    0,  229,    2, 0x08,   27 /* Private */,
-      27,    1,  230,    2, 0x08,   28 /* Private */,
-      28,    1,  233,    2, 0x08,   30 /* Private */,
-      29,    1,  236,    2, 0x08,   32 /* Private */,
-      30,    0,  239,    2, 0x08,   34 /* Private */,
-      31,    1,  240,    2, 0x08,   35 /* Private */,
-      32,    1,  243,    2, 0x08,   37 /* Private */,
-      33,    1,  246,    2, 0x08,   39 /* Private */,
->>>>>>> Stashed changes
+       1,    0,  230,    2, 0x08,    1 /* Private */,
+       3,    0,  231,    2, 0x08,    2 /* Private */,
+       4,    0,  232,    2, 0x08,    3 /* Private */,
+       5,    0,  233,    2, 0x08,    4 /* Private */,
+       6,    1,  234,    2, 0x08,    5 /* Private */,
+       8,    0,  237,    2, 0x08,    7 /* Private */,
+       9,    0,  238,    2, 0x08,    8 /* Private */,
+      10,    0,  239,    2, 0x08,    9 /* Private */,
+      11,    0,  240,    2, 0x08,   10 /* Private */,
+      12,    0,  241,    2, 0x08,   11 /* Private */,
+      13,    0,  242,    2, 0x08,   12 /* Private */,
+      14,    0,  243,    2, 0x08,   13 /* Private */,
+      15,    0,  244,    2, 0x08,   14 /* Private */,
+      16,    0,  245,    2, 0x08,   15 /* Private */,
+      17,    0,  246,    2, 0x08,   16 /* Private */,
+      18,    0,  247,    2, 0x08,   17 /* Private */,
+      19,    0,  248,    2, 0x08,   18 /* Private */,
+      20,    0,  249,    2, 0x08,   19 /* Private */,
+      21,    0,  250,    2, 0x08,   20 /* Private */,
+      22,    1,  251,    2, 0x08,   21 /* Private */,
+      23,    1,  254,    2, 0x08,   23 /* Private */,
+      24,    0,  257,    2, 0x08,   25 /* Private */,
+      25,    0,  258,    2, 0x08,   26 /* Private */,
+      26,    0,  259,    2, 0x08,   27 /* Private */,
+      27,    1,  260,    2, 0x08,   28 /* Private */,
+      28,    1,  263,    2, 0x08,   30 /* Private */,
+      29,    1,  266,    2, 0x08,   32 /* Private */,
+      30,    0,  269,    2, 0x08,   34 /* Private */,
+      31,    1,  270,    2, 0x08,   35 /* Private */,
+      32,    1,  273,    2, 0x08,   37 /* Private */,
+      33,    1,  276,    2, 0x08,   39 /* Private */,
+      34,    0,  279,    2, 0x08,   41 /* Private */,
+      35,    1,  280,    2, 0x08,   42 /* Private */,
+      35,    0,  283,    2, 0x28,   44 /* Private | MethodCloned */,
+      36,    1,  284,    2, 0x08,   45 /* Private */,
+      37,    0,  287,    2, 0x08,   47 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
@@ -172,8 +151,6 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMainWindowENDCLASS[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
-<<<<<<< Updated upstream
-=======
     QMetaType::Void, QMetaType::QString,    7,
     QMetaType::Void, QMetaType::QString,    7,
     QMetaType::Void,
@@ -184,9 +161,13 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMainWindowENDCLASS[] = {
     QMetaType::Void, QMetaType::QString,    7,
     QMetaType::Void,
     QMetaType::Void, QMetaType::QString,    7,
-    QMetaType::Void, QMetaType::QString,    7,
-    QMetaType::Void, QMetaType::QString,    7,
->>>>>>> Stashed changes
+    QMetaType::Void, QMetaType::QString,    2,
+    QMetaType::Void, QMetaType::QString,    2,
+    QMetaType::Void,
+    QMetaType::Void, QMetaType::QString,    2,
+    QMetaType::Void,
+    QMetaType::Void, QMetaType::Int,    2,
+    QMetaType::Void,
 
        0        // eod
 };
@@ -238,9 +219,6 @@ Q_CONSTINIT const QMetaObject MainWindow::staticMetaObject = { {
         // method 'on_delete_emp_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_reset_emp_clicked'
-<<<<<<< Updated upstream
-        QtPrivate::TypeAndForceComplete<void, std::false_type>
-=======
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_first_name_textChanged'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
@@ -273,8 +251,19 @@ Q_CONSTINIT const QMetaObject MainWindow::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
         // method 'on_confirm_password_textChanged'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<const QString &, std::false_type>
->>>>>>> Stashed changes
+        QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
+        // method 'on_export_emp_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_import_emp_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
+        // method 'on_import_emp_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_tabWidget_currentChanged'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<int, std::false_type>,
+        // method 'on_login_btn_2_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
 } };
@@ -304,8 +293,6 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 16: _t->on_update_emp_clicked(); break;
         case 17: _t->on_delete_emp_clicked(); break;
         case 18: _t->on_reset_emp_clicked(); break;
-<<<<<<< Updated upstream
-=======
         case 19: _t->on_first_name_textChanged((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
         case 20: _t->on_last_name_textChanged((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
         case 21: _t->on_email_editingFinished(); break;
@@ -318,7 +305,11 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 28: _t->on_current_password_textChanged((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
         case 29: _t->on_new_password_textChanged((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
         case 30: _t->on_confirm_password_textChanged((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
->>>>>>> Stashed changes
+        case 31: _t->on_export_emp_clicked(); break;
+        case 32: _t->on_import_emp_clicked((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 33: _t->on_import_emp_clicked(); break;
+        case 34: _t->on_tabWidget_currentChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 35: _t->on_login_btn_2_clicked(); break;
         default: ;
         }
     }
@@ -343,23 +334,13 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-<<<<<<< Updated upstream
-        if (_id < 19)
+        if (_id < 36)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 19;
+        _id -= 36;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 19)
+        if (_id < 36)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 19;
-=======
-        if (_id < 31)
-            qt_static_metacall(this, _c, _id, _a);
-        _id -= 31;
-    } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 31)
-            *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 31;
->>>>>>> Stashed changes
+        _id -= 36;
     }
     return _id;
 }

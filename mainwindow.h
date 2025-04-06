@@ -2,36 +2,39 @@
 #define MAINWINDOW_H
 #include <QDragEnterEvent>
 #include <QDropEvent>
-#include <QEvent>
-<<<<<<< Updated upstream
-#include <QFile>
-=======
->>>>>>> Stashed changes
 #include <QFileDialog>
 #include <QHeaderView>
 #include <QIcon>
 #include <QMainWindow>
 #include <QMenu>
-#include <QMessageBox>
 #include <QMimeData>
 #include <QPixmap>
 #include <QPoint>
 #include <QRect>
-#include <QTextStream>
 #include <QTimer>
-#include <QUrl>
-#include <QBuffer>
 #include <QRegularExpressionValidator>
-<<<<<<< Updated upstream
-#include "employer.h"
-#include<QSortFilterProxyModel>
-=======
 #include <QSortFilterProxyModel>
-#include <QProcess>
-#include "employer.h"
 #include <QStandardPaths>
 #include <QShortcut>
->>>>>>> Stashed changes
+#include <QAxObject>
+#include <QtCharts/QChartView>
+#include <QtCharts/QChart>
+#include <QtCharts/QLegend>
+#include <QtCharts/QPieSeries>
+#include <QtCharts/QBarSeries>
+#include <QtCharts/QBarSet>
+#include <QtCharts/QBarCategoryAxis>
+#include <QtCharts/QValueAxis>
+#include <QtCharts/QStackedBarSeries>
+#include <QToolTip>
+#include <QCamera>
+#include <QMediaCaptureSession>
+#include <QImageCapture>
+#include <QVideoSink>
+#include <QMediaDevices>
+#include <QSpacerItem>
+#include <QtConcurrent>
+#include <employer.h>
 QT_BEGIN_NAMESPACE
 namespace Ui
 {
@@ -65,8 +68,6 @@ private slots:
     void on_update_emp_clicked();
     void on_delete_emp_clicked();
     void on_reset_emp_clicked();
-<<<<<<< Updated upstream
-=======
     void on_first_name_textChanged(const QString &arg1);
     void on_last_name_textChanged(const QString &arg1);
     void on_email_editingFinished();
@@ -77,15 +78,25 @@ private slots:
     void on_cin_textChanged(const QString &arg1);
     void on_change_password_profile_clicked();
     void on_current_password_textChanged(const QString &arg1);
-    void on_new_password_textChanged(const QString &arg1);
-    void on_confirm_password_textChanged(const QString &arg1);
->>>>>>> Stashed changes
+    void on_new_password_textChanged(const QString &);
+    void on_confirm_password_textChanged(const QString &);
+    void on_export_emp_clicked();
+    void on_import_emp_clicked(const QString& ="");
+    void on_tabWidget_currentChanged(int);
+    void on_login_btn_2_clicked();
 protected:
-    void initializeAAB6(Ui::MainWindow *ui);
-    void dragEnterEvent(QDragEnterEvent *event) override;
-    void dropEvent(QDropEvent *event) override;
-    bool eventFilter(QObject *obj, QEvent *event) override;
+    void initializeAAB6(Ui::MainWindow *);
+    void dragEnterEvent(QDragEnterEvent *) override;
+    void dropEvent(QDropEvent *) override;
+    bool eventFilter(QObject *, QEvent *) override;
     void on_table_emp_selectionChanged();
+    void g1();
+    void g2();
+    void g3();
+    void importFace(const QImage&);
+    void loadEmp(int,bool=true);
+    void login();
+    void fetch_emp();
 private:
     Ui::MainWindow *ui;
 };

@@ -10,11 +10,7 @@
 #container QPushButton,#container QToolButton{background:#FF5C5C;color:white;border:2px solid #E55353;font-weight:bold;border-radius:5px;padding:5px 10px;font-size:13px;}
 #container QPushButton:hover,#container QToolButton:hover{background:#E55353;border:2px solid #D32F2F;}
 #container QPushButton:pressed,#container QToolButton:pressed{background:#D32F2F;}
-<<<<<<< Updated upstream
-#container QPushButton:disabled,#container QToolButton:disabled{background:#C0C0C0;color:#7A7A7A;border:2px solid #A0A0A0;cursor:not-allowed;}
-=======
 #container QPushButton:disabled,#container QToolButton:disabled{background:#C0C0C0;color:#7A7A7A;border:2px solid #A0A0A0;}
->>>>>>> Stashed changes
 #container QLineEdit,#container QDateEdit,#container QComboBox,#container QTextEdit,#container QDoubleSpinBox,#container QSpinBox{background:white;color:#3E3E3E;border:2px solid #FF5C5C;border-radius:5px;padding:5px;font-size:13px;}
 #container QLineEdit:disabled,#container QDateEdit:disabled,#container QComboBox:disabled,#container QTextEdit:disabled,#container QDoubleSpinBox:disabled,#container QSpinBox:disabled{background:#E0E0E0;color:#A0A0A0;border:2px solid #C0C0C0;}
 #container QComboBox QAbstractItemView{background:#FFF;border:2px solid #FF5C5C;color:#3E3E3E;padding:4px;}
@@ -39,12 +35,6 @@
 #container QLabel:hover{color:#FF5C5C;}
 #container QLabel:focus{outline:2px solid #FF5C5C;border-radius:4px;padding:2px;}
 #container QLabel:disabled{color:#A0A0A0;}
-<<<<<<< Updated upstream
-#pfp_profile,#pfp{border:2px dashed #FF5C5C;border-radius:6px;padding:5px;background:#FFF;color:#3E3E3E;image: none;}
-#pfp_profile:hover,#pfp:hover{border:2px solid #E55353;background:#FAFAFA;}
-#pfp_profile:focus,#pfp:focus{border:2px solid #D32F2F;background:#F0EDE8;}
-#pfp_profile:disabled,#pfp:disabled{border:2px solid #C0C0C0;color:#A0A0A0;background:#E0E0E0;}
-=======
 #pfp{border:2px dashed #FF5C5C;border-radius:6px;padding:5px;background:#FFF;color:#3E3E3E;image: none;}
 #pfp:hover{border:2px solid #E55353;background:#FAFAFA;}
 #pfp:focus{border:2px solid #D32F2F;background:#F0EDE8;}
@@ -53,7 +43,6 @@
 #container QLineEdit[invalid="true"] { border: 2px solid #FF6B6B; background: #FFF0F0; color: #5A5A5A; }
 #container QLineEdit[invalid="true"]:focus { border: 2px solid #FF4C4C; background: #FFE0E0; }
 #container QLabel[invalid="true"] { color: #FF6B6B; font-weight: bold; }
->>>>>>> Stashed changes
 
 
 
@@ -76,14 +65,14 @@ QMainWindow { background: #F0EDE8; }
 #forgot_password_btn:hover { color: #B71C1C; }
 /* SIDEBAR & TOPBAR */
 #sidebar { min-width: 250px; max-width: 250px; background: #F5F5F5; border-right: 2px solid #FF5C5C; }
-#sidebar QLabel { margin-top: 30px; margin-left: 80px; background: transparent; qproperty-pixmap: url("C:/Users/aab62/Desktop/testing/aab6/icons/logo_sidebar_light.png"); }
+#sidebar QLabel { margin-top: 30px; margin-left: 80px; background: transparent; qproperty-pixmap: url("icons/logo_sidebar_light.png"); }
 #sidebar QPushButton { background: #E55353; font-size: 14px; border: 2px solid transparent; border-radius: 8px; padding: 10px; color: white; }
 #sidebar QPushButton:hover { background: #FF5C5C; border: 2px solid #E55353; }
 #sidebar QPushButton:checked, #sidebar QPushButton:focus { background: #D32F2F; color: white; font-weight: bold; border: 2px solid #B71C1C; border-top-width: 2px; border-top-style: solid; border-top-color: rgba(255, 92, 92, 0.9);border-left-width: 2px; border-left-style: solid; border-left-color: rgba(255, 92, 92, 0.6); }
 #topbar { min-height: 64px; max-height: 64px; background: #F5F5F5; border-bottom: 2px solid #FF5C5C; padding: 0 10px; }
 #topbar QLabel { color:#3E3E3E; background: transparent; font-size: 18px; font-weight: bold; qproperty-alignment: AlignCenter; padding: 6px 12px; }
 #topbar QToolButton { background: transparent; border: none; padding: 6px; }
-#topbar #sidebar_btn {qproperty-icon: url("C:/Users/aab62/Desktop/testing/aab6/icons/logo_sidebar_light.png");}
+#topbar #sidebar_btn {qproperty-icon: url("icons/logo_sidebar_light.png");}
 #topbar QToolButton:hover { background: rgba(255, 92, 92, 0.3); border-radius: 4px; }
 /* PROFILE SECTION */
 #profile_section { background: #FFFFFF; border: 2px solid #FF5C5C; border-radius: 8px; padding: 10px; }
