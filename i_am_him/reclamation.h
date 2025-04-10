@@ -3,7 +3,26 @@
 
 #include <QString>
 #include <QSqlQuery>
+#include <QTableWidget>
+#include <QMap>
 #include <QSqlQueryModel>
+#include <QPdfWriter>
+#include <QPainter>
+#include <QAudioInput>       // Added for speech-to-text
+#include <QBuffer>           // Added for audio recording
+
+#include <QAudioDevice>
+#include <QAudioSource>
+#include <QMediaDevices>
+#include <QBuffer>
+#include <QNetworkAccessManager>
+#include <QNetworkRequest>
+#include <QNetworkReply>
+#include <QJsonDocument>
+#include <QJsonObject>
+#include <QElapsedTimer>
+#include <QCoreApplication>
+#include <QDataStream>
 
 class Reclamation
 {
@@ -31,8 +50,14 @@ public:
     bool supprimer(int);
     bool modifier(int id, const QString& name, const QString& email, const QString& phone,const QString& type, const QString& priority, const QString& status,const QString& description, const QString& location);
     QSqlQueryModel* afficher();
+    QSqlQueryModel* search(const QString &priority, const QString &type, const QString &status);
+    //stats
+    QMap<QString, int> statistiquesParType(QTableWidget *table);
 
+    bool exportTraitéeEnPDF(QTableWidget *table, const QString &filePath);
+
+    QString transcribeSpeech();
+    QByteArray createWavHeader(const QAudioFormat &format, qint64 dataSize);
 
 };
-
 #endif // RECLAMATION_H

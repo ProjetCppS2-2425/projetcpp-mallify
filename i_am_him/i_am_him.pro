@@ -11,12 +11,16 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    SpeechRecognizer.cpp \
+    chartwindow.cpp \
     connection.cpp \
     main.cpp \
     mainwindow.cpp \
     reclamation.cpp
 
 HEADERS += \
+    SpeechRecognizer.h \
+    chartwindow.h \
     connection.h \
     mainwindow.h \
     reclamation.h
@@ -28,3 +32,18 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+QT += charts
+QT += core gui widgets
+QT += multimedia
+QT += multimedia network
+
+QT += multimedia multimediawidgets
+
+QT += core multimedia
+CONFIG += console c++11
+
+
+DEFINES += VOSK_MODEL_PATH=\\\"$$PWD/models/vosk-model\\\"
+
+

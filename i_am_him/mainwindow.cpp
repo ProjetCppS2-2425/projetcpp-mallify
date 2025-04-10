@@ -3,6 +3,7 @@
 #include "reclamation.h"
 #include <QRegularExpressionValidator>  // Include the necessary header for validators
 #include <QSqlRecord>
+#include "chartwindow.h"
 
 
 MainWindow::MainWindow(QWidget *parent)
@@ -34,12 +35,33 @@ MainWindow::MainWindow(QWidget *parent)
     ui->profile_pic->setAcceptDrops(true);
     ui->profile_pic->setAlignment(Qt::AlignCenter);
     ui->title->setAcceptDrops(true);
+    ui->tableWidget_2->setSelectionMode(QAbstractItemView::MultiSelection);
+    ui->tableWidget_2->setSelectionBehavior(QAbstractItemView::SelectRows);
+    ui->tableWidget_2->setEditTriggers(QAbstractItemView::NoEditTriggers);
+    ui->tableWidget_2->horizontalHeader()->setSectionsMovable(true);
+    ui->tableWidget_2->horizontalHeader()->setSortIndicatorShown(true);
+    ui->tableWidget_2->setSortingEnabled(true);
     setAcceptDrops(true);
     QFile file("C:\\Users\\mahdo\\Downloads\\ka7loush\\i_am_him\\light.qss");
     if (file.open(QFile::ReadOnly)) {
         qApp->setStyleSheet(file.readAll());
         file.close();
     }
+    speechRecognizer = new SpeechRecognizer(this);
+
+    connect(ui->rec_search_btn_4, &QPushButton::clicked, this, &MainWindow::on_rec_search_btn_4_clicked);
+
+
+    ui->tableWidget_2->setColumnCount(9);
+    ui->tableWidget_2->setHorizontalHeaderLabels(QStringList() <<"Select a column"<< "Nom" << "E-mail" << "Phone" << "Type" << "Priority" << "Status" << "Location" << "Description");
+
+    // Fill the columnComboBox with column names and their index
+    for (int i = 0; i < ui->tableWidget_2->columnCount(); ++i) {
+        QString header = ui->tableWidget_2->horizontalHeaderItem(i)->text();
+        ui->columnComboBox->addItem(header, i); // Display text + internal index
+    }
+
+
 }
 
 MainWindow::~MainWindow()
@@ -326,14 +348,18 @@ void MainWindow::on_lineEditName_textChanged(const QString &arg1)
 }
 void MainWindow::checkInputs()
 {
-    // Check if all required fields are filled
+    // Email validation pattern
+    QRegularExpression emailPattern("^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$");
+    bool isEmailValid = emailPattern.match(ui->lineEditEmail->text()).hasMatch();
+
+    // Check if all required fields are filled AND email is valid
     bool allFilled = !ui->lineEditName->text().isEmpty() &&
-                     !ui->lineEditEmail->text().isEmpty() &&
+                     isEmailValid &&
                      !ui->lineEditPhone->text().isEmpty() &&
                      !ui->textEditDescription->toPlainText().isEmpty() &&
                      !ui->lineEditLocation->text().isEmpty();
 
-    // Enable the button only if all required fields are filled
+    // Enable the button only if all required fields are filled and email is valid
     ui->btnSubmit->setEnabled(allFilled);
 }
 
@@ -402,5 +428,108 @@ void MainWindow::on_textEditDescription_textChanged()
 
     // Enable or disable the Submit button based on input
     checkInputs();
+}
+
+
+
+
+
+void MainWindow::on_pushButton_3_clicked()
+{
+    // Compute statistics from your table widget
+    Reclamation r;
+    QMap<QString, int> stats = r.statistiquesParType(ui->tableWidget_2);
+
+    // For debugging: print each type's count
+    for (auto it = stats.begin(); it != stats.end(); ++it) {
+        qDebug() << "Type:" << it.key() << ", Count:" << it.value();
+    }
+
+    // Create and display the chart window with updated data.
+    ChartWindow *chartWin = new ChartWindow(this);
+    chartWin->setChartData(stats);
+    chartWin->show();
+}
+
+
+void MainWindow::on_pushButton_clicked()
+{
+    QString filePath = QFileDialog::getSaveFileName(this, "Export PDF", "", "PDF Files (*.pdf)");
+    if (!filePath.isEmpty()) {
+        Reclamation r;
+        if (r.exportTraitéeEnPDF(ui->tableWidget_2, filePath)) {
+            QMessageBox::information(this, "Succès", "Exportation réussie !");
+        } else {
+            QMessageBox::warning(this, "Erreur", "Échec de l'exportation.");
+        }
+    }
+}
+
+
+
+
+void MainWindow::on_startButton_clicked()
+{
+    speechRecognizer->startRecording();
+    // Optional: Update UI to indicate recording started
+    qDebug() << "Recording started.";
+}
+
+
+
+void MainWindow::on_stopButton_clicked()
+{
+    speechRecognizer->stopRecording();
+    // Optional: Update UI to indicate recording stopped.
+    qDebug() << "Recording stopped.";
+}
+
+void MainWindow::handleTranscription(const QString &transcription)
+{
+    ui->textEditDescription->append("Transcription: " + transcription);
+    qDebug() << "Transcription received:" << transcription;
+}
+
+void MainWindow::handleError(const QString &errorString)
+{
+    ui->textEditDescription->append("Error: " + errorString);
+    qDebug() << "Error:" << errorString;
+}
+
+
+
+
+
+
+
+void MainWindow::on_rec_search_btn_4_clicked()
+{
+    QString searchText = ui->searchbox_emp_4->text();
+    int column = ui->columnComboBox->currentData().toInt(); // Get selected column
+
+    // Debugging: Check column and search text
+    qDebug() << "Selected Column: " << column;
+    qDebug() << "Search Text: " << searchText;
+
+    // If search text is empty, show all rows
+    if (searchText.isEmpty()) {
+        for (int row = 0; row < ui->tableWidget_2->rowCount(); ++row) {
+            ui->tableWidget_2->setRowHidden(row, false); // Show all rows
+        }
+        return; // Exit function early to avoid further filtering
+    }
+
+    // Filter the rows based on the search text
+    for (int row = 0; row < ui->tableWidget_2->rowCount(); ++row) {
+        QTableWidgetItem* item = ui->tableWidget_2->item(row, column);
+
+        // Ensure the item exists and then perform filtering
+        if (item) {
+            bool match = item->text().contains(searchText, Qt::CaseInsensitive);
+            ui->tableWidget_2->setRowHidden(row, !match); // Hide row if it doesn't match
+        } else {
+            qDebug() << "Item is null at row:" << row << " column:" << column;
+        }
+    }
 }
 

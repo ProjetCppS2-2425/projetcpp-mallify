@@ -16,6 +16,9 @@
 #include <QRect>
 #include <QTextStream>
 #include <QUrl>
+#include <libs/vosk_api.h>
+#include <libs/portaudio.h>
+#include "SpeechRecognizer.h"
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class MainWindow;
@@ -79,8 +82,38 @@ private slots:
 
     void on_textEditDescription_textChanged();
 
+
+
+    void on_pushButton_3_clicked();
+
+    void on_pushButton_clicked();
+
+
+
+
+    void on_startButton_clicked();
+
+    void on_stopButton_clicked();
+
+    void handleTranscription(const QString &transcription);
+    void handleError(const QString &errorString);
+
+
+
+
+
+
+
+
+    void on_rec_search_btn_4_clicked();
+
 private:
     Ui::MainWindow *ui;
+    bool isListening;
+    VoskRecognizer *recognizer;
+    VoskModel *model;
+    PaStream *stream;
+    SpeechRecognizer *speechRecognizer;
 protected:
 };
 #endif // MAINWINDOW_H

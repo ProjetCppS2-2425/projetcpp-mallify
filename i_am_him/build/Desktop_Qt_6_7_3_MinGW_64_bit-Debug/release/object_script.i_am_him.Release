@@ -1,0 +1,10 @@
+release/SpeechRecognizer.o
+release/chartwindow.o
+release/connection.o
+release/main.o
+release/mainwindow.o
+release/reclamation.o
+release/SpeechRecognizer.o
+release/moc_SpeechRecognizer.o
+release/moc_chartwindow.o
+release/moc_mainwindow.o
