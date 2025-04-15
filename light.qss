@@ -51,9 +51,9 @@
 QMainWindow { background: #F0EDE8; }
 #login_page { background: #FFFFFF; border-radius: 15px; padding: 12px; border: 2px solid #D32F2F; }
 #logo_label { background: transparent; border: none; margin: 8px auto; qproperty-alignment: AlignCenter; }
-#username, #password { background: transparent; border: none; border-bottom: 2px solid #D32F2F; color: #3E3E3E; padding: 4px; font-size: 12px; }
-#username:focus, #password:focus { border-bottom: 3px solid #B71C1C; }
-#username::placeholder, #password::placeholder { color: rgba(62, 62, 62, 0.8); }
+#username, #password, #code { background: transparent; border: none; border-bottom: 2px solid #D32F2F; color: #3E3E3E; padding: 4px; font-size: 12px; }
+#username:focus, #password:focus, #code:focus { border-bottom: 3px solid #B71C1C; }
+#username::placeholder, #password::placeholder, #code::placeholder { color: rgba(62, 62, 62, 0.8); }
 #login_btn, #login_btn_2 { border-radius: 8px; padding: 8px; font-weight: bold; font-size: 12px; }
 #login_btn { background: qlineargradient(x1:0, y1:0.505, x2:1, y2:0.477, stop:0 #FF5C5C, stop:1 #D32F2F); color: white; border: 2px solid #B71C1C; }
 #login_btn:hover { background: qlineargradient(x1:0, y1:0.505, x2:1, y2:0.477, stop:0 #E55353, stop:1 #A32020); }

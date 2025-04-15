@@ -563,6 +563,7 @@ release/moc_mainwindow.cpp: ../../mainwindow.h \
 		C:/Qt/6.7.3/mingw_64/include/QtConcurrent/qtconcurrentrun.h \
 		C:/Qt/6.7.3/mingw_64/include/QtConcurrent/qtconcurrenttask.h \
 		C:/Qt/6.7.3/mingw_64/include/QtConcurrent/qtconcurrentversion.h \
+		C:/Qt/6.7.3/mingw_64/include/QtCore/QAtomicInt \
 		../../employer.h \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/QByteArray \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/QDate \
@@ -614,6 +615,7 @@ release/moc_mainwindow.cpp: ../../mainwindow.h \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/QJsonObject \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/QJsonArray \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/QThread \
+		C:/Qt/6.7.3/mingw_64/include/QtCore/QMessageAuthenticationCode \
 		release/moc_predefs.h \
 		C:/Qt/6.7.3/mingw_64/bin/moc.exe
 	C:\Qt\6.7.3\mingw_64\bin\moc.exe $(DEFINES) --include C:/Users/aab62/Desktop/testing/aab6/build/Desktop_Qt_6_7_3_MinGW_64_bit-Debug/release/moc_predefs.h -IC:/Qt/6.7.3/mingw_64/mkspecs/win32-g++ -IC:/Users/aab62/Desktop/testing/aab6 -IC:/Qt/6.7.3/mingw_64/include -IC:/Qt/6.7.3/mingw_64/include/QtAxContainer -IC:/Qt/6.7.3/mingw_64/include/QtCharts -IC:/Qt/6.7.3/mingw_64/include/QtOpenGLWidgets -IC:/Qt/6.7.3/mingw_64/include/QtWidgets -IC:/Qt/6.7.3/mingw_64/include/QtOpenGL -IC:/Qt/6.7.3/mingw_64/include/QtMultimedia -IC:/Qt/6.7.3/mingw_64/include/QtGui -IC:/Qt/6.7.3/mingw_64/include/QtSql -IC:/Qt/6.7.3/mingw_64/include/QtNetwork -IC:/Qt/6.7.3/mingw_64/include/QtConcurrent -IC:/Qt/6.7.3/mingw_64/include/QtCore -I. -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -IC:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include ..\..\mainwindow.h -o release\moc_mainwindow.cpp
@@ -978,7 +980,9 @@ release/employer.o: ../../employer.cpp ../../employer.h \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/qjsonobject.h \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/QJsonArray \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/qjsonarray.h \
-		C:/Qt/6.7.3/mingw_64/include/QtCore/QThread
+		C:/Qt/6.7.3/mingw_64/include/QtCore/QThread \
+		C:/Qt/6.7.3/mingw_64/include/QtCore/QMessageAuthenticationCode \
+		C:/Qt/6.7.3/mingw_64/include/QtCore/qmessageauthenticationcode.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\employer.o ..\..\employer.cpp
 
 release/initiate_employer.o: ../../initiate_employer.cpp ../../mainwindow.h \
@@ -1423,6 +1427,7 @@ release/initiate_employer.o: ../../initiate_employer.cpp ../../mainwindow.h \
 		C:/Qt/6.7.3/mingw_64/include/QtConcurrent/qtconcurrentrun.h \
 		C:/Qt/6.7.3/mingw_64/include/QtConcurrent/qtconcurrenttask.h \
 		C:/Qt/6.7.3/mingw_64/include/QtConcurrent/qtconcurrentversion.h \
+		C:/Qt/6.7.3/mingw_64/include/QtCore/QAtomicInt \
 		../../employer.h \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/QByteArray \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/QDate \
@@ -1474,6 +1479,7 @@ release/initiate_employer.o: ../../initiate_employer.cpp ../../mainwindow.h \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/QJsonObject \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/QJsonArray \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/QThread \
+		C:/Qt/6.7.3/mingw_64/include/QtCore/QMessageAuthenticationCode \
 		ui_mainwindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\initiate_employer.o ..\..\initiate_employer.cpp
 
@@ -1927,6 +1933,7 @@ release/main.o: ../../main.cpp C:/Qt/6.7.3/mingw_64/include/QtWidgets/QApplicati
 		C:/Qt/6.7.3/mingw_64/include/QtConcurrent/qtconcurrentrun.h \
 		C:/Qt/6.7.3/mingw_64/include/QtConcurrent/qtconcurrenttask.h \
 		C:/Qt/6.7.3/mingw_64/include/QtConcurrent/qtconcurrentversion.h \
+		C:/Qt/6.7.3/mingw_64/include/QtCore/QAtomicInt \
 		../../employer.h \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/QByteArray \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/QDate \
@@ -1973,7 +1980,8 @@ release/main.o: ../../main.cpp C:/Qt/6.7.3/mingw_64/include/QtWidgets/QApplicati
 		C:/Qt/6.7.3/mingw_64/include/QtCore/QJsonDocument \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/QJsonObject \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/QJsonArray \
-		C:/Qt/6.7.3/mingw_64/include/QtCore/QThread
+		C:/Qt/6.7.3/mingw_64/include/QtCore/QThread \
+		C:/Qt/6.7.3/mingw_64/include/QtCore/QMessageAuthenticationCode
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\main.o ..\..\main.cpp
 
 release/mainwindow.o: ../../mainwindow.cpp ../../mainwindow.h \
@@ -2418,6 +2426,7 @@ release/mainwindow.o: ../../mainwindow.cpp ../../mainwindow.h \
 		C:/Qt/6.7.3/mingw_64/include/QtConcurrent/qtconcurrentrun.h \
 		C:/Qt/6.7.3/mingw_64/include/QtConcurrent/qtconcurrenttask.h \
 		C:/Qt/6.7.3/mingw_64/include/QtConcurrent/qtconcurrentversion.h \
+		C:/Qt/6.7.3/mingw_64/include/QtCore/QAtomicInt \
 		../../employer.h \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/QByteArray \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/QDate \
@@ -2469,6 +2478,7 @@ release/mainwindow.o: ../../mainwindow.cpp ../../mainwindow.h \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/QJsonObject \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/QJsonArray \
 		C:/Qt/6.7.3/mingw_64/include/QtCore/QThread \
+		C:/Qt/6.7.3/mingw_64/include/QtCore/QMessageAuthenticationCode \
 		ui_mainwindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\mainwindow.o ..\..\mainwindow.cpp
 

@@ -34,6 +34,7 @@
 #include <QMediaDevices>
 #include <QSpacerItem>
 #include <QtConcurrent>
+#include <QAtomicInt>
 #include <employer.h>
 QT_BEGIN_NAMESPACE
 namespace Ui
@@ -84,6 +85,11 @@ private slots:
     void on_import_emp_clicked(const QString& ="");
     void on_tabWidget_currentChanged(int);
     void on_login_btn_2_clicked();
+    void on_stats_tab_currentChanged(int);
+    void on_username_textChanged(const QString &arg1 ="");
+    void on_password_textChanged(const QString &arg1 ="");
+    void on_forgot_password_btn_clicked();
+    void on_forget_password_profile_clicked();
 protected:
     void initializeAAB6(Ui::MainWindow *);
     void dragEnterEvent(QDragEnterEvent *) override;
@@ -95,8 +101,8 @@ protected:
     void g3();
     void importFace(const QImage&);
     void loadEmp(int,bool=true);
-    void login();
     void fetch_emp();
+    void login();
 private:
     Ui::MainWindow *ui;
 };

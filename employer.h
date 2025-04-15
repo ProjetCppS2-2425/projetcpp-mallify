@@ -23,12 +23,13 @@
 #include <QJsonObject>
 #include <QJsonArray>
 #include <QThread>
+#include <QMessageAuthenticationCode>
 class Employer
 {
 private:
     int id,access_type,hours_worked,absences,lateness,created_by,modified_by;
     double base_salary,customer_feedback;
-    QString first_name,last_name,cin,email,phone,password,position,ui_preference,face_embedding;
+    QString first_name,last_name,cin,email,phone,password,position,ui_preference,face_embedding,auth_secret;
     QByteArray profile_image,fingerprint;
     QDate hire_date,last_login,created_on,modified_on;
     static Employer* logged_in_employer;
@@ -36,9 +37,8 @@ private:
     static QMap<QString, QString> phoneCache;
     static QSqlQueryModel* model;
 public:
-    Employer(int,int,int,int,int,int,int,double,double,const QString&,const QString&,const QString&,const QString&,const QString&,const QString&,const QString&,const QString&,const QString&,const QByteArray&,const QByteArray&,const QDate&,const QDate&,const QDate&,const QDate&);
+    Employer(int,int,int,int,int,int,int,double,double,const QString&,const QString&,const QString&,const QString&,const QString&,const QString&,const QString&,const QString&,const QString&,const QString&,const QByteArray&,const QByteArray&,const QDate&,const QDate&,const QDate&,const QDate&);
     ~Employer();
-    static bool login(int,const QString&);
     static bool loginWithFace(int);
     static bool logout();
     static Employer* getLoggedInEmployer();
@@ -54,7 +54,9 @@ public:
     static bool updateAll(int,int,int,int,int,const QString&,double,double,const QDate&);
     static QSqlQueryModel* fetchAll();
     static bool delete_(int);
-    static void sendEmail(const QString&,const QString&,const QString&);
+    static void sendEmail(const QString&,const QString&,const QString&,const QString & ="");
+    static QString generateQrCodeImage(const QString&, const QString&);
+    static QString getCurrentCode(const QString&,int=6,int=30);
     static void updatePassword(const QString&);
     static void updateUiPreference(const QString&);
     static QString generatePassword(int = 12);
@@ -85,5 +87,6 @@ public:
     QDate getLastLogin()const;
     QDate getCreatedOn()const;
     QDate getModifiedOn()const;
+    QString getAuthSecret() const;
 };
 #endif // EMPLOYER_H
