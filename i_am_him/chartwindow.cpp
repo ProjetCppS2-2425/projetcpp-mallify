@@ -1,47 +1,57 @@
 #include "chartwindow.h"
-#include <QtCharts/QChart>
-#include <QtCharts/QPieSlice>
+#include <QChartView>
+#include <QChart>
+#include <QPieSeries>
+#include <QPieSlice>
 #include <QPainter>
 
-ChartWindow::ChartWindow(QWidget *parent) : QMainWindow(parent)
+ChartWindow::ChartWindow(QWidget *parent)
+    : QMainWindow(parent)
 {
-    // Create an empty pie series initially
-    QPieSeries *series = new QPieSeries();
+    // Create an empty pie series
+    auto *series = new QPieSeries();
 
-    // Create a chart, add the series, and set a title
-    QChart *chart = new QChart();
+    // Create the chart (no QWidget* parent!)
+    auto *chart = new QChart();
     chart->addSeries(series);
     chart->setTitle("Statistiques par type de réclamation");
+    chart->setAnimationOptions(QChart::SeriesAnimations);
 
-    // Create the chart view and set it as the central widget
-    chartView = new QChartView(chart);
+    // Put the chart into a view, and set this window as its parent
+    chartView = new QChartView(chart, this);  // QChartView(QChart*, QWidget* parent)
     chartView->setRenderHint(QPainter::Antialiasing);
     setCentralWidget(chartView);
 }
 
 void ChartWindow::setChartData(const QMap<QString, int> &data)
 {
-    // Calculate total count for percentage calculations.
     int total = 0;
-    for (auto value : data) {
-        total += value;
-    }
+    for (int v : data) total += v;
 
-    // Create a new pie series and add slices with percentage labels.
-    QPieSeries *series = new QPieSeries();
-    for (auto it = data.begin(); it != data.end(); ++it) {
-        int count = it.value();
-        double percentage = (total > 0) ? (count * 100.0 / total) : 0;
-        // Format label as: "Type (count, percentage%)"
+    auto *series = new QPieSeries();
+    for (auto it = data.constBegin(); it != data.constEnd(); ++it) {
+        double pct = total > 0 ? it.value() * 100.0 / total : 0;
         QString label = QString("%1 (%2, %3%)")
                             .arg(it.key())
-                            .arg(count)
-                            .arg(QString::number(percentage, 'f', 1));
-        series->append(label, count);
+                            .arg(it.value())
+                            .arg(QString::number(pct, 'f', 1));
+        series->append(label, it.value());
     }
 
-    // Update the chart with the new series.
-    QChart *chart = chartView->chart();
+    series->setLabelsVisible(true);
+    // Use QPieSlice::LabelOutside, not a QPieSeries enum
+    series->setLabelsPosition(QPieSlice::LabelOutside);
+
+    QFont f;
+    f.setPointSize(16);
+    f.setBold(true);
+    for (QPieSlice *slice : series->slices()) {
+        slice->setLabelFont(f);
+        slice->setExploded(true);
+        slice->setExplodeDistanceFactor(0.1);
+    }
+
+    auto *chart = chartView->chart();
     chart->removeAllSeries();
     chart->addSeries(series);
     chart->setTitle("Statistiques par type de réclamation");

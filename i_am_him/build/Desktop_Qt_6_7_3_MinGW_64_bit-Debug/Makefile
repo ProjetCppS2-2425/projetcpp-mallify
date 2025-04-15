@@ -410,13 +410,23 @@ Makefile: ../../i_am_him.pro C:/Qt/6.7.3/mingw_64/mkspecs/win32-g++/qmake.conf C
 		C:/Qt/6.7.3/mingw_64/lib/Qt6Charts.prl \
 		C:/Qt/6.7.3/mingw_64/lib/Qt6OpenGLWidgets.prl \
 		C:/Qt/6.7.3/mingw_64/lib/Qt6MultimediaWidgets.prl \
+		C:/Qt/6.7.3/mingw_64/lib/Qt6QuickWidgets.prl \
 		C:/Qt/6.7.3/mingw_64/lib/Qt6Widgets.prl \
+		C:/Qt/6.7.3/mingw_64/lib/Qt6QuickControls2.prl \
+		C:/Qt/6.7.3/mingw_64/lib/Qt6Location.prl \
+		C:/Qt/6.7.3/mingw_64/lib/Qt6PositioningQuick.prl \
+		C:/Qt/6.7.3/mingw_64/lib/Qt6QuickShapes.prl \
+		C:/Qt/6.7.3/mingw_64/lib/Qt6Quick.prl \
 		C:/Qt/6.7.3/mingw_64/lib/Qt6OpenGL.prl \
 		C:/Qt/6.7.3/mingw_64/lib/Qt6Multimedia.prl \
 		C:/Qt/6.7.3/mingw_64/lib/Qt6Gui.prl \
 		C:/Qt/6.7.3/mingw_64/lib/Qt6Sql.prl \
+		C:/Qt/6.7.3/mingw_64/lib/Qt6QmlModels.prl \
+		C:/Qt/6.7.3/mingw_64/lib/Qt6Qml.prl \
 		C:/Qt/6.7.3/mingw_64/lib/Qt6Network.prl \
+		C:/Qt/6.7.3/mingw_64/lib/Qt6Positioning.prl \
 		C:/Qt/6.7.3/mingw_64/lib/Qt6Core.prl \
+		C:/Qt/6.7.3/mingw_64/lib/Qt6QmlBuiltins.prl \
 		C:/Qt/6.7.3/mingw_64/mkspecs/features/build_pass.prf
 	$(QMAKE) -o Makefile ..\..\i_am_him.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
 C:/Qt/6.7.3/mingw_64/mkspecs/features/spec_pre.prf:
@@ -759,13 +769,23 @@ C:/Qt/6.7.3/mingw_64/mkspecs/features/lex.prf:
 C:/Qt/6.7.3/mingw_64/lib/Qt6Charts.prl:
 C:/Qt/6.7.3/mingw_64/lib/Qt6OpenGLWidgets.prl:
 C:/Qt/6.7.3/mingw_64/lib/Qt6MultimediaWidgets.prl:
+C:/Qt/6.7.3/mingw_64/lib/Qt6QuickWidgets.prl:
 C:/Qt/6.7.3/mingw_64/lib/Qt6Widgets.prl:
+C:/Qt/6.7.3/mingw_64/lib/Qt6QuickControls2.prl:
+C:/Qt/6.7.3/mingw_64/lib/Qt6Location.prl:
+C:/Qt/6.7.3/mingw_64/lib/Qt6PositioningQuick.prl:
+C:/Qt/6.7.3/mingw_64/lib/Qt6QuickShapes.prl:
+C:/Qt/6.7.3/mingw_64/lib/Qt6Quick.prl:
 C:/Qt/6.7.3/mingw_64/lib/Qt6OpenGL.prl:
 C:/Qt/6.7.3/mingw_64/lib/Qt6Multimedia.prl:
 C:/Qt/6.7.3/mingw_64/lib/Qt6Gui.prl:
 C:/Qt/6.7.3/mingw_64/lib/Qt6Sql.prl:
+C:/Qt/6.7.3/mingw_64/lib/Qt6QmlModels.prl:
+C:/Qt/6.7.3/mingw_64/lib/Qt6Qml.prl:
 C:/Qt/6.7.3/mingw_64/lib/Qt6Network.prl:
+C:/Qt/6.7.3/mingw_64/lib/Qt6Positioning.prl:
 C:/Qt/6.7.3/mingw_64/lib/Qt6Core.prl:
+C:/Qt/6.7.3/mingw_64/lib/Qt6QmlBuiltins.prl:
 C:/Qt/6.7.3/mingw_64/mkspecs/features/build_pass.prf:
 qmake: FORCE
 	@$(QMAKE) -o Makefile ..\..\i_am_him.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"

@@ -8,6 +8,15 @@
 #include <QDataStream>
 #include <QByteArray>
 
+#include <QFile>
+#include <QDataStream>
+#include <QStandardPaths>
+#include <QJsonDocument>
+#include <QJsonObject>
+#include <QJsonArray>
+#include <QJsonValue>
+
+
 SpeechRecognizer::SpeechRecognizer(QObject *parent)
     : QObject(parent),
     audioSource(nullptr),
@@ -52,17 +61,11 @@ void SpeechRecognizer::startRecording()
 void SpeechRecognizer::stopRecording()
 {
     if (audioSource) {
-        // Stop the audio capture.
         audioSource->stop();
-
-        // Disconnect the readyRead signal.
         disconnect(audioIODevice, &QIODevice::readyRead, this, &SpeechRecognizer::onReadyRead);
-
-        // Debug: Log that stopRecording has been triggered and the size of recorded data.
         qDebug() << "stopRecording(): Audio recording stopped. Total recorded data:" << recordedData.size() << "bytes";
-
-        // Now, send the recorded audio data to the online speech-to-text service.
-        uploadAudioData(recordedData);
+        // NO! don’t upload raw PCM
+        //uploadAudioData(recordedData);
     }
 }
 
@@ -105,25 +108,113 @@ void SpeechRecognizer::uploadAudioData(const QByteArray &audioData)
 
 void SpeechRecognizer::onNetworkReplyFinished(QNetworkReply *reply)
 {
+    // Log HTTP status for debugging
+    int status = reply->attribute(QNetworkRequest::HttpStatusCodeAttribute).toInt();
+    qDebug() << "[onNetworkReplyFinished] HTTP status code:" << status;
+
     if (reply->error() == QNetworkReply::NoError) {
         QByteArray responseData = reply->readAll();
-
-        // Debug: Log the full API response.
         qDebug() << "onNetworkReplyFinished(): API response received:" << responseData;
 
-        // Convert the received data into a JSON document.
         QJsonDocument jsonDoc = QJsonDocument::fromJson(responseData);
-        QJsonObject jsonObj = jsonDoc.object();
+        QJsonObject  jsonObj = jsonDoc.object();
 
-        // Extract the transcription text. Adjust the key ("transcription") as needed.
-        QString transcription = jsonObj["transcription"].toString();
-        emit transcriptionReceived(transcription);
-    } else {
-        // Debug: Log the error string for troubleshooting.
-        qDebug() << "onNetworkReplyFinished(): API error occurred:" << reply->errorString();
-        emit errorOccurred(reply->errorString());
+        // Deepgram returns: { results: { channels: [ { alternatives: [ { transcript: "..."} ] } ] } }
+        QJsonObject resultsObj = jsonObj.value("results").toObject();
+        QJsonArray  channels   = resultsObj.value("channels").toArray();
+        if (!channels.isEmpty()) {
+            QJsonObject ch0 = channels.at(0).toObject();
+            QJsonArray  alts = ch0.value("alternatives").toArray();
+            if (!alts.isEmpty()) {
+                QString transcript = alts.at(0).toObject().value("transcript").toString();
+                qDebug() << "[onNetworkReplyFinished] Parsed transcript:" << transcript;
+                emit transcriptionReceived(transcript);
+                reply->deleteLater();
+                return;
+            }
+        }
+
+        // No transcript found
+        emit transcriptionReceived(QString());
+    }
+    else {
+        QString err = reply->errorString();
+        qDebug() << "[onNetworkReplyFinished] ERROR:" << err;
+        emit errorOccurred(err);
     }
 
     reply->deleteLater();
 }
 
+void SpeechRecognizer::saveAudioToFile(const QString &filePath)
+{
+    qDebug() << "[saveAudioToFile] Attempting to open" << filePath;
+    QFile file(filePath);
+    if (!file.open(QIODevice::WriteOnly)) {
+        QString err = "Failed to open file for writing: " + file.errorString();
+        qDebug() << "[saveAudioToFile] ERROR:" << err;
+        emit errorOccurred(err);
+        return;
+    }
+
+    // Prepare WAV header
+    QDataStream out(&file);
+    out.setByteOrder(QDataStream::LittleEndian);
+
+    quint32 dataSize    = static_cast<quint32>(recordedData.size());
+    quint32 fileSize    = 36 + dataSize;
+    quint16 audioFormat = 1;    // PCM
+    quint16 channels    = 1;
+    quint32 sampleRate  = 16000;
+    quint16 bitsPerSample = 16;
+    quint32 byteRate    = sampleRate * channels * bitsPerSample / 8;
+    quint16 blockAlign  = channels * bitsPerSample / 8;
+
+    qDebug() << "[saveAudioToFile] Writing WAV header:"
+             << "dataSize=" << dataSize
+             << "fileSize=" << fileSize;
+
+    // RIFF chunk
+    out.writeRawData("RIFF", 4);
+    out << fileSize;
+    out.writeRawData("WAVE", 4);
+
+    // fmt subchunk
+    out.writeRawData("fmt ", 4);
+    out << (quint32)16;         // Subchunk1Size
+    out << audioFormat;
+    out << channels;
+    out << sampleRate;
+    out << byteRate;
+    out << blockAlign;
+    out << bitsPerSample;
+
+    // data subchunk
+    out.writeRawData("data", 4);
+    out << dataSize;
+
+    qint64 written = file.write(recordedData);
+    qDebug() << "[saveAudioToFile] Wrote" << written << "bytes of audio data";
+
+    file.close();
+    qDebug() << "[saveAudioToFile] File closed successfully.";
+}
+
+void SpeechRecognizer::transcribeAudioFile(const QString &filePath)
+{
+    qDebug() << "[transcribeAudioFile] Opening file:" << filePath;
+    QFile file(filePath);
+    if (!file.open(QIODevice::ReadOnly)) {
+        QString err = "Cannot open audio file for transcription: " + file.errorString();
+        qDebug() << "[transcribeAudioFile] ERROR:" << err;
+        emit errorOccurred(err);
+        return;
+    }
+
+    QByteArray audioData = file.readAll();
+    file.close();
+    qDebug() << "[transcribeAudioFile] Read" << audioData.size() << "bytes from file";
+
+    // Reuse your existing uploader
+    uploadAudioData(audioData);
+}

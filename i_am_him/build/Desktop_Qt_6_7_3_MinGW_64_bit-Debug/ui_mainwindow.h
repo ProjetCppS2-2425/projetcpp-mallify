@@ -144,42 +144,53 @@ public:
     QLabel *label_8;
     QLineEdit *lineEditLocation;
     QLineEdit *lineEditEmail;
-    QLineEdit *lineEditName;
     QLineEdit *lineEditPhone;
     QTextEdit *textEditDescription;
     QComboBox *comboBoxStatus;
     QPushButton *startButton;
+    QPushButton *ShowMap;
+    QLineEdit *lineEditName;
     QWidget *Remove;
     QGridLayout *gridLayout_12;
     QFrame *frame_3;
     QGridLayout *gridLayout_13;
-    QPushButton *selectAll;
     QLabel *label_12;
-    QLabel *label_30;
-    QLineEdit *lineEditLocation_2;
-    QPushButton *pushButton_3;
-    QTextEdit *textEditDescription_2;
-    QPushButton *Updatebtn;
-    QComboBox *columnComboBox;
-    QComboBox *comboBoxPriority_2;
-    QLineEdit *lineEditPhone_2;
-    QLabel *label_14;
-    QLabel *label_13;
-    QPushButton *pushButtonDelete;
+    QLabel *label_22;
+    QLabel *label_15;
     QTableWidget *tableWidget_2;
+    QLabel *label_16;
+    QPushButton *pushButton;
+    QPushButton *pushButtonDelete;
+    QPushButton *pushButton_3;
+    QLineEdit *lineEditLocation_2;
+    QLineEdit *lineEditPhone_2;
+    QPushButton *Updatebtn;
     QLineEdit *lineEditEmail_2;
     QComboBox *comboBoxStatus_2;
-    QLineEdit *searchbox_emp_4;
-    QPushButton *rec_search_btn_4;
-    QLabel *label_15;
-    QLabel *label_16;
-    QLabel *label_22;
     QComboBox *comboBoxCategory_2;
+    QLabel *label_14;
+    QComboBox *comboBoxPriority_2;
+    QLabel *label_13;
     QLineEdit *lineEditName_2;
-    QPushButton *pushButton;
-    QWidget *PDF_Status;
+    QPushButton *selectAll;
+    QTextEdit *textEditDescription_2;
+    QLineEdit *searchbox_emp_4;
+    QComboBox *columnComboBox;
+    QLabel *label_30;
+    QLabel *label_17;
+    QPushButton *rec_search_btn_4;
+    QLabel *label_18;
+    QWidget *VoiceCall;
     QGridLayout *gridLayout_16;
-    QWidget *widget;
+    QFrame *frame_2;
+    QGridLayout *gridLayout_14;
+    QPushButton *callDest2Btn;
+    QPushButton *callDest1Btn;
+    QLabel *statusLabel;
+    QPushButton *muteBtn;
+    QPushButton *hangupBtn;
+    QPushButton *speakBtn;
+    QPushButton *pushButton_4;
     QWidget *shop_page;
     QGridLayout *gridLayout_18;
     QTabWidget *tabWidget_4;
@@ -1092,8 +1103,8 @@ public:
 
         gridLayout_11->addWidget(lineEditEmail, 5, 0, 1, 1);
 
-        lineEditName = new QLineEdit(frame);
-        lineEditName->setObjectName("lineEditName");
+        lineEditPhone = new QLineEdit(frame);
+        lineEditPhone->setObjectName("lineEditPhone");
         QPalette palette2;
         palette2.setBrush(QPalette::Active, QPalette::WindowText, brush);
         palette2.setBrush(QPalette::Active, QPalette::Button, brush4);
@@ -1101,8 +1112,6 @@ public:
         palette2.setBrush(QPalette::Active, QPalette::ButtonText, brush);
         palette2.setBrush(QPalette::Active, QPalette::Base, brush4);
         palette2.setBrush(QPalette::Active, QPalette::Window, brush4);
-        palette2.setBrush(QPalette::Active, QPalette::HighlightedText, brush);
-        palette2.setBrush(QPalette::Active, QPalette::ToolTipText, brush);
 #if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
         palette2.setBrush(QPalette::Active, QPalette::PlaceholderText, brush5);
 #endif
@@ -1112,8 +1121,6 @@ public:
         palette2.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
         palette2.setBrush(QPalette::Inactive, QPalette::Base, brush4);
         palette2.setBrush(QPalette::Inactive, QPalette::Window, brush4);
-        palette2.setBrush(QPalette::Inactive, QPalette::HighlightedText, brush);
-        palette2.setBrush(QPalette::Inactive, QPalette::ToolTipText, brush);
 #if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
         palette2.setBrush(QPalette::Inactive, QPalette::PlaceholderText, brush5);
 #endif
@@ -1123,47 +1130,10 @@ public:
         palette2.setBrush(QPalette::Disabled, QPalette::ButtonText, brush6);
         palette2.setBrush(QPalette::Disabled, QPalette::Base, brush7);
         palette2.setBrush(QPalette::Disabled, QPalette::Window, brush7);
-        palette2.setBrush(QPalette::Disabled, QPalette::HighlightedText, brush);
-        palette2.setBrush(QPalette::Disabled, QPalette::ToolTipText, brush);
 #if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
         palette2.setBrush(QPalette::Disabled, QPalette::PlaceholderText, brush8);
 #endif
-        lineEditName->setPalette(palette2);
-        lineEditName->setStyleSheet(QString::fromUtf8(""));
-
-        gridLayout_11->addWidget(lineEditName, 2, 0, 1, 2);
-
-        lineEditPhone = new QLineEdit(frame);
-        lineEditPhone->setObjectName("lineEditPhone");
-        QPalette palette3;
-        palette3.setBrush(QPalette::Active, QPalette::WindowText, brush);
-        palette3.setBrush(QPalette::Active, QPalette::Button, brush4);
-        palette3.setBrush(QPalette::Active, QPalette::Text, brush);
-        palette3.setBrush(QPalette::Active, QPalette::ButtonText, brush);
-        palette3.setBrush(QPalette::Active, QPalette::Base, brush4);
-        palette3.setBrush(QPalette::Active, QPalette::Window, brush4);
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette3.setBrush(QPalette::Active, QPalette::PlaceholderText, brush5);
-#endif
-        palette3.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
-        palette3.setBrush(QPalette::Inactive, QPalette::Button, brush4);
-        palette3.setBrush(QPalette::Inactive, QPalette::Text, brush);
-        palette3.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
-        palette3.setBrush(QPalette::Inactive, QPalette::Base, brush4);
-        palette3.setBrush(QPalette::Inactive, QPalette::Window, brush4);
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette3.setBrush(QPalette::Inactive, QPalette::PlaceholderText, brush5);
-#endif
-        palette3.setBrush(QPalette::Disabled, QPalette::WindowText, brush6);
-        palette3.setBrush(QPalette::Disabled, QPalette::Button, brush7);
-        palette3.setBrush(QPalette::Disabled, QPalette::Text, brush6);
-        palette3.setBrush(QPalette::Disabled, QPalette::ButtonText, brush6);
-        palette3.setBrush(QPalette::Disabled, QPalette::Base, brush7);
-        palette3.setBrush(QPalette::Disabled, QPalette::Window, brush7);
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette3.setBrush(QPalette::Disabled, QPalette::PlaceholderText, brush8);
-#endif
-        lineEditPhone->setPalette(palette3);
+        lineEditPhone->setPalette(palette2);
         lineEditPhone->setStyleSheet(QString::fromUtf8(""));
 
         gridLayout_11->addWidget(lineEditPhone, 8, 0, 1, 1);
@@ -1183,8 +1153,55 @@ public:
 
         startButton = new QPushButton(frame);
         startButton->setObjectName("startButton");
+        startButton->setFont(font);
 
         gridLayout_11->addWidget(startButton, 12, 4, 1, 1);
+
+        ShowMap = new QPushButton(frame);
+        ShowMap->setObjectName("ShowMap");
+
+        gridLayout_11->addWidget(ShowMap, 10, 1, 1, 1);
+
+        lineEditName = new QLineEdit(frame);
+        lineEditName->setObjectName("lineEditName");
+        QPalette palette3;
+        palette3.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        palette3.setBrush(QPalette::Active, QPalette::Button, brush4);
+        palette3.setBrush(QPalette::Active, QPalette::Text, brush);
+        palette3.setBrush(QPalette::Active, QPalette::ButtonText, brush);
+        palette3.setBrush(QPalette::Active, QPalette::Base, brush4);
+        palette3.setBrush(QPalette::Active, QPalette::Window, brush4);
+        palette3.setBrush(QPalette::Active, QPalette::HighlightedText, brush);
+        palette3.setBrush(QPalette::Active, QPalette::ToolTipText, brush);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette3.setBrush(QPalette::Active, QPalette::PlaceholderText, brush5);
+#endif
+        palette3.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette3.setBrush(QPalette::Inactive, QPalette::Button, brush4);
+        palette3.setBrush(QPalette::Inactive, QPalette::Text, brush);
+        palette3.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
+        palette3.setBrush(QPalette::Inactive, QPalette::Base, brush4);
+        palette3.setBrush(QPalette::Inactive, QPalette::Window, brush4);
+        palette3.setBrush(QPalette::Inactive, QPalette::HighlightedText, brush);
+        palette3.setBrush(QPalette::Inactive, QPalette::ToolTipText, brush);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette3.setBrush(QPalette::Inactive, QPalette::PlaceholderText, brush5);
+#endif
+        palette3.setBrush(QPalette::Disabled, QPalette::WindowText, brush6);
+        palette3.setBrush(QPalette::Disabled, QPalette::Button, brush7);
+        palette3.setBrush(QPalette::Disabled, QPalette::Text, brush6);
+        palette3.setBrush(QPalette::Disabled, QPalette::ButtonText, brush6);
+        palette3.setBrush(QPalette::Disabled, QPalette::Base, brush7);
+        palette3.setBrush(QPalette::Disabled, QPalette::Window, brush7);
+        palette3.setBrush(QPalette::Disabled, QPalette::HighlightedText, brush);
+        palette3.setBrush(QPalette::Disabled, QPalette::ToolTipText, brush);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette3.setBrush(QPalette::Disabled, QPalette::PlaceholderText, brush8);
+#endif
+        lineEditName->setPalette(palette3);
+        lineEditName->setStyleSheet(QString::fromUtf8(""));
+
+        gridLayout_11->addWidget(lineEditName, 2, 0, 1, 1);
 
 
         gridLayout_10->addWidget(frame, 0, 0, 1, 1);
@@ -1203,10 +1220,44 @@ public:
         frame_3->setFrameShadow(QFrame::Shadow::Raised);
         gridLayout_13 = new QGridLayout(frame_3);
         gridLayout_13->setObjectName("gridLayout_13");
-        selectAll = new QPushButton(frame_3);
-        selectAll->setObjectName("selectAll");
-        sizePolicy.setHeightForWidth(selectAll->sizePolicy().hasHeightForWidth());
-        selectAll->setSizePolicy(sizePolicy);
+        label_12 = new QLabel(frame_3);
+        label_12->setObjectName("label_12");
+
+        gridLayout_13->addWidget(label_12, 5, 5, 1, 1);
+
+        label_22 = new QLabel(frame_3);
+        label_22->setObjectName("label_22");
+        label_22->setMaximumSize(QSize(261, 81));
+        label_22->setBaseSize(QSize(0, 1000));
+        label_22->setFont(font5);
+
+        gridLayout_13->addWidget(label_22, 1, 0, 1, 1);
+
+        label_15 = new QLabel(frame_3);
+        label_15->setObjectName("label_15");
+
+        gridLayout_13->addWidget(label_15, 11, 5, 1, 1);
+
+        tableWidget_2 = new QTableWidget(frame_3);
+        if (tableWidget_2->columnCount() < 8)
+            tableWidget_2->setColumnCount(8);
+        QTableWidgetItem *__qtablewidgetitem10 = new QTableWidgetItem();
+        tableWidget_2->setHorizontalHeaderItem(0, __qtablewidgetitem10);
+        QTableWidgetItem *__qtablewidgetitem11 = new QTableWidgetItem();
+        tableWidget_2->setHorizontalHeaderItem(1, __qtablewidgetitem11);
+        QTableWidgetItem *__qtablewidgetitem12 = new QTableWidgetItem();
+        tableWidget_2->setHorizontalHeaderItem(2, __qtablewidgetitem12);
+        QTableWidgetItem *__qtablewidgetitem13 = new QTableWidgetItem();
+        tableWidget_2->setHorizontalHeaderItem(3, __qtablewidgetitem13);
+        QTableWidgetItem *__qtablewidgetitem14 = new QTableWidgetItem();
+        tableWidget_2->setHorizontalHeaderItem(4, __qtablewidgetitem14);
+        QTableWidgetItem *__qtablewidgetitem15 = new QTableWidgetItem();
+        tableWidget_2->setHorizontalHeaderItem(5, __qtablewidgetitem15);
+        QTableWidgetItem *__qtablewidgetitem16 = new QTableWidgetItem();
+        tableWidget_2->setHorizontalHeaderItem(6, __qtablewidgetitem16);
+        QTableWidgetItem *__qtablewidgetitem17 = new QTableWidgetItem();
+        tableWidget_2->setHorizontalHeaderItem(7, __qtablewidgetitem17);
+        tableWidget_2->setObjectName("tableWidget_2");
         QPalette palette5;
         palette5.setBrush(QPalette::Active, QPalette::WindowText, brush);
         palette5.setBrush(QPalette::Active, QPalette::Button, brush3);
@@ -1275,74 +1326,29 @@ public:
         palette5.setBrush(QPalette::Disabled, QPalette::PlaceholderText, brush13);
 #endif
         palette5.setBrush(QPalette::Disabled, QPalette::Accent, brush3);
-        selectAll->setPalette(palette5);
-        selectAll->setAutoFillBackground(false);
-        selectAll->setStyleSheet(QString::fromUtf8(""));
+        tableWidget_2->setPalette(palette5);
+        tableWidget_2->setAlternatingRowColors(false);
+        tableWidget_2->setSelectionBehavior(QAbstractItemView::SelectionBehavior::SelectRows);
+        tableWidget_2->setShowGrid(true);
+        tableWidget_2->setCornerButtonEnabled(true);
+        tableWidget_2->setRowCount(0);
+        tableWidget_2->setColumnCount(8);
+        tableWidget_2->horizontalHeader()->setCascadingSectionResizes(false);
+        tableWidget_2->horizontalHeader()->setDefaultSectionSize(108);
 
-        gridLayout_13->addWidget(selectAll, 21, 0, 1, 1);
+        gridLayout_13->addWidget(tableWidget_2, 5, 0, 14, 5);
 
-        label_12 = new QLabel(frame_3);
-        label_12->setObjectName("label_12");
+        label_16 = new QLabel(frame_3);
+        label_16->setObjectName("label_16");
 
-        gridLayout_13->addWidget(label_12, 5, 5, 1, 1);
+        gridLayout_13->addWidget(label_16, 17, 5, 1, 1);
 
-        label_30 = new QLabel(frame_3);
-        label_30->setObjectName("label_30");
-        label_30->setFont(font6);
+        pushButton = new QPushButton(frame_3);
+        pushButton->setObjectName("pushButton");
+        sizePolicy2.setHeightForWidth(pushButton->sizePolicy().hasHeightForWidth());
+        pushButton->setSizePolicy(sizePolicy2);
 
-        gridLayout_13->addWidget(label_30, 2, 2, 1, 1);
-
-        lineEditLocation_2 = new QLineEdit(frame_3);
-        lineEditLocation_2->setObjectName("lineEditLocation_2");
-
-        gridLayout_13->addWidget(lineEditLocation_2, 12, 5, 1, 1);
-
-        pushButton_3 = new QPushButton(frame_3);
-        pushButton_3->setObjectName("pushButton_3");
-        sizePolicy2.setHeightForWidth(pushButton_3->sizePolicy().hasHeightForWidth());
-        pushButton_3->setSizePolicy(sizePolicy2);
-
-        gridLayout_13->addWidget(pushButton_3, 21, 2, 1, 1);
-
-        textEditDescription_2 = new QTextEdit(frame_3);
-        textEditDescription_2->setObjectName("textEditDescription_2");
-
-        gridLayout_13->addWidget(textEditDescription_2, 18, 5, 1, 1);
-
-        Updatebtn = new QPushButton(frame_3);
-        Updatebtn->setObjectName("Updatebtn");
-
-        gridLayout_13->addWidget(Updatebtn, 21, 5, 1, 1);
-
-        columnComboBox = new QComboBox(frame_3);
-        columnComboBox->setObjectName("columnComboBox");
-
-        gridLayout_13->addWidget(columnComboBox, 3, 2, 1, 2);
-
-        comboBoxPriority_2 = new QComboBox(frame_3);
-        comboBoxPriority_2->addItem(QString());
-        comboBoxPriority_2->addItem(QString());
-        comboBoxPriority_2->addItem(QString());
-        comboBoxPriority_2->addItem(QString());
-        comboBoxPriority_2->addItem(QString());
-        comboBoxPriority_2->setObjectName("comboBoxPriority_2");
-
-        gridLayout_13->addWidget(comboBoxPriority_2, 14, 5, 1, 1);
-
-        lineEditPhone_2 = new QLineEdit(frame_3);
-        lineEditPhone_2->setObjectName("lineEditPhone_2");
-
-        gridLayout_13->addWidget(lineEditPhone_2, 10, 5, 1, 1);
-
-        label_14 = new QLabel(frame_3);
-        label_14->setObjectName("label_14");
-
-        gridLayout_13->addWidget(label_14, 9, 5, 1, 1);
-
-        label_13 = new QLabel(frame_3);
-        label_13->setObjectName("label_13");
-
-        gridLayout_13->addWidget(label_13, 7, 5, 1, 1);
+        gridLayout_13->addWidget(pushButton, 21, 1, 1, 1);
 
         pushButtonDelete = new QPushButton(frame_3);
         pushButtonDelete->setObjectName("pushButtonDelete");
@@ -1409,26 +1415,82 @@ public:
 
         gridLayout_13->addWidget(pushButtonDelete, 21, 3, 1, 1);
 
-        tableWidget_2 = new QTableWidget(frame_3);
-        if (tableWidget_2->columnCount() < 8)
-            tableWidget_2->setColumnCount(8);
-        QTableWidgetItem *__qtablewidgetitem10 = new QTableWidgetItem();
-        tableWidget_2->setHorizontalHeaderItem(0, __qtablewidgetitem10);
-        QTableWidgetItem *__qtablewidgetitem11 = new QTableWidgetItem();
-        tableWidget_2->setHorizontalHeaderItem(1, __qtablewidgetitem11);
-        QTableWidgetItem *__qtablewidgetitem12 = new QTableWidgetItem();
-        tableWidget_2->setHorizontalHeaderItem(2, __qtablewidgetitem12);
-        QTableWidgetItem *__qtablewidgetitem13 = new QTableWidgetItem();
-        tableWidget_2->setHorizontalHeaderItem(3, __qtablewidgetitem13);
-        QTableWidgetItem *__qtablewidgetitem14 = new QTableWidgetItem();
-        tableWidget_2->setHorizontalHeaderItem(4, __qtablewidgetitem14);
-        QTableWidgetItem *__qtablewidgetitem15 = new QTableWidgetItem();
-        tableWidget_2->setHorizontalHeaderItem(5, __qtablewidgetitem15);
-        QTableWidgetItem *__qtablewidgetitem16 = new QTableWidgetItem();
-        tableWidget_2->setHorizontalHeaderItem(6, __qtablewidgetitem16);
-        QTableWidgetItem *__qtablewidgetitem17 = new QTableWidgetItem();
-        tableWidget_2->setHorizontalHeaderItem(7, __qtablewidgetitem17);
-        tableWidget_2->setObjectName("tableWidget_2");
+        pushButton_3 = new QPushButton(frame_3);
+        pushButton_3->setObjectName("pushButton_3");
+        sizePolicy2.setHeightForWidth(pushButton_3->sizePolicy().hasHeightForWidth());
+        pushButton_3->setSizePolicy(sizePolicy2);
+
+        gridLayout_13->addWidget(pushButton_3, 21, 2, 1, 1);
+
+        lineEditLocation_2 = new QLineEdit(frame_3);
+        lineEditLocation_2->setObjectName("lineEditLocation_2");
+
+        gridLayout_13->addWidget(lineEditLocation_2, 12, 5, 1, 1);
+
+        lineEditPhone_2 = new QLineEdit(frame_3);
+        lineEditPhone_2->setObjectName("lineEditPhone_2");
+
+        gridLayout_13->addWidget(lineEditPhone_2, 10, 5, 1, 1);
+
+        Updatebtn = new QPushButton(frame_3);
+        Updatebtn->setObjectName("Updatebtn");
+
+        gridLayout_13->addWidget(Updatebtn, 21, 5, 1, 1);
+
+        lineEditEmail_2 = new QLineEdit(frame_3);
+        lineEditEmail_2->setObjectName("lineEditEmail_2");
+
+        gridLayout_13->addWidget(lineEditEmail_2, 8, 5, 1, 1);
+
+        comboBoxStatus_2 = new QComboBox(frame_3);
+        comboBoxStatus_2->addItem(QString());
+        comboBoxStatus_2->addItem(QString());
+        comboBoxStatus_2->addItem(QString());
+        comboBoxStatus_2->addItem(QString());
+        comboBoxStatus_2->addItem(QString());
+        comboBoxStatus_2->setObjectName("comboBoxStatus_2");
+
+        gridLayout_13->addWidget(comboBoxStatus_2, 16, 5, 1, 1);
+
+        comboBoxCategory_2 = new QComboBox(frame_3);
+        comboBoxCategory_2->addItem(QString());
+        comboBoxCategory_2->addItem(QString());
+        comboBoxCategory_2->addItem(QString());
+        comboBoxCategory_2->addItem(QString());
+        comboBoxCategory_2->addItem(QString());
+        comboBoxCategory_2->setObjectName("comboBoxCategory_2");
+
+        gridLayout_13->addWidget(comboBoxCategory_2, 15, 5, 1, 1);
+
+        label_14 = new QLabel(frame_3);
+        label_14->setObjectName("label_14");
+
+        gridLayout_13->addWidget(label_14, 9, 5, 1, 1);
+
+        comboBoxPriority_2 = new QComboBox(frame_3);
+        comboBoxPriority_2->addItem(QString());
+        comboBoxPriority_2->addItem(QString());
+        comboBoxPriority_2->addItem(QString());
+        comboBoxPriority_2->addItem(QString());
+        comboBoxPriority_2->addItem(QString());
+        comboBoxPriority_2->setObjectName("comboBoxPriority_2");
+
+        gridLayout_13->addWidget(comboBoxPriority_2, 14, 5, 1, 1);
+
+        label_13 = new QLabel(frame_3);
+        label_13->setObjectName("label_13");
+
+        gridLayout_13->addWidget(label_13, 7, 5, 1, 1);
+
+        lineEditName_2 = new QLineEdit(frame_3);
+        lineEditName_2->setObjectName("lineEditName_2");
+
+        gridLayout_13->addWidget(lineEditName_2, 6, 5, 1, 1);
+
+        selectAll = new QPushButton(frame_3);
+        selectAll->setObjectName("selectAll");
+        sizePolicy.setHeightForWidth(selectAll->sizePolicy().hasHeightForWidth());
+        selectAll->setSizePolicy(sizePolicy);
         QPalette palette7;
         palette7.setBrush(QPalette::Active, QPalette::WindowText, brush);
         palette7.setBrush(QPalette::Active, QPalette::Button, brush3);
@@ -1487,89 +1549,56 @@ public:
         palette7.setBrush(QPalette::Disabled, QPalette::PlaceholderText, brush13);
 #endif
         palette7.setBrush(QPalette::Disabled, QPalette::Accent, brush3);
-        tableWidget_2->setPalette(palette7);
-        tableWidget_2->setAlternatingRowColors(false);
-        tableWidget_2->setSelectionBehavior(QAbstractItemView::SelectionBehavior::SelectRows);
-        tableWidget_2->setShowGrid(true);
-        tableWidget_2->setCornerButtonEnabled(true);
-        tableWidget_2->setRowCount(0);
-        tableWidget_2->setColumnCount(8);
-        tableWidget_2->horizontalHeader()->setCascadingSectionResizes(false);
-        tableWidget_2->horizontalHeader()->setDefaultSectionSize(108);
+        selectAll->setPalette(palette7);
+        selectAll->setAutoFillBackground(false);
+        selectAll->setStyleSheet(QString::fromUtf8(""));
 
-        gridLayout_13->addWidget(tableWidget_2, 5, 0, 14, 5);
+        gridLayout_13->addWidget(selectAll, 21, 0, 1, 1);
 
-        lineEditEmail_2 = new QLineEdit(frame_3);
-        lineEditEmail_2->setObjectName("lineEditEmail_2");
+        textEditDescription_2 = new QTextEdit(frame_3);
+        textEditDescription_2->setObjectName("textEditDescription_2");
 
-        gridLayout_13->addWidget(lineEditEmail_2, 8, 5, 1, 1);
-
-        comboBoxStatus_2 = new QComboBox(frame_3);
-        comboBoxStatus_2->addItem(QString());
-        comboBoxStatus_2->addItem(QString());
-        comboBoxStatus_2->addItem(QString());
-        comboBoxStatus_2->addItem(QString());
-        comboBoxStatus_2->addItem(QString());
-        comboBoxStatus_2->setObjectName("comboBoxStatus_2");
-
-        gridLayout_13->addWidget(comboBoxStatus_2, 16, 5, 1, 1);
+        gridLayout_13->addWidget(textEditDescription_2, 18, 5, 1, 1);
 
         searchbox_emp_4 = new QLineEdit(frame_3);
         searchbox_emp_4->setObjectName("searchbox_emp_4");
 
         gridLayout_13->addWidget(searchbox_emp_4, 3, 0, 1, 1);
 
+        columnComboBox = new QComboBox(frame_3);
+        columnComboBox->setObjectName("columnComboBox");
+        sizePolicy2.setHeightForWidth(columnComboBox->sizePolicy().hasHeightForWidth());
+        columnComboBox->setSizePolicy(sizePolicy2);
+
+        gridLayout_13->addWidget(columnComboBox, 3, 1, 1, 1);
+
+        label_30 = new QLabel(frame_3);
+        label_30->setObjectName("label_30");
+        label_30->setFont(font6);
+
+        gridLayout_13->addWidget(label_30, 2, 1, 1, 1);
+
+        label_17 = new QLabel(frame_3);
+        label_17->setObjectName("label_17");
+
+        gridLayout_13->addWidget(label_17, 2, 0, 1, 1);
+
         rec_search_btn_4 = new QPushButton(frame_3);
         rec_search_btn_4->setObjectName("rec_search_btn_4");
 
-        gridLayout_13->addWidget(rec_search_btn_4, 3, 5, 1, 1);
+        gridLayout_13->addWidget(rec_search_btn_4, 3, 3, 1, 1);
 
-        label_15 = new QLabel(frame_3);
-        label_15->setObjectName("label_15");
+        label_18 = new QLabel(frame_3);
+        label_18->setObjectName("label_18");
 
-        gridLayout_13->addWidget(label_15, 11, 5, 1, 1);
-
-        label_16 = new QLabel(frame_3);
-        label_16->setObjectName("label_16");
-
-        gridLayout_13->addWidget(label_16, 17, 5, 1, 1);
-
-        label_22 = new QLabel(frame_3);
-        label_22->setObjectName("label_22");
-        label_22->setMaximumSize(QSize(261, 81));
-        label_22->setBaseSize(QSize(0, 1000));
-        label_22->setFont(font5);
-
-        gridLayout_13->addWidget(label_22, 1, 0, 1, 1);
-
-        comboBoxCategory_2 = new QComboBox(frame_3);
-        comboBoxCategory_2->addItem(QString());
-        comboBoxCategory_2->addItem(QString());
-        comboBoxCategory_2->addItem(QString());
-        comboBoxCategory_2->addItem(QString());
-        comboBoxCategory_2->addItem(QString());
-        comboBoxCategory_2->setObjectName("comboBoxCategory_2");
-
-        gridLayout_13->addWidget(comboBoxCategory_2, 15, 5, 1, 1);
-
-        lineEditName_2 = new QLineEdit(frame_3);
-        lineEditName_2->setObjectName("lineEditName_2");
-
-        gridLayout_13->addWidget(lineEditName_2, 6, 5, 1, 1);
-
-        pushButton = new QPushButton(frame_3);
-        pushButton->setObjectName("pushButton");
-        sizePolicy2.setHeightForWidth(pushButton->sizePolicy().hasHeightForWidth());
-        pushButton->setSizePolicy(sizePolicy2);
-
-        gridLayout_13->addWidget(pushButton, 21, 1, 1, 1);
+        gridLayout_13->addWidget(label_18, 4, 0, 1, 1);
 
 
         gridLayout_12->addWidget(frame_3, 0, 0, 1, 1);
 
         tabWidget_3->addTab(Remove, QString());
-        PDF_Status = new QWidget();
-        PDF_Status->setObjectName("PDF_Status");
+        VoiceCall = new QWidget();
+        VoiceCall->setObjectName("VoiceCall");
         QPalette palette8;
         palette8.setBrush(QPalette::Active, QPalette::WindowText, brush);
         palette8.setBrush(QPalette::Active, QPalette::Button, brush3);
@@ -1628,15 +1657,66 @@ public:
         palette8.setBrush(QPalette::Disabled, QPalette::PlaceholderText, brush13);
 #endif
         palette8.setBrush(QPalette::Disabled, QPalette::Accent, brush3);
-        PDF_Status->setPalette(palette8);
-        gridLayout_16 = new QGridLayout(PDF_Status);
+        VoiceCall->setPalette(palette8);
+        gridLayout_16 = new QGridLayout(VoiceCall);
         gridLayout_16->setObjectName("gridLayout_16");
-        widget = new QWidget(PDF_Status);
-        widget->setObjectName("widget");
+        frame_2 = new QFrame(VoiceCall);
+        frame_2->setObjectName("frame_2");
+        frame_2->setFrameShape(QFrame::Shape::StyledPanel);
+        frame_2->setFrameShadow(QFrame::Shadow::Raised);
+        gridLayout_14 = new QGridLayout(frame_2);
+        gridLayout_14->setObjectName("gridLayout_14");
+        callDest2Btn = new QPushButton(frame_2);
+        callDest2Btn->setObjectName("callDest2Btn");
+        sizePolicy.setHeightForWidth(callDest2Btn->sizePolicy().hasHeightForWidth());
+        callDest2Btn->setSizePolicy(sizePolicy);
 
-        gridLayout_16->addWidget(widget, 1, 0, 1, 1);
+        gridLayout_14->addWidget(callDest2Btn, 4, 0, 1, 1);
 
-        tabWidget_3->addTab(PDF_Status, QString());
+        callDest1Btn = new QPushButton(frame_2);
+        callDest1Btn->setObjectName("callDest1Btn");
+        sizePolicy.setHeightForWidth(callDest1Btn->sizePolicy().hasHeightForWidth());
+        callDest1Btn->setSizePolicy(sizePolicy);
+
+        gridLayout_14->addWidget(callDest1Btn, 2, 0, 1, 1);
+
+        statusLabel = new QLabel(frame_2);
+        statusLabel->setObjectName("statusLabel");
+        sizePolicy2.setHeightForWidth(statusLabel->sizePolicy().hasHeightForWidth());
+        statusLabel->setSizePolicy(sizePolicy2);
+        QFont font8;
+        font8.setPointSize(16);
+        font8.setBold(false);
+        statusLabel->setFont(font8);
+
+        gridLayout_14->addWidget(statusLabel, 7, 1, 1, 1);
+
+        muteBtn = new QPushButton(frame_2);
+        muteBtn->setObjectName("muteBtn");
+
+        gridLayout_14->addWidget(muteBtn, 6, 1, 1, 1);
+
+        hangupBtn = new QPushButton(frame_2);
+        hangupBtn->setObjectName("hangupBtn");
+
+        gridLayout_14->addWidget(hangupBtn, 8, 3, 1, 1);
+
+        speakBtn = new QPushButton(frame_2);
+        speakBtn->setObjectName("speakBtn");
+        sizePolicy.setHeightForWidth(speakBtn->sizePolicy().hasHeightForWidth());
+        speakBtn->setSizePolicy(sizePolicy);
+
+        gridLayout_14->addWidget(speakBtn, 6, 0, 1, 1);
+
+        pushButton_4 = new QPushButton(frame_2);
+        pushButton_4->setObjectName("pushButton_4");
+
+        gridLayout_14->addWidget(pushButton_4, 0, 1, 1, 1);
+
+
+        gridLayout_16->addWidget(frame_2, 0, 1, 1, 1);
+
+        tabWidget_3->addTab(VoiceCall, QString());
 
         gridLayout_17->addWidget(tabWidget_3, 0, 0, 1, 1);
 
@@ -1707,13 +1787,13 @@ public:
         tableWidget_5->setHorizontalHeaderItem(6, __qtablewidgetitem24);
         if (tableWidget_5->rowCount() < 1)
             tableWidget_5->setRowCount(1);
-        QFont font8;
-        font8.setStrikeOut(false);
+        QFont font9;
+        font9.setStrikeOut(false);
         QTableWidgetItem *__qtablewidgetitem25 = new QTableWidgetItem();
-        __qtablewidgetitem25->setFont(font8);
+        __qtablewidgetitem25->setFont(font9);
         tableWidget_5->setVerticalHeaderItem(0, __qtablewidgetitem25);
         QTableWidgetItem *__qtablewidgetitem26 = new QTableWidgetItem();
-        __qtablewidgetitem26->setFont(font8);
+        __qtablewidgetitem26->setFont(font9);
         tableWidget_5->setItem(0, 0, __qtablewidgetitem26);
         tableWidget_5->setObjectName("tableWidget_5");
         tableWidget_5->setStyleSheet(QString::fromUtf8(""));
@@ -2524,7 +2604,7 @@ public:
         stackedWidget->setCurrentIndex(1);
         container->setCurrentIndex(1);
         tabWidget->setCurrentIndex(0);
-        tabWidget_3->setCurrentIndex(1);
+        tabWidget_3->setCurrentIndex(2);
         tabWidget_4->setCurrentIndex(0);
         tabWidget_2->setCurrentIndex(0);
         tabWidget_5->setCurrentIndex(0);
@@ -2627,7 +2707,7 @@ public:
         label_11->setText(QCoreApplication::translate("MainWindow", "Location:", nullptr));
         label_6->setText(QCoreApplication::translate("MainWindow", "Phone:", nullptr));
         label_5->setText(QCoreApplication::translate("MainWindow", "Email:", nullptr));
-        stopButton->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
+        stopButton->setText(QCoreApplication::translate("MainWindow", "\342\254\233", nullptr));
         label_4->setText(QCoreApplication::translate("MainWindow", "Name:", nullptr));
         label_7->setText(QCoreApplication::translate("MainWindow", "Type:", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "Status:", nullptr));
@@ -2636,22 +2716,12 @@ public:
         comboBoxStatus->setItemText(1, QCoreApplication::translate("MainWindow", "Completed", nullptr));
         comboBoxStatus->setItemText(2, QCoreApplication::translate("MainWindow", "Canceled", nullptr));
 
-        startButton->setText(QCoreApplication::translate("MainWindow", "Voice to Text", nullptr));
+        startButton->setText(QCoreApplication::translate("MainWindow", "\342\226\266", nullptr));
+        ShowMap->setText(QCoreApplication::translate("MainWindow", "Show Map", nullptr));
         tabWidget_3->setTabText(tabWidget_3->indexOf(Add), QCoreApplication::translate("MainWindow", "Add", nullptr));
-        selectAll->setText(QCoreApplication::translate("MainWindow", "Select All", nullptr));
         label_12->setText(QCoreApplication::translate("MainWindow", "Name", nullptr));
-        label_30->setText(QCoreApplication::translate("MainWindow", "Filter Type:", nullptr));
-        pushButton_3->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
-        Updatebtn->setText(QCoreApplication::translate("MainWindow", "Update", nullptr));
-        comboBoxPriority_2->setItemText(0, QCoreApplication::translate("MainWindow", "Select Priority", nullptr));
-        comboBoxPriority_2->setItemText(1, QCoreApplication::translate("MainWindow", "Emergency", nullptr));
-        comboBoxPriority_2->setItemText(2, QCoreApplication::translate("MainWindow", "Water leak", nullptr));
-        comboBoxPriority_2->setItemText(3, QCoreApplication::translate("MainWindow", "delay exprired", nullptr));
-        comboBoxPriority_2->setItemText(4, QCoreApplication::translate("MainWindow", "Broken Product", nullptr));
-
-        label_14->setText(QCoreApplication::translate("MainWindow", "phone", nullptr));
-        label_13->setText(QCoreApplication::translate("MainWindow", "email", nullptr));
-        pushButtonDelete->setText(QCoreApplication::translate("MainWindow", "Delete Selected", nullptr));
+        label_22->setText(QCoreApplication::translate("MainWindow", "Edit A Complaint:", nullptr));
+        label_15->setText(QCoreApplication::translate("MainWindow", "Location", nullptr));
         QTableWidgetItem *___qtablewidgetitem9 = tableWidget_2->horizontalHeaderItem(0);
         ___qtablewidgetitem9->setText(QCoreApplication::translate("MainWindow", "Nom", nullptr));
         QTableWidgetItem *___qtablewidgetitem10 = tableWidget_2->horizontalHeaderItem(1);
@@ -2668,25 +2738,45 @@ public:
         ___qtablewidgetitem15->setText(QCoreApplication::translate("MainWindow", "Location", nullptr));
         QTableWidgetItem *___qtablewidgetitem16 = tableWidget_2->horizontalHeaderItem(7);
         ___qtablewidgetitem16->setText(QCoreApplication::translate("MainWindow", "Description", nullptr));
+        label_16->setText(QCoreApplication::translate("MainWindow", "Description", nullptr));
+        pushButton->setText(QCoreApplication::translate("MainWindow", "PDF", nullptr));
+        pushButtonDelete->setText(QCoreApplication::translate("MainWindow", "Delete Selected", nullptr));
+        pushButton_3->setText(QCoreApplication::translate("MainWindow", "Stats", nullptr));
+        Updatebtn->setText(QCoreApplication::translate("MainWindow", "Update", nullptr));
         comboBoxStatus_2->setItemText(0, QCoreApplication::translate("MainWindow", "Select Status", nullptr));
         comboBoxStatus_2->setItemText(1, QCoreApplication::translate("MainWindow", "Pendig", nullptr));
         comboBoxStatus_2->setItemText(2, QCoreApplication::translate("MainWindow", "Completed", nullptr));
         comboBoxStatus_2->setItemText(3, QCoreApplication::translate("MainWindow", "Canceled", nullptr));
         comboBoxStatus_2->setItemText(4, QString());
 
-        rec_search_btn_4->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
-        label_15->setText(QCoreApplication::translate("MainWindow", "Location", nullptr));
-        label_16->setText(QCoreApplication::translate("MainWindow", "Description", nullptr));
-        label_22->setText(QCoreApplication::translate("MainWindow", "Edit A Complaint:", nullptr));
         comboBoxCategory_2->setItemText(0, QCoreApplication::translate("MainWindow", "Select Type", nullptr));
         comboBoxCategory_2->setItemText(1, QCoreApplication::translate("MainWindow", "SO Important", nullptr));
         comboBoxCategory_2->setItemText(2, QCoreApplication::translate("MainWindow", "Important", nullptr));
         comboBoxCategory_2->setItemText(3, QCoreApplication::translate("MainWindow", "Normal", nullptr));
         comboBoxCategory_2->setItemText(4, QCoreApplication::translate("MainWindow", "Nothing To Worry About", nullptr));
 
-        pushButton->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
+        label_14->setText(QCoreApplication::translate("MainWindow", "phone", nullptr));
+        comboBoxPriority_2->setItemText(0, QCoreApplication::translate("MainWindow", "Select Priority", nullptr));
+        comboBoxPriority_2->setItemText(1, QCoreApplication::translate("MainWindow", "Emergency", nullptr));
+        comboBoxPriority_2->setItemText(2, QCoreApplication::translate("MainWindow", "Water leak", nullptr));
+        comboBoxPriority_2->setItemText(3, QCoreApplication::translate("MainWindow", "delay exprired", nullptr));
+        comboBoxPriority_2->setItemText(4, QCoreApplication::translate("MainWindow", "Broken Product", nullptr));
+
+        label_13->setText(QCoreApplication::translate("MainWindow", "email", nullptr));
+        selectAll->setText(QCoreApplication::translate("MainWindow", "Select All", nullptr));
+        label_30->setText(QCoreApplication::translate("MainWindow", "Filter Type:", nullptr));
+        label_17->setText(QCoreApplication::translate("MainWindow", "Input Text", nullptr));
+        rec_search_btn_4->setText(QCoreApplication::translate("MainWindow", "Find", nullptr));
+        label_18->setText(QCoreApplication::translate("MainWindow", "note:click on the header to sort \342\206\223", nullptr));
         tabWidget_3->setTabText(tabWidget_3->indexOf(Remove), QCoreApplication::translate("MainWindow", "LIst Complaints", nullptr));
-        tabWidget_3->setTabText(tabWidget_3->indexOf(PDF_Status), QCoreApplication::translate("MainWindow", "PDF & Stats", nullptr));
+        callDest2Btn->setText(QCoreApplication::translate("MainWindow", "Dest2", nullptr));
+        callDest1Btn->setText(QCoreApplication::translate("MainWindow", "Dest1", nullptr));
+        statusLabel->setText(QCoreApplication::translate("MainWindow", "all Manager", nullptr));
+        muteBtn->setText(QCoreApplication::translate("MainWindow", "Mute", nullptr));
+        hangupBtn->setText(QCoreApplication::translate("MainWindow", "Hang Up", nullptr));
+        speakBtn->setText(QCoreApplication::translate("MainWindow", "Speak", nullptr));
+        pushButton_4->setText(QCoreApplication::translate("MainWindow", "open app", nullptr));
+        tabWidget_3->setTabText(tabWidget_3->indexOf(VoiceCall), QCoreApplication::translate("MainWindow", "VoiceCall", nullptr));
         comboBox_10->setItemText(0, QCoreApplication::translate("MainWindow", "Filter By State", nullptr));
         comboBox_10->setItemText(1, QCoreApplication::translate("MainWindow", "Rented", nullptr));
         comboBox_10->setItemText(2, QCoreApplication::translate("MainWindow", "Not Rented", nullptr));

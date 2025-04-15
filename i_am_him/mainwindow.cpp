@@ -4,11 +4,24 @@
 #include <QRegularExpressionValidator>  // Include the necessary header for validators
 #include <QSqlRecord>
 #include "chartwindow.h"
+#include <QStandardPaths>
 
+#include <QDesktopServices>
+#include <QUrl>
+
+#include "mainwindow.h"
+#include "mapdialog.h" // Include the dialog with the map
+#include <QPushButton>
+#include <QVBoxLayout>
+#include <QWidget>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
+    , m_transmitter(new VoiceTransmitter(this))
+    , m_receiver(new VoiceReceiver(this))
+    , m_callActive(false)
+
 {
     ui->setupUi(this);
 
@@ -41,6 +54,9 @@ MainWindow::MainWindow(QWidget *parent)
     ui->tableWidget_2->horizontalHeader()->setSectionsMovable(true);
     ui->tableWidget_2->horizontalHeader()->setSortIndicatorShown(true);
     ui->tableWidget_2->setSortingEnabled(true);
+    ui->speakBtn->setEnabled(false);
+    ui->muteBtn->setEnabled(false);
+    ui->hangupBtn->setEnabled(false);
     setAcceptDrops(true);
     QFile file("C:\\Users\\mahdo\\Downloads\\ka7loush\\i_am_him\\light.qss");
     if (file.open(QFile::ReadOnly)) {
@@ -61,9 +77,14 @@ MainWindow::MainWindow(QWidget *parent)
         ui->columnComboBox->addItem(header, i); // Display text + internal index
     }
 
+    connect(speechRecognizer, &SpeechRecognizer::transcriptionReceived,this, &MainWindow::handleTranscription);
+    connect(speechRecognizer, &SpeechRecognizer::errorOccurred,this, &MainWindow::handleError);
+
 
 }
-
+static QString number1 = "54985102";
+static QString number2 = "24566703";
+static QString number;
 MainWindow::~MainWindow()
 {
     delete ui;
@@ -479,10 +500,23 @@ void MainWindow::on_startButton_clicked()
 
 void MainWindow::on_stopButton_clicked()
 {
+    // 1) Stop & clear
     speechRecognizer->stopRecording();
-    // Optional: Update UI to indicate recording stopped.
-    qDebug() << "Recording stopped.";
+
+    // 2) Save WAV to Desktop
+    QString desktop = QStandardPaths::writableLocation(QStandardPaths::DesktopLocation);
+    QString filePath = desktop + "/recording.wav";
+    qDebug() << "[MainWindow] Saving to:" << filePath;
+    speechRecognizer->saveAudioToFile(filePath);
+
+    // 3) Send that file for transcription
+    qDebug() << "[MainWindow] Transcribing file...";
+    speechRecognizer->transcribeAudioFile(filePath);
+
+    // 4) UI feedback
+    //ui->textEditDescription->append("Saved to: " + filePath);
 }
+
 
 void MainWindow::handleTranscription(const QString &transcription)
 {
@@ -532,4 +566,147 @@ void MainWindow::on_rec_search_btn_4_clicked()
         }
     }
 }
+
+
+
+
+
+void MainWindow::on_searchbox_emp_4_textChanged(const QString &arg1)
+{
+    QString searchText = arg1;
+    int column = ui->columnComboBox->currentData().toInt(); // Get selected column
+
+    // Debugging: Check column and search text
+    qDebug() << "Selected Column: " << column;
+    qDebug() << "Search Text: " << searchText;
+
+    // If search text is empty, show all rows
+    if (searchText.isEmpty()) {
+        for (int row = 0; row < ui->tableWidget_2->rowCount(); ++row) {
+            ui->tableWidget_2->setRowHidden(row, false); // Show all rows
+        }
+        return; // Exit function early to avoid further filtering
+    }
+
+    // Filter the rows based on the search text
+    for (int row = 0; row < ui->tableWidget_2->rowCount(); ++row) {
+        QTableWidgetItem* item = ui->tableWidget_2->item(row, column);
+
+        // Ensure the item exists and then perform filtering
+        if (item) {
+            bool match = item->text().contains(searchText, Qt::CaseInsensitive);
+            ui->tableWidget_2->setRowHidden(row, !match); // Hide row if it doesn't match
+        } else {
+            qDebug() << "Item is null at row:" << row << " column:" << column;
+        }
+    }
+}
+
+
+void MainWindow::on_callDest1Btn_clicked()
+{
+    if (m_callActive)
+        return;
+
+    // Set destination IP for Call Destination 1.
+    m_currentDestination = QHostAddress("192.168.1.101");
+    ui->statusLabel->setText("Calling Destination 1...");
+
+    // Start the receiver so we can play incoming audio.
+    m_receiver->start(m_port);
+
+    // Enable the Speak and Hang Up controls.
+    ui->speakBtn->setEnabled(true);
+    ui->muteBtn->setEnabled(false);   // Initially, nothing is speaking.
+    ui->hangupBtn->setEnabled(true);
+    number = number1;
+    m_callActive = true;
+}
+
+
+void MainWindow::on_callDest2Btn_clicked()
+{
+    if (m_callActive)
+        return;
+
+    // Set destination IP for Call Destination 2.
+    m_currentDestination = QHostAddress("192.168.1.102");
+    ui->statusLabel->setText("Calling Destination 2...");
+    number = number2;
+    // Start the receiver so we can play incoming audio.
+    m_receiver->start(m_port);
+
+    // Enable Speak and Hang Up controls.
+    ui->speakBtn->setEnabled(true);
+    ui->muteBtn->setEnabled(false);
+    ui->hangupBtn->setEnabled(true);
+
+    m_callActive = true;
+}
+
+
+
+
+void MainWindow::on_speakBtn_clicked()
+{
+    if (!m_callActive)
+        return;
+
+    // Prepare destination list (using the selected destination address).
+    QList<QHostAddress> targets;
+    targets.append(m_currentDestination);
+
+    // Start transmitting audio to the specified UDP port.
+    m_transmitter->start(targets, m_port);
+
+    ui->statusLabel->setText("Speaking...");
+    ui->speakBtn->setEnabled(false);
+    ui->muteBtn->setEnabled(true);
+}
+
+
+
+void MainWindow::on_muteBtn_clicked()
+{
+    if (!m_callActive)
+        return;
+
+    // Stop transmitting audio.
+    m_transmitter->stop();
+
+    ui->statusLabel->setText("Muted");
+    ui->speakBtn->setEnabled(true);
+    ui->muteBtn->setEnabled(false);
+}
+
+
+
+void MainWindow::on_hangupBtn_clicked()
+{
+    if (!m_callActive)
+        return;
+
+    // Stop both the transmitter and the receiver.
+    m_transmitter->stop();
+    m_receiver->stop();
+
+    ui->statusLabel->setText("Call ended.");
+    ui->speakBtn->setEnabled(false);
+    ui->muteBtn->setEnabled(false);
+    ui->hangupBtn->setEnabled(false);
+
+    m_callActive = false;
+}
+
+
+void MainWindow::on_pushButton_4_clicked()
+{
+    callNumber(number);
+}
+
+void MainWindow::callNumber(const QString &number) {
+    QDesktopServices::openUrl(QUrl("tel:" + number));
+}
+
+
 

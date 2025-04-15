@@ -12,17 +12,25 @@ CONFIG += c++17
 
 SOURCES += \
     SpeechRecognizer.cpp \
+    VoiceReceiver.cpp \
+    VoiceTransmitter.cpp \
     chartwindow.cpp \
     connection.cpp \
+    coordinatehandler.cpp \
     main.cpp \
     mainwindow.cpp \
+    mapdialog.cpp \
     reclamation.cpp
 
 HEADERS += \
     SpeechRecognizer.h \
+    VoiceReceiver.h \
+    VoiceTransmitter.h \
     chartwindow.h \
     connection.h \
+    coordinatehandler.h \
     mainwindow.h \
+    mapdialog.h \
     reclamation.h
 
 FORMS += \
@@ -45,5 +53,8 @@ CONFIG += console c++11
 
 
 DEFINES += VOSK_MODEL_PATH=\\\"$$PWD/models/vosk-model\\\"
+QT += charts
+QT += quick quickcontrols2 location positioning network
+QT += quickwidgets quick network
 
 

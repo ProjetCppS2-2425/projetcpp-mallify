@@ -19,6 +19,8 @@
 #include <libs/vosk_api.h>
 #include <libs/portaudio.h>
 #include "SpeechRecognizer.h"
+#include "VoiceTransmitter.h"
+#include "VoiceReceiver.h"
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class MainWindow;
@@ -107,6 +109,22 @@ private slots:
 
     void on_rec_search_btn_4_clicked();
 
+
+    void on_searchbox_emp_4_textChanged(const QString &arg1);
+
+    void on_callDest1Btn_clicked();
+
+    void on_callDest2Btn_clicked();
+
+    void on_speakBtn_clicked();
+
+    void on_muteBtn_clicked();
+
+    void on_hangupBtn_clicked();
+
+    void on_pushButton_4_clicked();
+
+
 private:
     Ui::MainWindow *ui;
     bool isListening;
@@ -114,6 +132,21 @@ private:
     VoskModel *model;
     PaStream *stream;
     SpeechRecognizer *speechRecognizer;
+    VoiceReceiver *voiceReceiver;
+    VoiceTransmitter *voiceTransmitter;
+    void callNumber(const QString &number);
+
+    VoiceTransmitter *m_transmitter;
+    VoiceReceiver *m_receiver;
+
+    // The currently selected destination.
+    QHostAddress m_currentDestination;
+    const quint16 m_port = 45454;
+
+    // Call state flags
+    bool m_callActive;
+
+
 protected:
 };
 #endif // MAINWINDOW_H

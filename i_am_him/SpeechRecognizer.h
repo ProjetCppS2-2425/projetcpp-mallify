@@ -22,6 +22,9 @@ public:
 
     // Stops capturing audio and uploads the recorded data
     void stopRecording();
+    void saveAudioToFile(const QString &filePath);
+    void transcribeAudioFile(const QString &filePath);
+
 
 signals:
     void transcriptionReceived(const QString &transcription);
@@ -49,6 +52,8 @@ private:
 
     // Internal method to send the recorded audio data to the online API.
     void uploadAudioData(const QByteArray &audioData);
+
+
 };
 
 #endif // SPEECHRECOGNIZER_H
