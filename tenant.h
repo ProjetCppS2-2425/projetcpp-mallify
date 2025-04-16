@@ -3,7 +3,7 @@
 #include <QString>
 #include <QSqlQuery>
 #include <QSqlQueryModel>
-
+#include <list>
 #include <QDate>
 
 class Tenant {
@@ -27,6 +27,10 @@ public:
     void setId(int newId) { id = newId; }
 
     static QSqlQueryModel* fetch();
+
+    static std::list<std::pair<QString, int>> getPaymentStatusWithCounts();
+    static std::pair<int, int> getRentExpirationStatus();
+    static bool exportTableTentToCSV(const QString &filePath);
 };
 
 #endif // TENANT_H

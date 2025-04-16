@@ -56,19 +56,40 @@ private slots:
 
     void on_sidebar_btn_3_clicked();
 
-    void on_add_btn_tent_clicked();
+    void on_add_tent_clicked();
 
     void on_refresh_tab_clicked();
 
-    void on_table_emp_3_itemSelectionChanged();
-
-    void on_delete_emp_3_clicked();
+    void on_table_tent_itemSelectionChanged();
 
     void on_delete_tent_clicked();
 
     void on_reset_tent_clicked();
 
     void on_update_tent_clicked();
+
+    void on_predict_tent_clicked();
+
+    void on_clear_pred_tent_clicked();
+
+    void on_export_tent_clicked();
+
+    void on_search_tent_clicked();
+
+    void on_auto_mail_tent_clicked();
+
+    void sendEmail(const QString &to, const QString &subject, const QString &body);
+
+    void generateForms_Tent(int index, QWidget* container);
+
+    void on_tabWidget_tent_tabBarClicked(int index);
+
+    void on_delete_pred_tent_clicked();
+
+    void on_delete_all_pred_tent_clicked();
+
+
+    void on_refresh_pred_tent_clicked();
 
 private:
     Ui::MainWindow *ui;

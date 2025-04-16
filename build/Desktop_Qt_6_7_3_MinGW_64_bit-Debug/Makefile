@@ -407,9 +407,13 @@ Makefile: ../../i_am_him.pro E:/Qt/6.7.3/mingw_64/mkspecs/win32-g++/qmake.conf E
 		E:/Qt/6.7.3/mingw_64/mkspecs/features/yacc.prf \
 		E:/Qt/6.7.3/mingw_64/mkspecs/features/lex.prf \
 		../../i_am_him.pro \
+		E:/Qt/6.7.3/mingw_64/lib/Qt6Charts.prl \
+		E:/Qt/6.7.3/mingw_64/lib/Qt6OpenGLWidgets.prl \
 		E:/Qt/6.7.3/mingw_64/lib/Qt6Widgets.prl \
+		E:/Qt/6.7.3/mingw_64/lib/Qt6OpenGL.prl \
 		E:/Qt/6.7.3/mingw_64/lib/Qt6Gui.prl \
 		E:/Qt/6.7.3/mingw_64/lib/Qt6Sql.prl \
+		E:/Qt/6.7.3/mingw_64/lib/Qt6Network.prl \
 		E:/Qt/6.7.3/mingw_64/lib/Qt6Core.prl \
 		E:/Qt/6.7.3/mingw_64/lib/Qt6EntryPoint.prl \
 		E:/Qt/6.7.3/mingw_64/mkspecs/features/build_pass.prf
@@ -751,9 +755,13 @@ E:/Qt/6.7.3/mingw_64/mkspecs/features/exceptions.prf:
 E:/Qt/6.7.3/mingw_64/mkspecs/features/yacc.prf:
 E:/Qt/6.7.3/mingw_64/mkspecs/features/lex.prf:
 ../../i_am_him.pro:
+E:/Qt/6.7.3/mingw_64/lib/Qt6Charts.prl:
+E:/Qt/6.7.3/mingw_64/lib/Qt6OpenGLWidgets.prl:
 E:/Qt/6.7.3/mingw_64/lib/Qt6Widgets.prl:
+E:/Qt/6.7.3/mingw_64/lib/Qt6OpenGL.prl:
 E:/Qt/6.7.3/mingw_64/lib/Qt6Gui.prl:
 E:/Qt/6.7.3/mingw_64/lib/Qt6Sql.prl:
+E:/Qt/6.7.3/mingw_64/lib/Qt6Network.prl:
 E:/Qt/6.7.3/mingw_64/lib/Qt6Core.prl:
 E:/Qt/6.7.3/mingw_64/lib/Qt6EntryPoint.prl:
 E:/Qt/6.7.3/mingw_64/mkspecs/features/build_pass.prf:

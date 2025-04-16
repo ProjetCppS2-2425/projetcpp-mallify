@@ -43,6 +43,11 @@ class Ui_MainWindow
 public:
     QWidget *centralwidget;
     QGridLayout *grid0;
+    QWidget *profile_section;
+    QVBoxLayout *verticalLayout_13;
+    QTextBrowser *nom_role;
+    QPushButton *settings_btn;
+    QPushButton *logout_btn;
     QStackedWidget *stackedWidget;
     QWidget *login_page;
     QGridLayout *gridLayout_7;
@@ -62,21 +67,6 @@ public:
     QPushButton *login_btn_2;
     QWidget *main_page;
     QGridLayout *grid3;
-    QWidget *topbar;
-    QHBoxLayout *h0;
-    QToolButton *sidebar_btn;
-    QLabel *title;
-    QToolButton *profile_btn;
-    QWidget *sidebar;
-    QVBoxLayout *v0;
-    QLabel *logo;
-    QSpacerItem *verticalSpacer;
-    QPushButton *sidebar_btn_1;
-    QPushButton *sidebar_btn_3;
-    QPushButton *sidebar_btn_4;
-    QPushButton *sidebar_btn_5;
-    QPushButton *sidebar_btn_2;
-    QPushButton *sidebar_btn_6;
     QStackedWidget *container;
     QWidget *employer_page;
     QGridLayout *grid1;
@@ -278,45 +268,80 @@ public:
     QWidget *tab_4;
     QWidget *tenants_page;
     QGridLayout *gridLayout_24;
-    QTabWidget *tabWidget_5;
+    QTabWidget *tabWidget_tent;
     QWidget *tab_5;
     QGridLayout *gridLayout_19;
+    QWidget *list_emp_3;
+    QGridLayout *gridLayout_29;
+    QPushButton *auto_mail_tent;
+    QPushButton *export_tent;
+    QPushButton *delete_tent;
+    QTableWidget *table_tent;
+    QWidget *emp_form_3;
+    QGridLayout *gridLayout_20;
+    QDateEdit *to_tent;
+    QLineEdit *rented_tent;
+    QLineEdit *email_tent;
+    QLineEdit *nom_tent;
+    QComboBox *store_type_tent;
+    QPushButton *reset_tent;
+    QComboBox *zone_tent;
+    QLineEdit *monthly_tent;
+    QSpacerItem *verticalSpacer_2;
+    QPushButton *update_tent;
+    QDateEdit *from_tent;
+    QComboBox *payment_tent;
+    QLineEdit *tel_tent;
+    QComboBox *activity_level_tent;
+    QPushButton *add_tent;
     QWidget *searchform_emp_3;
     QHBoxLayout *grid5_3;
     QToolButton *refresh_tab;
-    QLineEdit *searchbox_emp_3;
-    QToolButton *emp_search_btn_3;
-    QWidget *list_emp_3;
-    QGridLayout *grid6_3;
-    QPushButton *import_emp_3;
-    QTableWidget *table_emp_3;
-    QPushButton *export_emp_3;
-    QPushButton *delete_tent;
-    QWidget *emp_form_3;
-    QGridLayout *gridLayout_20;
-    QLineEdit *email_tent;
-    QPushButton *add_btn_tent;
-    QDateEdit *to_tent;
-    QComboBox *zone_tent;
-    QComboBox *store_type_tent;
-    QLabel *label_10;
-    QLineEdit *tel_tent;
-    QLineEdit *monthly_tent;
-    QLabel *label_2;
-    QPushButton *reset_tent;
-    QPushButton *update_tent;
-    QSpacerItem *verticalSpacer_2;
-    QDateEdit *from_tent;
-    QLineEdit *nom_tent;
-    QLineEdit *rented_tent;
-    QComboBox *payment_tent;
+    QLineEdit *search_box_tent;
+    QToolButton *search_tent;
     QWidget *tab_6;
+    QGridLayout *gridLayout_28;
+    QWidget *chart_widget_tent_one;
+    QWidget *chart_widget_tent_three;
     QWidget *tab_7;
-    QWidget *profile_section;
-    QVBoxLayout *verticalLayout_13;
-    QTextBrowser *nom_role;
-    QPushButton *settings_btn;
-    QPushButton *logout_btn;
+    QGridLayout *gridLayout_31;
+    QWidget *widget;
+    QGridLayout *gridLayout_27;
+    QLineEdit *space_tent;
+    QComboBox *nivact_tent;
+    QComboBox *type_boutique_pred_tent;
+    QGridLayout *gridLayout_26;
+    QCheckBox *zone_d_tent;
+    QCheckBox *zone_a_tent;
+    QCheckBox *zone_c_tent;
+    QCheckBox *zone_b_tent;
+    QSpacerItem *verticalSpacer_3;
+    QLabel *prediction_value_tent;
+    QHBoxLayout *horizontalLayout;
+    QPushButton *predict_tent;
+    QPushButton *clear_pred_tent;
+    QWidget *widget_2;
+    QGridLayout *gridLayout_30;
+    QHBoxLayout *horizontalLayout_2;
+    QPushButton *delete_pred_tent;
+    QPushButton *delete_all_pred_tent;
+    QPushButton *refresh_pred_tent;
+    QTableWidget *prediction_history_tent;
+    QWidget *sidebar;
+    QVBoxLayout *v0;
+    QLabel *logo;
+    QSpacerItem *verticalSpacer;
+    QPushButton *sidebar_btn_1;
+    QPushButton *sidebar_btn_3;
+    QPushButton *sidebar_btn_4;
+    QPushButton *sidebar_btn_5;
+    QPushButton *sidebar_btn_2;
+    QPushButton *sidebar_btn_6;
+    QWidget *topbar;
+    QHBoxLayout *h0;
+    QToolButton *sidebar_btn;
+    QLabel *title;
+    QToolButton *profile_btn;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -332,54 +357,91 @@ public:
         grid0->setSpacing(0);
         grid0->setObjectName("grid0");
         grid0->setContentsMargins(0, 0, 0, 0);
+        profile_section = new QWidget(centralwidget);
+        profile_section->setObjectName("profile_section");
+        QSizePolicy sizePolicy(QSizePolicy::Policy::Maximum, QSizePolicy::Policy::Maximum);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(profile_section->sizePolicy().hasHeightForWidth());
+        profile_section->setSizePolicy(sizePolicy);
+        profile_section->setMinimumSize(QSize(0, 0));
+        profile_section->setMaximumSize(QSize(0, 0));
+        verticalLayout_13 = new QVBoxLayout(profile_section);
+        verticalLayout_13->setSpacing(2);
+        verticalLayout_13->setObjectName("verticalLayout_13");
+        verticalLayout_13->setContentsMargins(2, 2, 2, 2);
+        nom_role = new QTextBrowser(profile_section);
+        nom_role->setObjectName("nom_role");
+        QSizePolicy sizePolicy1(QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Fixed);
+        sizePolicy1.setHorizontalStretch(0);
+        sizePolicy1.setVerticalStretch(0);
+        sizePolicy1.setHeightForWidth(nom_role->sizePolicy().hasHeightForWidth());
+        nom_role->setSizePolicy(sizePolicy1);
+        nom_role->setStyleSheet(QString::fromUtf8("max-height:50px;"));
+
+        verticalLayout_13->addWidget(nom_role);
+
+        settings_btn = new QPushButton(profile_section);
+        settings_btn->setObjectName("settings_btn");
+
+        verticalLayout_13->addWidget(settings_btn);
+
+        logout_btn = new QPushButton(profile_section);
+        logout_btn->setObjectName("logout_btn");
+
+        verticalLayout_13->addWidget(logout_btn);
+
+
+        grid0->addWidget(profile_section, 0, 1, 1, 1);
+
         stackedWidget = new QStackedWidget(centralwidget);
         stackedWidget->setObjectName("stackedWidget");
         stackedWidget->setStyleSheet(QString::fromUtf8(""));
         login_page = new QWidget();
         login_page->setObjectName("login_page");
-        QSizePolicy sizePolicy(QSizePolicy::Policy::Fixed, QSizePolicy::Policy::Fixed);
-        sizePolicy.setHorizontalStretch(0);
-        sizePolicy.setVerticalStretch(0);
-        sizePolicy.setHeightForWidth(login_page->sizePolicy().hasHeightForWidth());
-        login_page->setSizePolicy(sizePolicy);
+        QSizePolicy sizePolicy2(QSizePolicy::Policy::Fixed, QSizePolicy::Policy::Fixed);
+        sizePolicy2.setHorizontalStretch(0);
+        sizePolicy2.setVerticalStretch(0);
+        sizePolicy2.setHeightForWidth(login_page->sizePolicy().hasHeightForWidth());
+        login_page->setSizePolicy(sizePolicy2);
         gridLayout_7 = new QGridLayout(login_page);
         gridLayout_7->setSpacing(0);
         gridLayout_7->setObjectName("gridLayout_7");
         gridLayout_7->setContentsMargins(0, 0, 0, 0);
         background0 = new QWidget(login_page);
         background0->setObjectName("background0");
-        QSizePolicy sizePolicy1(QSizePolicy::Policy::Fixed, QSizePolicy::Policy::Expanding);
-        sizePolicy1.setHorizontalStretch(0);
-        sizePolicy1.setVerticalStretch(0);
-        sizePolicy1.setHeightForWidth(background0->sizePolicy().hasHeightForWidth());
-        background0->setSizePolicy(sizePolicy1);
+        QSizePolicy sizePolicy3(QSizePolicy::Policy::Fixed, QSizePolicy::Policy::Expanding);
+        sizePolicy3.setHorizontalStretch(0);
+        sizePolicy3.setVerticalStretch(0);
+        sizePolicy3.setHeightForWidth(background0->sizePolicy().hasHeightForWidth());
+        background0->setSizePolicy(sizePolicy3);
         gridLayout_3 = new QGridLayout(background0);
         gridLayout_3->setObjectName("gridLayout_3");
         background1 = new QWidget(background0);
         background1->setObjectName("background1");
-        sizePolicy1.setHeightForWidth(background1->sizePolicy().hasHeightForWidth());
-        background1->setSizePolicy(sizePolicy1);
+        sizePolicy3.setHeightForWidth(background1->sizePolicy().hasHeightForWidth());
+        background1->setSizePolicy(sizePolicy3);
         gridLayout_4 = new QGridLayout(background1);
         gridLayout_4->setObjectName("gridLayout_4");
         background2 = new QWidget(background1);
         background2->setObjectName("background2");
-        sizePolicy1.setHeightForWidth(background2->sizePolicy().hasHeightForWidth());
-        background2->setSizePolicy(sizePolicy1);
+        sizePolicy3.setHeightForWidth(background2->sizePolicy().hasHeightForWidth());
+        background2->setSizePolicy(sizePolicy3);
         gridLayout_6 = new QGridLayout(background2);
         gridLayout_6->setSpacing(0);
         gridLayout_6->setObjectName("gridLayout_6");
         gridLayout_6->setContentsMargins(0, 0, 0, 0);
         background3 = new QWidget(background2);
         background3->setObjectName("background3");
-        sizePolicy1.setHeightForWidth(background3->sizePolicy().hasHeightForWidth());
-        background3->setSizePolicy(sizePolicy1);
+        sizePolicy3.setHeightForWidth(background3->sizePolicy().hasHeightForWidth());
+        background3->setSizePolicy(sizePolicy3);
         background3->setStyleSheet(QString::fromUtf8(""));
         verticalLayout = new QVBoxLayout(background3);
         verticalLayout->setObjectName("verticalLayout");
         logo_label = new QLabel(background3);
         logo_label->setObjectName("logo_label");
-        sizePolicy.setHeightForWidth(logo_label->sizePolicy().hasHeightForWidth());
-        logo_label->setSizePolicy(sizePolicy);
+        sizePolicy2.setHeightForWidth(logo_label->sizePolicy().hasHeightForWidth());
+        logo_label->setSizePolicy(sizePolicy2);
         logo_label->setMaximumSize(QSize(16777215, 16777215));
         QFont font;
         font.setBold(true);
@@ -393,11 +455,8 @@ public:
 
         username = new QLineEdit(background3);
         username->setObjectName("username");
-        QSizePolicy sizePolicy2(QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Fixed);
-        sizePolicy2.setHorizontalStretch(0);
-        sizePolicy2.setVerticalStretch(0);
-        sizePolicy2.setHeightForWidth(username->sizePolicy().hasHeightForWidth());
-        username->setSizePolicy(sizePolicy2);
+        sizePolicy1.setHeightForWidth(username->sizePolicy().hasHeightForWidth());
+        username->setSizePolicy(sizePolicy1);
         username->setMaximumSize(QSize(16777215, 16777215));
         QFont font1;
         username->setFont(font1);
@@ -408,8 +467,8 @@ public:
 
         password = new QLineEdit(background3);
         password->setObjectName("password");
-        sizePolicy2.setHeightForWidth(password->sizePolicy().hasHeightForWidth());
-        password->setSizePolicy(sizePolicy2);
+        sizePolicy1.setHeightForWidth(password->sizePolicy().hasHeightForWidth());
+        password->setSizePolicy(sizePolicy1);
         password->setMaximumSize(QSize(16777215, 16777215));
         password->setFont(font1);
         password->setStyleSheet(QString::fromUtf8(""));
@@ -419,8 +478,8 @@ public:
 
         login_btn = new QPushButton(background3);
         login_btn->setObjectName("login_btn");
-        sizePolicy2.setHeightForWidth(login_btn->sizePolicy().hasHeightForWidth());
-        login_btn->setSizePolicy(sizePolicy2);
+        sizePolicy1.setHeightForWidth(login_btn->sizePolicy().hasHeightForWidth());
+        login_btn->setSizePolicy(sizePolicy1);
         login_btn->setMaximumSize(QSize(16777215, 16777215));
         QFont font2;
         font2.setPointSize(12);
@@ -431,8 +490,8 @@ public:
 
         forgot_password_btn = new QLabel(background3);
         forgot_password_btn->setObjectName("forgot_password_btn");
-        sizePolicy2.setHeightForWidth(forgot_password_btn->sizePolicy().hasHeightForWidth());
-        forgot_password_btn->setSizePolicy(sizePolicy2);
+        sizePolicy1.setHeightForWidth(forgot_password_btn->sizePolicy().hasHeightForWidth());
+        forgot_password_btn->setSizePolicy(sizePolicy1);
         forgot_password_btn->setStyleSheet(QString::fromUtf8(""));
         forgot_password_btn->setAlignment(Qt::AlignmentFlag::AlignCenter);
 
@@ -440,8 +499,8 @@ public:
 
         login_btn_2 = new QPushButton(background3);
         login_btn_2->setObjectName("login_btn_2");
-        sizePolicy2.setHeightForWidth(login_btn_2->sizePolicy().hasHeightForWidth());
-        login_btn_2->setSizePolicy(sizePolicy2);
+        sizePolicy1.setHeightForWidth(login_btn_2->sizePolicy().hasHeightForWidth());
+        login_btn_2->setSizePolicy(sizePolicy1);
         login_btn_2->setMaximumSize(QSize(16777215, 16777215));
         login_btn_2->setFont(font2);
 
@@ -466,102 +525,17 @@ public:
         grid3->setSpacing(0);
         grid3->setObjectName("grid3");
         grid3->setContentsMargins(0, 0, 0, 0);
-        topbar = new QWidget(main_page);
-        topbar->setObjectName("topbar");
-        sizePolicy2.setHeightForWidth(topbar->sizePolicy().hasHeightForWidth());
-        topbar->setSizePolicy(sizePolicy2);
-        h0 = new QHBoxLayout(topbar);
-        h0->setObjectName("h0");
-        sidebar_btn = new QToolButton(topbar);
-        sidebar_btn->setObjectName("sidebar_btn");
-        QIcon icon;
-        icon.addFile(QString::fromUtf8("icons/sidebar.svg"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
-        sidebar_btn->setIcon(icon);
-
-        h0->addWidget(sidebar_btn);
-
-        title = new QLabel(topbar);
-        title->setObjectName("title");
-        QSizePolicy sizePolicy3(QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Expanding);
-        sizePolicy3.setHorizontalStretch(0);
-        sizePolicy3.setVerticalStretch(0);
-        sizePolicy3.setHeightForWidth(title->sizePolicy().hasHeightForWidth());
-        title->setSizePolicy(sizePolicy3);
-
-        h0->addWidget(title);
-
-        profile_btn = new QToolButton(topbar);
-        profile_btn->setObjectName("profile_btn");
-        QIcon icon1;
-        icon1.addFile(QString::fromUtf8("icons/pfp.jpg"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
-        profile_btn->setIcon(icon1);
-
-        h0->addWidget(profile_btn);
-
-
-        grid3->addWidget(topbar, 0, 1, 1, 2);
-
-        sidebar = new QWidget(main_page);
-        sidebar->setObjectName("sidebar");
-        sizePolicy1.setHeightForWidth(sidebar->sizePolicy().hasHeightForWidth());
-        sidebar->setSizePolicy(sizePolicy1);
-        v0 = new QVBoxLayout(sidebar);
-        v0->setObjectName("v0");
-        logo = new QLabel(sidebar);
-        logo->setObjectName("logo");
-        sizePolicy.setHeightForWidth(logo->sizePolicy().hasHeightForWidth());
-        logo->setSizePolicy(sizePolicy);
-        logo->setPixmap(QPixmap(QString::fromUtf8("icons/logo.svg")));
-        logo->setScaledContents(true);
-        logo->setAlignment(Qt::AlignmentFlag::AlignCenter);
-
-        v0->addWidget(logo);
-
-        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
-
-        v0->addItem(verticalSpacer);
-
-        sidebar_btn_1 = new QPushButton(sidebar);
-        sidebar_btn_1->setObjectName("sidebar_btn_1");
-
-        v0->addWidget(sidebar_btn_1);
-
-        sidebar_btn_3 = new QPushButton(sidebar);
-        sidebar_btn_3->setObjectName("sidebar_btn_3");
-
-        v0->addWidget(sidebar_btn_3);
-
-        sidebar_btn_4 = new QPushButton(sidebar);
-        sidebar_btn_4->setObjectName("sidebar_btn_4");
-
-        v0->addWidget(sidebar_btn_4);
-
-        sidebar_btn_5 = new QPushButton(sidebar);
-        sidebar_btn_5->setObjectName("sidebar_btn_5");
-
-        v0->addWidget(sidebar_btn_5);
-
-        sidebar_btn_2 = new QPushButton(sidebar);
-        sidebar_btn_2->setObjectName("sidebar_btn_2");
-
-        v0->addWidget(sidebar_btn_2);
-
-        sidebar_btn_6 = new QPushButton(sidebar);
-        sidebar_btn_6->setObjectName("sidebar_btn_6");
-
-        v0->addWidget(sidebar_btn_6);
-
-
-        grid3->addWidget(sidebar, 0, 0, 2, 1);
-
         container = new QStackedWidget(main_page);
         container->setObjectName("container");
-        sizePolicy3.setHeightForWidth(container->sizePolicy().hasHeightForWidth());
-        container->setSizePolicy(sizePolicy3);
+        QSizePolicy sizePolicy4(QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Expanding);
+        sizePolicy4.setHorizontalStretch(0);
+        sizePolicy4.setVerticalStretch(0);
+        sizePolicy4.setHeightForWidth(container->sizePolicy().hasHeightForWidth());
+        container->setSizePolicy(sizePolicy4);
         employer_page = new QWidget();
         employer_page->setObjectName("employer_page");
-        sizePolicy3.setHeightForWidth(employer_page->sizePolicy().hasHeightForWidth());
-        employer_page->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(employer_page->sizePolicy().hasHeightForWidth());
+        employer_page->setSizePolicy(sizePolicy4);
         grid1 = new QGridLayout(employer_page);
         grid1->setSpacing(7);
         grid1->setObjectName("grid1");
@@ -574,23 +548,23 @@ public:
         gridLayout_2->setObjectName("gridLayout_2");
         searchform_emp = new QWidget(tab_1);
         searchform_emp->setObjectName("searchform_emp");
-        sizePolicy2.setHeightForWidth(searchform_emp->sizePolicy().hasHeightForWidth());
-        searchform_emp->setSizePolicy(sizePolicy2);
+        sizePolicy1.setHeightForWidth(searchform_emp->sizePolicy().hasHeightForWidth());
+        searchform_emp->setSizePolicy(sizePolicy1);
         grid5 = new QHBoxLayout(searchform_emp);
         grid5->setObjectName("grid5");
         resetfilter_emp = new QToolButton(searchform_emp);
         resetfilter_emp->setObjectName("resetfilter_emp");
-        sizePolicy.setHeightForWidth(resetfilter_emp->sizePolicy().hasHeightForWidth());
-        resetfilter_emp->setSizePolicy(sizePolicy);
-        QIcon icon2(QIcon::fromTheme(QIcon::ThemeIcon::SyncSynchronizing));
-        resetfilter_emp->setIcon(icon2);
+        sizePolicy2.setHeightForWidth(resetfilter_emp->sizePolicy().hasHeightForWidth());
+        resetfilter_emp->setSizePolicy(sizePolicy2);
+        QIcon icon(QIcon::fromTheme(QIcon::ThemeIcon::SyncSynchronizing));
+        resetfilter_emp->setIcon(icon);
 
         grid5->addWidget(resetfilter_emp);
 
         unselect_btn = new QToolButton(searchform_emp);
         unselect_btn->setObjectName("unselect_btn");
-        QIcon icon3(QIcon::fromTheme(QString::fromUtf8("application-exit")));
-        unselect_btn->setIcon(icon3);
+        QIcon icon1(QIcon::fromTheme(QString::fromUtf8("application-exit")));
+        unselect_btn->setIcon(icon1);
 
         grid5->addWidget(unselect_btn);
 
@@ -601,15 +575,15 @@ public:
 
         emp_search_btn = new QToolButton(searchform_emp);
         emp_search_btn->setObjectName("emp_search_btn");
-        QIcon icon4(QIcon::fromTheme(QIcon::ThemeIcon::EditFind));
-        emp_search_btn->setIcon(icon4);
+        QIcon icon2(QIcon::fromTheme(QIcon::ThemeIcon::EditFind));
+        emp_search_btn->setIcon(icon2);
 
         grid5->addWidget(emp_search_btn);
 
         camera_emp = new QToolButton(searchform_emp);
         camera_emp->setObjectName("camera_emp");
-        QIcon icon5(QIcon::fromTheme(QIcon::ThemeIcon::AddressBookNew));
-        camera_emp->setIcon(icon5);
+        QIcon icon3(QIcon::fromTheme(QIcon::ThemeIcon::AddressBookNew));
+        camera_emp->setIcon(icon3);
 
         grid5->addWidget(camera_emp);
 
@@ -618,28 +592,28 @@ public:
 
         list_emp = new QWidget(tab_1);
         list_emp->setObjectName("list_emp");
-        sizePolicy3.setHeightForWidth(list_emp->sizePolicy().hasHeightForWidth());
-        list_emp->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(list_emp->sizePolicy().hasHeightForWidth());
+        list_emp->setSizePolicy(sizePolicy4);
         grid6 = new QGridLayout(list_emp);
         grid6->setObjectName("grid6");
         delete_emp = new QPushButton(list_emp);
         delete_emp->setObjectName("delete_emp");
-        sizePolicy2.setHeightForWidth(delete_emp->sizePolicy().hasHeightForWidth());
-        delete_emp->setSizePolicy(sizePolicy2);
+        sizePolicy1.setHeightForWidth(delete_emp->sizePolicy().hasHeightForWidth());
+        delete_emp->setSizePolicy(sizePolicy1);
 
         grid6->addWidget(delete_emp, 2, 0, 1, 1);
 
         export_emp = new QPushButton(list_emp);
         export_emp->setObjectName("export_emp");
-        sizePolicy2.setHeightForWidth(export_emp->sizePolicy().hasHeightForWidth());
-        export_emp->setSizePolicy(sizePolicy2);
+        sizePolicy1.setHeightForWidth(export_emp->sizePolicy().hasHeightForWidth());
+        export_emp->setSizePolicy(sizePolicy1);
 
         grid6->addWidget(export_emp, 2, 1, 1, 1);
 
         import_emp = new QPushButton(list_emp);
         import_emp->setObjectName("import_emp");
-        sizePolicy2.setHeightForWidth(import_emp->sizePolicy().hasHeightForWidth());
-        import_emp->setSizePolicy(sizePolicy2);
+        sizePolicy1.setHeightForWidth(import_emp->sizePolicy().hasHeightForWidth());
+        import_emp->setSizePolicy(sizePolicy1);
 
         grid6->addWidget(import_emp, 2, 2, 1, 1);
 
@@ -711,24 +685,24 @@ public:
 
         emp_form = new QWidget(tab_1);
         emp_form->setObjectName("emp_form");
-        sizePolicy3.setHeightForWidth(emp_form->sizePolicy().hasHeightForWidth());
-        emp_form->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(emp_form->sizePolicy().hasHeightForWidth());
+        emp_form->setSizePolicy(sizePolicy4);
         gridLayout_5 = new QGridLayout(emp_form);
         gridLayout_5->setObjectName("gridLayout_5");
         a1 = new QCheckBox(emp_form);
         a1->setObjectName("a1");
-        QSizePolicy sizePolicy4(QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
-        sizePolicy4.setHorizontalStretch(0);
-        sizePolicy4.setVerticalStretch(0);
-        sizePolicy4.setHeightForWidth(a1->sizePolicy().hasHeightForWidth());
-        a1->setSizePolicy(sizePolicy4);
+        QSizePolicy sizePolicy5(QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+        sizePolicy5.setHorizontalStretch(0);
+        sizePolicy5.setVerticalStretch(0);
+        sizePolicy5.setHeightForWidth(a1->sizePolicy().hasHeightForWidth());
+        a1->setSizePolicy(sizePolicy5);
 
         gridLayout_5->addWidget(a1, 5, 0, 1, 1);
 
         telephone = new QLineEdit(emp_form);
         telephone->setObjectName("telephone");
-        sizePolicy4.setHeightForWidth(telephone->sizePolicy().hasHeightForWidth());
-        telephone->setSizePolicy(sizePolicy4);
+        sizePolicy5.setHeightForWidth(telephone->sizePolicy().hasHeightForWidth());
+        telephone->setSizePolicy(sizePolicy5);
 
         gridLayout_5->addWidget(telephone, 2, 0, 1, 2);
 
@@ -739,34 +713,34 @@ public:
 
         a5 = new QCheckBox(emp_form);
         a5->setObjectName("a5");
-        sizePolicy2.setHeightForWidth(a5->sizePolicy().hasHeightForWidth());
-        a5->setSizePolicy(sizePolicy2);
+        sizePolicy1.setHeightForWidth(a5->sizePolicy().hasHeightForWidth());
+        a5->setSizePolicy(sizePolicy1);
 
         gridLayout_5->addWidget(a5, 6, 1, 1, 1);
 
         prenom = new QLineEdit(emp_form);
         prenom->setObjectName("prenom");
-        sizePolicy4.setHeightForWidth(prenom->sizePolicy().hasHeightForWidth());
-        prenom->setSizePolicy(sizePolicy4);
+        sizePolicy5.setHeightForWidth(prenom->sizePolicy().hasHeightForWidth());
+        prenom->setSizePolicy(sizePolicy5);
         prenom->setMinimumSize(QSize(0, 0));
 
         gridLayout_5->addWidget(prenom, 0, 1, 1, 1);
 
         city = new QLineEdit(emp_form);
         city->setObjectName("city");
-        sizePolicy4.setHeightForWidth(city->sizePolicy().hasHeightForWidth());
-        city->setSizePolicy(sizePolicy4);
+        sizePolicy5.setHeightForWidth(city->sizePolicy().hasHeightForWidth());
+        city->setSizePolicy(sizePolicy5);
         city->setMinimumSize(QSize(0, 0));
 
         gridLayout_5->addWidget(city, 1, 1, 1, 1);
 
         a6 = new QCheckBox(emp_form);
         a6->setObjectName("a6");
-        QSizePolicy sizePolicy5(QSizePolicy::Policy::Fixed, QSizePolicy::Policy::Minimum);
-        sizePolicy5.setHorizontalStretch(0);
-        sizePolicy5.setVerticalStretch(0);
-        sizePolicy5.setHeightForWidth(a6->sizePolicy().hasHeightForWidth());
-        a6->setSizePolicy(sizePolicy5);
+        QSizePolicy sizePolicy6(QSizePolicy::Policy::Fixed, QSizePolicy::Policy::Minimum);
+        sizePolicy6.setHorizontalStretch(0);
+        sizePolicy6.setVerticalStretch(0);
+        sizePolicy6.setHeightForWidth(a6->sizePolicy().hasHeightForWidth());
+        a6->setSizePolicy(sizePolicy6);
 
         gridLayout_5->addWidget(a6, 6, 2, 1, 1);
 
@@ -775,31 +749,31 @@ public:
         sexe->addItem(QString());
         sexe->addItem(QString());
         sexe->setObjectName("sexe");
-        sizePolicy4.setHeightForWidth(sexe->sizePolicy().hasHeightForWidth());
-        sexe->setSizePolicy(sizePolicy4);
+        sizePolicy5.setHeightForWidth(sexe->sizePolicy().hasHeightForWidth());
+        sexe->setSizePolicy(sizePolicy5);
         sexe->setMinimumSize(QSize(0, 0));
 
         gridLayout_5->addWidget(sexe, 1, 0, 1, 1);
 
         salaire = new QLineEdit(emp_form);
         salaire->setObjectName("salaire");
-        sizePolicy4.setHeightForWidth(salaire->sizePolicy().hasHeightForWidth());
-        salaire->setSizePolicy(sizePolicy4);
+        sizePolicy5.setHeightForWidth(salaire->sizePolicy().hasHeightForWidth());
+        salaire->setSizePolicy(sizePolicy5);
         salaire->setMinimumSize(QSize(0, 0));
 
         gridLayout_5->addWidget(salaire, 4, 1, 1, 1);
 
         a3 = new QCheckBox(emp_form);
         a3->setObjectName("a3");
-        sizePolicy4.setHeightForWidth(a3->sizePolicy().hasHeightForWidth());
-        a3->setSizePolicy(sizePolicy4);
+        sizePolicy5.setHeightForWidth(a3->sizePolicy().hasHeightForWidth());
+        a3->setSizePolicy(sizePolicy5);
 
         gridLayout_5->addWidget(a3, 5, 2, 1, 1);
 
         update_emp = new QPushButton(emp_form);
         update_emp->setObjectName("update_emp");
-        sizePolicy2.setHeightForWidth(update_emp->sizePolicy().hasHeightForWidth());
-        update_emp->setSizePolicy(sizePolicy2);
+        sizePolicy1.setHeightForWidth(update_emp->sizePolicy().hasHeightForWidth());
+        update_emp->setSizePolicy(sizePolicy1);
 
         gridLayout_5->addWidget(update_emp, 8, 0, 1, 1);
 
@@ -809,60 +783,60 @@ public:
 
         a4 = new QCheckBox(emp_form);
         a4->setObjectName("a4");
-        sizePolicy4.setHeightForWidth(a4->sizePolicy().hasHeightForWidth());
-        a4->setSizePolicy(sizePolicy4);
+        sizePolicy5.setHeightForWidth(a4->sizePolicy().hasHeightForWidth());
+        a4->setSizePolicy(sizePolicy5);
 
         gridLayout_5->addWidget(a4, 6, 0, 1, 1);
 
         add_emp = new QPushButton(emp_form);
         add_emp->setObjectName("add_emp");
-        sizePolicy2.setHeightForWidth(add_emp->sizePolicy().hasHeightForWidth());
-        add_emp->setSizePolicy(sizePolicy2);
+        sizePolicy1.setHeightForWidth(add_emp->sizePolicy().hasHeightForWidth());
+        add_emp->setSizePolicy(sizePolicy1);
 
         gridLayout_5->addWidget(add_emp, 8, 2, 1, 1);
 
         role = new QLineEdit(emp_form);
         role->setObjectName("role");
-        sizePolicy4.setHeightForWidth(role->sizePolicy().hasHeightForWidth());
-        role->setSizePolicy(sizePolicy4);
+        sizePolicy5.setHeightForWidth(role->sizePolicy().hasHeightForWidth());
+        role->setSizePolicy(sizePolicy5);
         role->setMinimumSize(QSize(0, 0));
 
         gridLayout_5->addWidget(role, 4, 0, 1, 1);
 
         a2 = new QCheckBox(emp_form);
         a2->setObjectName("a2");
-        sizePolicy4.setHeightForWidth(a2->sizePolicy().hasHeightForWidth());
-        a2->setSizePolicy(sizePolicy4);
+        sizePolicy5.setHeightForWidth(a2->sizePolicy().hasHeightForWidth());
+        a2->setSizePolicy(sizePolicy5);
 
         gridLayout_5->addWidget(a2, 5, 1, 1, 1);
 
         date = new QDateEdit(emp_form);
         date->setObjectName("date");
-        sizePolicy4.setHeightForWidth(date->sizePolicy().hasHeightForWidth());
-        date->setSizePolicy(sizePolicy4);
+        sizePolicy5.setHeightForWidth(date->sizePolicy().hasHeightForWidth());
+        date->setSizePolicy(sizePolicy5);
         date->setMinimumSize(QSize(0, 0));
 
         gridLayout_5->addWidget(date, 4, 2, 1, 1);
 
         nom = new QLineEdit(emp_form);
         nom->setObjectName("nom");
-        sizePolicy4.setHeightForWidth(nom->sizePolicy().hasHeightForWidth());
-        nom->setSizePolicy(sizePolicy4);
+        sizePolicy5.setHeightForWidth(nom->sizePolicy().hasHeightForWidth());
+        nom->setSizePolicy(sizePolicy5);
         nom->setMinimumSize(QSize(0, 0));
 
         gridLayout_5->addWidget(nom, 0, 0, 1, 1);
 
         upload_photo = new QPushButton(emp_form);
         upload_photo->setObjectName("upload_photo");
-        sizePolicy4.setHeightForWidth(upload_photo->sizePolicy().hasHeightForWidth());
-        upload_photo->setSizePolicy(sizePolicy4);
+        sizePolicy5.setHeightForWidth(upload_photo->sizePolicy().hasHeightForWidth());
+        upload_photo->setSizePolicy(sizePolicy5);
 
         gridLayout_5->addWidget(upload_photo, 3, 2, 1, 1);
 
         profile_pic_2 = new QLabel(emp_form);
         profile_pic_2->setObjectName("profile_pic_2");
-        sizePolicy3.setHeightForWidth(profile_pic_2->sizePolicy().hasHeightForWidth());
-        profile_pic_2->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(profile_pic_2->sizePolicy().hasHeightForWidth());
+        profile_pic_2->setSizePolicy(sizePolicy4);
         profile_pic_2->setMaximumSize(QSize(200, 200));
         profile_pic_2->setPixmap(QPixmap(QString::fromUtf8("../ohio/icons/pfp.jpg")));
         profile_pic_2->setScaledContents(true);
@@ -871,8 +845,8 @@ public:
 
         reset_emp = new QPushButton(emp_form);
         reset_emp->setObjectName("reset_emp");
-        sizePolicy2.setHeightForWidth(reset_emp->sizePolicy().hasHeightForWidth());
-        reset_emp->setSizePolicy(sizePolicy2);
+        sizePolicy1.setHeightForWidth(reset_emp->sizePolicy().hasHeightForWidth());
+        reset_emp->setSizePolicy(sizePolicy1);
 
         gridLayout_5->addWidget(reset_emp, 8, 1, 1, 1);
 
@@ -889,8 +863,8 @@ public:
         container->addWidget(employer_page);
         complaint_page = new QWidget();
         complaint_page->setObjectName("complaint_page");
-        sizePolicy3.setHeightForWidth(complaint_page->sizePolicy().hasHeightForWidth());
-        complaint_page->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(complaint_page->sizePolicy().hasHeightForWidth());
+        complaint_page->setSizePolicy(sizePolicy4);
         gridLayout_17 = new QGridLayout(complaint_page);
         gridLayout_17->setObjectName("gridLayout_17");
         tabWidget_3 = new QTabWidget(complaint_page);
@@ -1635,8 +1609,8 @@ public:
         container->addWidget(complaint_page);
         shop_page = new QWidget();
         shop_page->setObjectName("shop_page");
-        sizePolicy3.setHeightForWidth(shop_page->sizePolicy().hasHeightForWidth());
-        shop_page->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(shop_page->sizePolicy().hasHeightForWidth());
+        shop_page->setSizePolicy(sizePolicy4);
         gridLayout_18 = new QGridLayout(shop_page);
         gridLayout_18->setObjectName("gridLayout_18");
         tabWidget_4 = new QTabWidget(shop_page);
@@ -1647,8 +1621,8 @@ public:
         gridLayout_22->setObjectName("gridLayout_22");
         searchform_emp_9 = new QWidget(tab_18);
         searchform_emp_9->setObjectName("searchform_emp_9");
-        sizePolicy2.setHeightForWidth(searchform_emp_9->sizePolicy().hasHeightForWidth());
-        searchform_emp_9->setSizePolicy(sizePolicy2);
+        sizePolicy1.setHeightForWidth(searchform_emp_9->sizePolicy().hasHeightForWidth());
+        searchform_emp_9->setSizePolicy(sizePolicy1);
         grid5_9 = new QHBoxLayout(searchform_emp_9);
         grid5_9->setObjectName("grid5_9");
         comboBox_10 = new QComboBox(searchform_emp_9);
@@ -1669,14 +1643,14 @@ public:
 
         list_emp_9 = new QWidget(tab_18);
         list_emp_9->setObjectName("list_emp_9");
-        sizePolicy3.setHeightForWidth(list_emp_9->sizePolicy().hasHeightForWidth());
-        list_emp_9->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(list_emp_9->sizePolicy().hasHeightForWidth());
+        list_emp_9->setSizePolicy(sizePolicy4);
         gridLayout_21 = new QGridLayout(list_emp_9);
         gridLayout_21->setObjectName("gridLayout_21");
         delete_emp_9 = new QPushButton(list_emp_9);
         delete_emp_9->setObjectName("delete_emp_9");
-        sizePolicy2.setHeightForWidth(delete_emp_9->sizePolicy().hasHeightForWidth());
-        delete_emp_9->setSizePolicy(sizePolicy2);
+        sizePolicy1.setHeightForWidth(delete_emp_9->sizePolicy().hasHeightForWidth());
+        delete_emp_9->setSizePolicy(sizePolicy1);
 
         gridLayout_21->addWidget(delete_emp_9, 1, 0, 1, 1);
 
@@ -1722,59 +1696,59 @@ public:
 
         emp_form_9 = new QWidget(tab_18);
         emp_form_9->setObjectName("emp_form_9");
-        sizePolicy3.setHeightForWidth(emp_form_9->sizePolicy().hasHeightForWidth());
-        emp_form_9->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(emp_form_9->sizePolicy().hasHeightForWidth());
+        emp_form_9->setSizePolicy(sizePolicy4);
         gridLayout_23 = new QGridLayout(emp_form_9);
         gridLayout_23->setObjectName("gridLayout_23");
         nom_20 = new QLineEdit(emp_form_9);
         nom_20->setObjectName("nom_20");
-        sizePolicy2.setHeightForWidth(nom_20->sizePolicy().hasHeightForWidth());
-        nom_20->setSizePolicy(sizePolicy2);
+        sizePolicy1.setHeightForWidth(nom_20->sizePolicy().hasHeightForWidth());
+        nom_20->setSizePolicy(sizePolicy1);
         nom_20->setMinimumSize(QSize(0, 0));
 
         gridLayout_23->addWidget(nom_20, 2, 0, 1, 3);
 
         update_emp_9 = new QPushButton(emp_form_9);
         update_emp_9->setObjectName("update_emp_9");
-        sizePolicy2.setHeightForWidth(update_emp_9->sizePolicy().hasHeightForWidth());
-        update_emp_9->setSizePolicy(sizePolicy2);
+        sizePolicy1.setHeightForWidth(update_emp_9->sizePolicy().hasHeightForWidth());
+        update_emp_9->setSizePolicy(sizePolicy1);
 
         gridLayout_23->addWidget(update_emp_9, 4, 0, 1, 1);
 
         reset_emp_9 = new QPushButton(emp_form_9);
         reset_emp_9->setObjectName("reset_emp_9");
-        sizePolicy2.setHeightForWidth(reset_emp_9->sizePolicy().hasHeightForWidth());
-        reset_emp_9->setSizePolicy(sizePolicy2);
+        sizePolicy1.setHeightForWidth(reset_emp_9->sizePolicy().hasHeightForWidth());
+        reset_emp_9->setSizePolicy(sizePolicy1);
 
         gridLayout_23->addWidget(reset_emp_9, 4, 1, 1, 1);
 
         add_emp_9 = new QPushButton(emp_form_9);
         add_emp_9->setObjectName("add_emp_9");
-        sizePolicy2.setHeightForWidth(add_emp_9->sizePolicy().hasHeightForWidth());
-        add_emp_9->setSizePolicy(sizePolicy2);
+        sizePolicy1.setHeightForWidth(add_emp_9->sizePolicy().hasHeightForWidth());
+        add_emp_9->setSizePolicy(sizePolicy1);
 
         gridLayout_23->addWidget(add_emp_9, 4, 2, 1, 1);
 
         nom_19 = new QLineEdit(emp_form_9);
         nom_19->setObjectName("nom_19");
-        sizePolicy2.setHeightForWidth(nom_19->sizePolicy().hasHeightForWidth());
-        nom_19->setSizePolicy(sizePolicy2);
+        sizePolicy1.setHeightForWidth(nom_19->sizePolicy().hasHeightForWidth());
+        nom_19->setSizePolicy(sizePolicy1);
         nom_19->setMinimumSize(QSize(0, 0));
 
         gridLayout_23->addWidget(nom_19, 0, 0, 1, 3);
 
         nom_18 = new QLineEdit(emp_form_9);
         nom_18->setObjectName("nom_18");
-        sizePolicy2.setHeightForWidth(nom_18->sizePolicy().hasHeightForWidth());
-        nom_18->setSizePolicy(sizePolicy2);
+        sizePolicy1.setHeightForWidth(nom_18->sizePolicy().hasHeightForWidth());
+        nom_18->setSizePolicy(sizePolicy1);
         nom_18->setMinimumSize(QSize(0, 0));
 
         gridLayout_23->addWidget(nom_18, 1, 0, 1, 3);
 
         nom_17 = new QLineEdit(emp_form_9);
         nom_17->setObjectName("nom_17");
-        sizePolicy3.setHeightForWidth(nom_17->sizePolicy().hasHeightForWidth());
-        nom_17->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(nom_17->sizePolicy().hasHeightForWidth());
+        nom_17->setSizePolicy(sizePolicy4);
         nom_17->setMinimumSize(QSize(0, 0));
 
         gridLayout_23->addWidget(nom_17, 3, 0, 1, 3);
@@ -1792,8 +1766,8 @@ public:
         container->addWidget(shop_page);
         profile_page = new QWidget();
         profile_page->setObjectName("profile_page");
-        sizePolicy3.setHeightForWidth(profile_page->sizePolicy().hasHeightForWidth());
-        profile_page->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(profile_page->sizePolicy().hasHeightForWidth());
+        profile_page->setSizePolicy(sizePolicy4);
         grid4 = new QGridLayout(profile_page);
         grid4->setObjectName("grid4");
         profile_back = new QWidget(profile_page);
@@ -1802,8 +1776,8 @@ public:
         grid2->setObjectName("grid2");
         groupBox_3 = new QGroupBox(profile_back);
         groupBox_3->setObjectName("groupBox_3");
-        sizePolicy3.setHeightForWidth(groupBox_3->sizePolicy().hasHeightForWidth());
-        groupBox_3->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(groupBox_3->sizePolicy().hasHeightForWidth());
+        groupBox_3->setSizePolicy(sizePolicy4);
         grid9 = new QGridLayout(groupBox_3);
         grid9->setObjectName("grid9");
         email_input = new QLineEdit(groupBox_3);
@@ -1818,8 +1792,8 @@ public:
 
         last_name_label = new QLabel(groupBox_3);
         last_name_label->setObjectName("last_name_label");
-        sizePolicy.setHeightForWidth(last_name_label->sizePolicy().hasHeightForWidth());
-        last_name_label->setSizePolicy(sizePolicy);
+        sizePolicy2.setHeightForWidth(last_name_label->sizePolicy().hasHeightForWidth());
+        last_name_label->setSizePolicy(sizePolicy2);
 
         grid9->addWidget(last_name_label, 1, 0, 1, 1);
 
@@ -1835,22 +1809,22 @@ public:
 
         city_label = new QLabel(groupBox_3);
         city_label->setObjectName("city_label");
-        sizePolicy.setHeightForWidth(city_label->sizePolicy().hasHeightForWidth());
-        city_label->setSizePolicy(sizePolicy);
+        sizePolicy2.setHeightForWidth(city_label->sizePolicy().hasHeightForWidth());
+        city_label->setSizePolicy(sizePolicy2);
 
         grid9->addWidget(city_label, 2, 0, 1, 1);
 
         email_label = new QLabel(groupBox_3);
         email_label->setObjectName("email_label");
-        sizePolicy.setHeightForWidth(email_label->sizePolicy().hasHeightForWidth());
-        email_label->setSizePolicy(sizePolicy);
+        sizePolicy2.setHeightForWidth(email_label->sizePolicy().hasHeightForWidth());
+        email_label->setSizePolicy(sizePolicy2);
 
         grid9->addWidget(email_label, 3, 0, 1, 1);
 
         name_label = new QLabel(groupBox_3);
         name_label->setObjectName("name_label");
-        sizePolicy.setHeightForWidth(name_label->sizePolicy().hasHeightForWidth());
-        name_label->setSizePolicy(sizePolicy);
+        sizePolicy2.setHeightForWidth(name_label->sizePolicy().hasHeightForWidth());
+        name_label->setSizePolicy(sizePolicy2);
 
         grid9->addWidget(name_label, 0, 0, 1, 1);
 
@@ -1861,8 +1835,8 @@ public:
 
         phone_label = new QLabel(groupBox_3);
         phone_label->setObjectName("phone_label");
-        sizePolicy.setHeightForWidth(phone_label->sizePolicy().hasHeightForWidth());
-        phone_label->setSizePolicy(sizePolicy);
+        sizePolicy2.setHeightForWidth(phone_label->sizePolicy().hasHeightForWidth());
+        phone_label->setSizePolicy(sizePolicy2);
 
         grid9->addWidget(phone_label, 4, 0, 1, 1);
 
@@ -1876,14 +1850,14 @@ public:
 
         groupBox_1 = new QGroupBox(profile_back);
         groupBox_1->setObjectName("groupBox_1");
-        sizePolicy3.setHeightForWidth(groupBox_1->sizePolicy().hasHeightForWidth());
-        groupBox_1->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(groupBox_1->sizePolicy().hasHeightForWidth());
+        groupBox_1->setSizePolicy(sizePolicy4);
         grid8 = new QVBoxLayout(groupBox_1);
         grid8->setObjectName("grid8");
         profile_pic = new QLabel(groupBox_1);
         profile_pic->setObjectName("profile_pic");
-        sizePolicy3.setHeightForWidth(profile_pic->sizePolicy().hasHeightForWidth());
-        profile_pic->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(profile_pic->sizePolicy().hasHeightForWidth());
+        profile_pic->setSizePolicy(sizePolicy4);
         profile_pic->setMaximumSize(QSize(16777215, 16777215));
         profile_pic->setAcceptDrops(true);
 
@@ -1891,8 +1865,8 @@ public:
 
         upload_btn = new QPushButton(groupBox_1);
         upload_btn->setObjectName("upload_btn");
-        sizePolicy2.setHeightForWidth(upload_btn->sizePolicy().hasHeightForWidth());
-        upload_btn->setSizePolicy(sizePolicy2);
+        sizePolicy1.setHeightForWidth(upload_btn->sizePolicy().hasHeightForWidth());
+        upload_btn->setSizePolicy(sizePolicy1);
         upload_btn->setMaximumSize(QSize(16777215, 16777215));
 
         grid8->addWidget(upload_btn);
@@ -1909,8 +1883,8 @@ public:
 
         groupBox_2 = new QGroupBox(profile_back);
         groupBox_2->setObjectName("groupBox_2");
-        sizePolicy3.setHeightForWidth(groupBox_2->sizePolicy().hasHeightForWidth());
-        groupBox_2->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(groupBox_2->sizePolicy().hasHeightForWidth());
+        groupBox_2->setSizePolicy(sizePolicy4);
         grid10 = new QGridLayout(groupBox_2);
         grid10->setObjectName("grid10");
         new_password_input = new QLineEdit(groupBox_2);
@@ -1920,8 +1894,8 @@ public:
 
         light_mode_label = new QLabel(groupBox_2);
         light_mode_label->setObjectName("light_mode_label");
-        sizePolicy.setHeightForWidth(light_mode_label->sizePolicy().hasHeightForWidth());
-        light_mode_label->setSizePolicy(sizePolicy);
+        sizePolicy2.setHeightForWidth(light_mode_label->sizePolicy().hasHeightForWidth());
+        light_mode_label->setSizePolicy(sizePolicy2);
 
         grid10->addWidget(light_mode_label, 3, 0, 1, 1);
 
@@ -1945,29 +1919,29 @@ public:
 
         current_password_label = new QLabel(groupBox_2);
         current_password_label->setObjectName("current_password_label");
-        sizePolicy.setHeightForWidth(current_password_label->sizePolicy().hasHeightForWidth());
-        current_password_label->setSizePolicy(sizePolicy);
+        sizePolicy2.setHeightForWidth(current_password_label->sizePolicy().hasHeightForWidth());
+        current_password_label->setSizePolicy(sizePolicy2);
 
         grid10->addWidget(current_password_label, 0, 0, 1, 2);
 
         language_label = new QLabel(groupBox_2);
         language_label->setObjectName("language_label");
-        sizePolicy.setHeightForWidth(language_label->sizePolicy().hasHeightForWidth());
-        language_label->setSizePolicy(sizePolicy);
+        sizePolicy2.setHeightForWidth(language_label->sizePolicy().hasHeightForWidth());
+        language_label->setSizePolicy(sizePolicy2);
 
         grid10->addWidget(language_label, 4, 0, 1, 1);
 
         confirm_password_label = new QLabel(groupBox_2);
         confirm_password_label->setObjectName("confirm_password_label");
-        sizePolicy.setHeightForWidth(confirm_password_label->sizePolicy().hasHeightForWidth());
-        confirm_password_label->setSizePolicy(sizePolicy);
+        sizePolicy2.setHeightForWidth(confirm_password_label->sizePolicy().hasHeightForWidth());
+        confirm_password_label->setSizePolicy(sizePolicy2);
 
         grid10->addWidget(confirm_password_label, 2, 0, 1, 1);
 
         new_password_label = new QLabel(groupBox_2);
         new_password_label->setObjectName("new_password_label");
-        sizePolicy.setHeightForWidth(new_password_label->sizePolicy().hasHeightForWidth());
-        new_password_label->setSizePolicy(sizePolicy);
+        sizePolicy2.setHeightForWidth(new_password_label->sizePolicy().hasHeightForWidth());
+        new_password_label->setSizePolicy(sizePolicy2);
 
         grid10->addWidget(new_password_label, 1, 0, 1, 1);
 
@@ -1995,8 +1969,8 @@ public:
         container->addWidget(profile_page);
         service_page = new QWidget();
         service_page->setObjectName("service_page");
-        sizePolicy3.setHeightForWidth(service_page->sizePolicy().hasHeightForWidth());
-        service_page->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(service_page->sizePolicy().hasHeightForWidth());
+        service_page->setSizePolicy(sizePolicy4);
         gridLayout = new QGridLayout(service_page);
         gridLayout->setObjectName("gridLayout");
         tabWidget_2 = new QTabWidget(service_page);
@@ -2007,28 +1981,28 @@ public:
         gridLayout_8->setObjectName("gridLayout_8");
         list_emp_2 = new QWidget(tab_3);
         list_emp_2->setObjectName("list_emp_2");
-        sizePolicy3.setHeightForWidth(list_emp_2->sizePolicy().hasHeightForWidth());
-        list_emp_2->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(list_emp_2->sizePolicy().hasHeightForWidth());
+        list_emp_2->setSizePolicy(sizePolicy4);
         grid6_2 = new QGridLayout(list_emp_2);
         grid6_2->setObjectName("grid6_2");
         import_emp_2 = new QPushButton(list_emp_2);
         import_emp_2->setObjectName("import_emp_2");
-        sizePolicy2.setHeightForWidth(import_emp_2->sizePolicy().hasHeightForWidth());
-        import_emp_2->setSizePolicy(sizePolicy2);
+        sizePolicy1.setHeightForWidth(import_emp_2->sizePolicy().hasHeightForWidth());
+        import_emp_2->setSizePolicy(sizePolicy1);
 
         grid6_2->addWidget(import_emp_2, 1, 2, 1, 1);
 
         export_emp_2 = new QPushButton(list_emp_2);
         export_emp_2->setObjectName("export_emp_2");
-        sizePolicy2.setHeightForWidth(export_emp_2->sizePolicy().hasHeightForWidth());
-        export_emp_2->setSizePolicy(sizePolicy2);
+        sizePolicy1.setHeightForWidth(export_emp_2->sizePolicy().hasHeightForWidth());
+        export_emp_2->setSizePolicy(sizePolicy1);
 
         grid6_2->addWidget(export_emp_2, 1, 1, 1, 1);
 
         delete_emp_2 = new QPushButton(list_emp_2);
         delete_emp_2->setObjectName("delete_emp_2");
-        sizePolicy2.setHeightForWidth(delete_emp_2->sizePolicy().hasHeightForWidth());
-        delete_emp_2->setSizePolicy(sizePolicy2);
+        sizePolicy1.setHeightForWidth(delete_emp_2->sizePolicy().hasHeightForWidth());
+        delete_emp_2->setSizePolicy(sizePolicy1);
 
         grid6_2->addWidget(delete_emp_2, 1, 0, 1, 1);
 
@@ -2085,38 +2059,38 @@ public:
 
         emp_form_2 = new QWidget(tab_3);
         emp_form_2->setObjectName("emp_form_2");
-        sizePolicy3.setHeightForWidth(emp_form_2->sizePolicy().hasHeightForWidth());
-        emp_form_2->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(emp_form_2->sizePolicy().hasHeightForWidth());
+        emp_form_2->setSizePolicy(sizePolicy4);
         gridLayout_25 = new QGridLayout(emp_form_2);
         gridLayout_25->setObjectName("gridLayout_25");
         nom_2 = new QLineEdit(emp_form_2);
         nom_2->setObjectName("nom_2");
-        sizePolicy2.setHeightForWidth(nom_2->sizePolicy().hasHeightForWidth());
-        nom_2->setSizePolicy(sizePolicy2);
+        sizePolicy1.setHeightForWidth(nom_2->sizePolicy().hasHeightForWidth());
+        nom_2->setSizePolicy(sizePolicy1);
         nom_2->setMinimumSize(QSize(0, 0));
 
         gridLayout_25->addWidget(nom_2, 0, 0, 1, 3);
 
         prenom_2 = new QLineEdit(emp_form_2);
         prenom_2->setObjectName("prenom_2");
-        sizePolicy2.setHeightForWidth(prenom_2->sizePolicy().hasHeightForWidth());
-        prenom_2->setSizePolicy(sizePolicy2);
+        sizePolicy1.setHeightForWidth(prenom_2->sizePolicy().hasHeightForWidth());
+        prenom_2->setSizePolicy(sizePolicy1);
         prenom_2->setMinimumSize(QSize(0, 0));
 
         gridLayout_25->addWidget(prenom_2, 1, 0, 1, 3);
 
         role_2 = new QLineEdit(emp_form_2);
         role_2->setObjectName("role_2");
-        sizePolicy2.setHeightForWidth(role_2->sizePolicy().hasHeightForWidth());
-        role_2->setSizePolicy(sizePolicy2);
+        sizePolicy1.setHeightForWidth(role_2->sizePolicy().hasHeightForWidth());
+        role_2->setSizePolicy(sizePolicy1);
         role_2->setMinimumSize(QSize(0, 0));
 
         gridLayout_25->addWidget(role_2, 2, 0, 1, 3);
 
         city_2 = new QLineEdit(emp_form_2);
         city_2->setObjectName("city_2");
-        sizePolicy3.setHeightForWidth(city_2->sizePolicy().hasHeightForWidth());
-        city_2->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(city_2->sizePolicy().hasHeightForWidth());
+        city_2->setSizePolicy(sizePolicy4);
         city_2->setMinimumSize(QSize(0, 0));
         city_2->setAlignment(Qt::AlignmentFlag::AlignCenter);
 
@@ -2124,22 +2098,22 @@ public:
 
         update_emp_2 = new QPushButton(emp_form_2);
         update_emp_2->setObjectName("update_emp_2");
-        sizePolicy2.setHeightForWidth(update_emp_2->sizePolicy().hasHeightForWidth());
-        update_emp_2->setSizePolicy(sizePolicy2);
+        sizePolicy1.setHeightForWidth(update_emp_2->sizePolicy().hasHeightForWidth());
+        update_emp_2->setSizePolicy(sizePolicy1);
 
         gridLayout_25->addWidget(update_emp_2, 4, 0, 1, 1);
 
         reset_emp_2 = new QPushButton(emp_form_2);
         reset_emp_2->setObjectName("reset_emp_2");
-        sizePolicy2.setHeightForWidth(reset_emp_2->sizePolicy().hasHeightForWidth());
-        reset_emp_2->setSizePolicy(sizePolicy2);
+        sizePolicy1.setHeightForWidth(reset_emp_2->sizePolicy().hasHeightForWidth());
+        reset_emp_2->setSizePolicy(sizePolicy1);
 
         gridLayout_25->addWidget(reset_emp_2, 4, 1, 1, 1);
 
         add_emp_2 = new QPushButton(emp_form_2);
         add_emp_2->setObjectName("add_emp_2");
-        sizePolicy2.setHeightForWidth(add_emp_2->sizePolicy().hasHeightForWidth());
-        add_emp_2->setSizePolicy(sizePolicy2);
+        sizePolicy1.setHeightForWidth(add_emp_2->sizePolicy().hasHeightForWidth());
+        add_emp_2->setSizePolicy(sizePolicy1);
 
         gridLayout_25->addWidget(add_emp_2, 4, 2, 1, 1);
 
@@ -2148,15 +2122,15 @@ public:
 
         searchform_emp_2 = new QWidget(tab_3);
         searchform_emp_2->setObjectName("searchform_emp_2");
-        sizePolicy2.setHeightForWidth(searchform_emp_2->sizePolicy().hasHeightForWidth());
-        searchform_emp_2->setSizePolicy(sizePolicy2);
+        sizePolicy1.setHeightForWidth(searchform_emp_2->sizePolicy().hasHeightForWidth());
+        searchform_emp_2->setSizePolicy(sizePolicy1);
         grid5_2 = new QHBoxLayout(searchform_emp_2);
         grid5_2->setObjectName("grid5_2");
         resetfilter_emp_2 = new QToolButton(searchform_emp_2);
         resetfilter_emp_2->setObjectName("resetfilter_emp_2");
-        sizePolicy.setHeightForWidth(resetfilter_emp_2->sizePolicy().hasHeightForWidth());
-        resetfilter_emp_2->setSizePolicy(sizePolicy);
-        resetfilter_emp_2->setIcon(icon2);
+        sizePolicy2.setHeightForWidth(resetfilter_emp_2->sizePolicy().hasHeightForWidth());
+        resetfilter_emp_2->setSizePolicy(sizePolicy2);
+        resetfilter_emp_2->setIcon(icon);
 
         grid5_2->addWidget(resetfilter_emp_2);
 
@@ -2167,20 +2141,20 @@ public:
 
         emp_search_btn_2 = new QToolButton(searchform_emp_2);
         emp_search_btn_2->setObjectName("emp_search_btn_2");
-        emp_search_btn_2->setIcon(icon4);
+        emp_search_btn_2->setIcon(icon2);
 
         grid5_2->addWidget(emp_search_btn_2);
 
         micro_emp_2 = new QToolButton(searchform_emp_2);
         micro_emp_2->setObjectName("micro_emp_2");
-        QIcon icon6(QIcon::fromTheme(QIcon::ThemeIcon::AudioInputMicrophone));
-        micro_emp_2->setIcon(icon6);
+        QIcon icon4(QIcon::fromTheme(QIcon::ThemeIcon::AudioInputMicrophone));
+        micro_emp_2->setIcon(icon4);
 
         grid5_2->addWidget(micro_emp_2);
 
         camera_emp_2 = new QToolButton(searchform_emp_2);
         camera_emp_2->setObjectName("camera_emp_2");
-        camera_emp_2->setIcon(icon5);
+        camera_emp_2->setIcon(icon3);
 
         grid5_2->addWidget(camera_emp_2);
 
@@ -2213,272 +2187,494 @@ public:
         container->addWidget(service_page);
         tenants_page = new QWidget();
         tenants_page->setObjectName("tenants_page");
-        sizePolicy3.setHeightForWidth(tenants_page->sizePolicy().hasHeightForWidth());
-        tenants_page->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(tenants_page->sizePolicy().hasHeightForWidth());
+        tenants_page->setSizePolicy(sizePolicy4);
         gridLayout_24 = new QGridLayout(tenants_page);
         gridLayout_24->setObjectName("gridLayout_24");
-        tabWidget_5 = new QTabWidget(tenants_page);
-        tabWidget_5->setObjectName("tabWidget_5");
+        tabWidget_tent = new QTabWidget(tenants_page);
+        tabWidget_tent->setObjectName("tabWidget_tent");
         tab_5 = new QWidget();
         tab_5->setObjectName("tab_5");
         gridLayout_19 = new QGridLayout(tab_5);
         gridLayout_19->setObjectName("gridLayout_19");
-        searchform_emp_3 = new QWidget(tab_5);
-        searchform_emp_3->setObjectName("searchform_emp_3");
-        sizePolicy2.setHeightForWidth(searchform_emp_3->sizePolicy().hasHeightForWidth());
-        searchform_emp_3->setSizePolicy(sizePolicy2);
-        grid5_3 = new QHBoxLayout(searchform_emp_3);
-        grid5_3->setObjectName("grid5_3");
-        refresh_tab = new QToolButton(searchform_emp_3);
-        refresh_tab->setObjectName("refresh_tab");
-        sizePolicy.setHeightForWidth(refresh_tab->sizePolicy().hasHeightForWidth());
-        refresh_tab->setSizePolicy(sizePolicy);
-        refresh_tab->setIcon(icon2);
-
-        grid5_3->addWidget(refresh_tab);
-
-        searchbox_emp_3 = new QLineEdit(searchform_emp_3);
-        searchbox_emp_3->setObjectName("searchbox_emp_3");
-
-        grid5_3->addWidget(searchbox_emp_3);
-
-        emp_search_btn_3 = new QToolButton(searchform_emp_3);
-        emp_search_btn_3->setObjectName("emp_search_btn_3");
-        emp_search_btn_3->setIcon(icon4);
-
-        grid5_3->addWidget(emp_search_btn_3);
-
-
-        gridLayout_19->addWidget(searchform_emp_3, 0, 0, 1, 2);
-
         list_emp_3 = new QWidget(tab_5);
         list_emp_3->setObjectName("list_emp_3");
-        sizePolicy3.setHeightForWidth(list_emp_3->sizePolicy().hasHeightForWidth());
-        list_emp_3->setSizePolicy(sizePolicy3);
-        grid6_3 = new QGridLayout(list_emp_3);
-        grid6_3->setObjectName("grid6_3");
-        import_emp_3 = new QPushButton(list_emp_3);
-        import_emp_3->setObjectName("import_emp_3");
-        sizePolicy2.setHeightForWidth(import_emp_3->sizePolicy().hasHeightForWidth());
-        import_emp_3->setSizePolicy(sizePolicy2);
+        sizePolicy4.setHeightForWidth(list_emp_3->sizePolicy().hasHeightForWidth());
+        list_emp_3->setSizePolicy(sizePolicy4);
+        gridLayout_29 = new QGridLayout(list_emp_3);
+        gridLayout_29->setObjectName("gridLayout_29");
+        auto_mail_tent = new QPushButton(list_emp_3);
+        auto_mail_tent->setObjectName("auto_mail_tent");
+        sizePolicy1.setHeightForWidth(auto_mail_tent->sizePolicy().hasHeightForWidth());
+        auto_mail_tent->setSizePolicy(sizePolicy1);
 
-        grid6_3->addWidget(import_emp_3, 1, 2, 1, 1);
+        gridLayout_29->addWidget(auto_mail_tent, 1, 2, 1, 1);
 
-        table_emp_3 = new QTableWidget(list_emp_3);
-        if (table_emp_3->rowCount() < 1)
-            table_emp_3->setRowCount(1);
-        table_emp_3->setObjectName("table_emp_3");
-        table_emp_3->setFont(font4);
-        table_emp_3->setFocusPolicy(Qt::FocusPolicy::NoFocus);
-        table_emp_3->setStyleSheet(QString::fromUtf8(""));
-        table_emp_3->setFrameShape(QFrame::Shape::NoFrame);
-        table_emp_3->setEditTriggers(QAbstractItemView::EditTrigger::AllEditTriggers);
-        table_emp_3->setSelectionMode(QAbstractItemView::SelectionMode::ExtendedSelection);
-        table_emp_3->setSelectionBehavior(QAbstractItemView::SelectionBehavior::SelectRows);
-        table_emp_3->setShowGrid(false);
-        table_emp_3->setGridStyle(Qt::PenStyle::NoPen);
-        table_emp_3->setSortingEnabled(true);
-        table_emp_3->setWordWrap(true);
-        table_emp_3->setCornerButtonEnabled(false);
-        table_emp_3->setRowCount(1);
-        table_emp_3->horizontalHeader()->setCascadingSectionResizes(false);
-        table_emp_3->horizontalHeader()->setMinimumSectionSize(50);
-        table_emp_3->horizontalHeader()->setDefaultSectionSize(120);
-        table_emp_3->horizontalHeader()->setStretchLastSection(true);
-        table_emp_3->verticalHeader()->setVisible(false);
-        table_emp_3->verticalHeader()->setCascadingSectionResizes(false);
-        table_emp_3->verticalHeader()->setDefaultSectionSize(28);
-        table_emp_3->verticalHeader()->setHighlightSections(false);
-        table_emp_3->verticalHeader()->setProperty("showSortIndicator", QVariant(true));
-        table_emp_3->verticalHeader()->setStretchLastSection(false);
+        export_tent = new QPushButton(list_emp_3);
+        export_tent->setObjectName("export_tent");
+        sizePolicy1.setHeightForWidth(export_tent->sizePolicy().hasHeightForWidth());
+        export_tent->setSizePolicy(sizePolicy1);
 
-        grid6_3->addWidget(table_emp_3, 0, 0, 1, 3);
-
-        export_emp_3 = new QPushButton(list_emp_3);
-        export_emp_3->setObjectName("export_emp_3");
-        sizePolicy2.setHeightForWidth(export_emp_3->sizePolicy().hasHeightForWidth());
-        export_emp_3->setSizePolicy(sizePolicy2);
-
-        grid6_3->addWidget(export_emp_3, 1, 1, 1, 1);
+        gridLayout_29->addWidget(export_tent, 1, 1, 1, 1);
 
         delete_tent = new QPushButton(list_emp_3);
         delete_tent->setObjectName("delete_tent");
-        sizePolicy2.setHeightForWidth(delete_tent->sizePolicy().hasHeightForWidth());
-        delete_tent->setSizePolicy(sizePolicy2);
+        sizePolicy1.setHeightForWidth(delete_tent->sizePolicy().hasHeightForWidth());
+        delete_tent->setSizePolicy(sizePolicy1);
 
-        grid6_3->addWidget(delete_tent, 1, 0, 1, 1);
+        gridLayout_29->addWidget(delete_tent, 1, 0, 1, 1);
+
+        table_tent = new QTableWidget(list_emp_3);
+        if (table_tent->rowCount() < 1)
+            table_tent->setRowCount(1);
+        table_tent->setObjectName("table_tent");
+        table_tent->setFont(font4);
+        table_tent->setFocusPolicy(Qt::FocusPolicy::NoFocus);
+        table_tent->setStyleSheet(QString::fromUtf8(""));
+        table_tent->setFrameShape(QFrame::Shape::NoFrame);
+        table_tent->setEditTriggers(QAbstractItemView::EditTrigger::AllEditTriggers);
+        table_tent->setSelectionMode(QAbstractItemView::SelectionMode::ExtendedSelection);
+        table_tent->setSelectionBehavior(QAbstractItemView::SelectionBehavior::SelectRows);
+        table_tent->setShowGrid(false);
+        table_tent->setGridStyle(Qt::PenStyle::NoPen);
+        table_tent->setSortingEnabled(true);
+        table_tent->setWordWrap(false);
+        table_tent->setCornerButtonEnabled(false);
+        table_tent->setRowCount(1);
+        table_tent->horizontalHeader()->setCascadingSectionResizes(false);
+        table_tent->horizontalHeader()->setMinimumSectionSize(50);
+        table_tent->horizontalHeader()->setDefaultSectionSize(120);
+        table_tent->horizontalHeader()->setStretchLastSection(true);
+        table_tent->verticalHeader()->setVisible(false);
+        table_tent->verticalHeader()->setCascadingSectionResizes(false);
+        table_tent->verticalHeader()->setDefaultSectionSize(28);
+        table_tent->verticalHeader()->setHighlightSections(false);
+        table_tent->verticalHeader()->setProperty("showSortIndicator", QVariant(true));
+        table_tent->verticalHeader()->setStretchLastSection(false);
+
+        gridLayout_29->addWidget(table_tent, 0, 0, 1, 3);
 
 
         gridLayout_19->addWidget(list_emp_3, 1, 0, 1, 1);
 
         emp_form_3 = new QWidget(tab_5);
         emp_form_3->setObjectName("emp_form_3");
-        sizePolicy3.setHeightForWidth(emp_form_3->sizePolicy().hasHeightForWidth());
-        emp_form_3->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(emp_form_3->sizePolicy().hasHeightForWidth());
+        emp_form_3->setSizePolicy(sizePolicy4);
+        emp_form_3->setMaximumSize(QSize(281, 16777215));
         gridLayout_20 = new QGridLayout(emp_form_3);
         gridLayout_20->setObjectName("gridLayout_20");
-        email_tent = new QLineEdit(emp_form_3);
-        email_tent->setObjectName("email_tent");
-        sizePolicy2.setHeightForWidth(email_tent->sizePolicy().hasHeightForWidth());
-        email_tent->setSizePolicy(sizePolicy2);
-
-        gridLayout_20->addWidget(email_tent, 1, 0, 1, 3);
-
-        add_btn_tent = new QPushButton(emp_form_3);
-        add_btn_tent->setObjectName("add_btn_tent");
-        sizePolicy2.setHeightForWidth(add_btn_tent->sizePolicy().hasHeightForWidth());
-        add_btn_tent->setSizePolicy(sizePolicy2);
-
-        gridLayout_20->addWidget(add_btn_tent, 8, 2, 1, 1);
-
         to_tent = new QDateEdit(emp_form_3);
         to_tent->setObjectName("to_tent");
-        sizePolicy2.setHeightForWidth(to_tent->sizePolicy().hasHeightForWidth());
-        to_tent->setSizePolicy(sizePolicy2);
+        sizePolicy1.setHeightForWidth(to_tent->sizePolicy().hasHeightForWidth());
+        to_tent->setSizePolicy(sizePolicy1);
 
-        gridLayout_20->addWidget(to_tent, 6, 1, 1, 2);
-
-        zone_tent = new QComboBox(emp_form_3);
-        zone_tent->addItem(QString());
-        zone_tent->setObjectName("zone_tent");
-        sizePolicy2.setHeightForWidth(zone_tent->sizePolicy().hasHeightForWidth());
-        zone_tent->setSizePolicy(sizePolicy2);
-
-        gridLayout_20->addWidget(zone_tent, 2, 2, 1, 1);
-
-        store_type_tent = new QComboBox(emp_form_3);
-        store_type_tent->addItem(QString());
-        store_type_tent->setObjectName("store_type_tent");
-        sizePolicy2.setHeightForWidth(store_type_tent->sizePolicy().hasHeightForWidth());
-        store_type_tent->setSizePolicy(sizePolicy2);
-
-        gridLayout_20->addWidget(store_type_tent, 2, 1, 1, 1);
-
-        label_10 = new QLabel(emp_form_3);
-        label_10->setObjectName("label_10");
-
-        gridLayout_20->addWidget(label_10, 6, 0, 1, 1);
-
-        tel_tent = new QLineEdit(emp_form_3);
-        tel_tent->setObjectName("tel_tent");
-        sizePolicy2.setHeightForWidth(tel_tent->sizePolicy().hasHeightForWidth());
-        tel_tent->setSizePolicy(sizePolicy2);
-
-        gridLayout_20->addWidget(tel_tent, 2, 0, 1, 1);
-
-        monthly_tent = new QLineEdit(emp_form_3);
-        monthly_tent->setObjectName("monthly_tent");
-        sizePolicy2.setHeightForWidth(monthly_tent->sizePolicy().hasHeightForWidth());
-        monthly_tent->setSizePolicy(sizePolicy2);
-
-        gridLayout_20->addWidget(monthly_tent, 4, 1, 1, 1);
-
-        label_2 = new QLabel(emp_form_3);
-        label_2->setObjectName("label_2");
-
-        gridLayout_20->addWidget(label_2, 5, 0, 1, 1);
-
-        reset_tent = new QPushButton(emp_form_3);
-        reset_tent->setObjectName("reset_tent");
-        sizePolicy2.setHeightForWidth(reset_tent->sizePolicy().hasHeightForWidth());
-        reset_tent->setSizePolicy(sizePolicy2);
-
-        gridLayout_20->addWidget(reset_tent, 8, 1, 1, 1);
-
-        update_tent = new QPushButton(emp_form_3);
-        update_tent->setObjectName("update_tent");
-        sizePolicy2.setHeightForWidth(update_tent->sizePolicy().hasHeightForWidth());
-        update_tent->setSizePolicy(sizePolicy2);
-
-        gridLayout_20->addWidget(update_tent, 8, 0, 1, 1);
-
-        verticalSpacer_2 = new QSpacerItem(378, 173, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
-
-        gridLayout_20->addItem(verticalSpacer_2, 7, 0, 1, 3);
-
-        from_tent = new QDateEdit(emp_form_3);
-        from_tent->setObjectName("from_tent");
-        sizePolicy2.setHeightForWidth(from_tent->sizePolicy().hasHeightForWidth());
-        from_tent->setSizePolicy(sizePolicy2);
-
-        gridLayout_20->addWidget(from_tent, 5, 1, 1, 2);
-
-        nom_tent = new QLineEdit(emp_form_3);
-        nom_tent->setObjectName("nom_tent");
-        sizePolicy2.setHeightForWidth(nom_tent->sizePolicy().hasHeightForWidth());
-        nom_tent->setSizePolicy(sizePolicy2);
-        nom_tent->setMinimumSize(QSize(0, 0));
-
-        gridLayout_20->addWidget(nom_tent, 0, 0, 1, 3);
+        gridLayout_20->addWidget(to_tent, 6, 0, 1, 3);
 
         rented_tent = new QLineEdit(emp_form_3);
         rented_tent->setObjectName("rented_tent");
-        sizePolicy2.setHeightForWidth(rented_tent->sizePolicy().hasHeightForWidth());
-        rented_tent->setSizePolicy(sizePolicy2);
+        sizePolicy1.setHeightForWidth(rented_tent->sizePolicy().hasHeightForWidth());
+        rented_tent->setSizePolicy(sizePolicy1);
 
-        gridLayout_20->addWidget(rented_tent, 4, 0, 1, 1);
+        gridLayout_20->addWidget(rented_tent, 1, 0, 1, 2);
+
+        email_tent = new QLineEdit(emp_form_3);
+        email_tent->setObjectName("email_tent");
+        sizePolicy1.setHeightForWidth(email_tent->sizePolicy().hasHeightForWidth());
+        email_tent->setSizePolicy(sizePolicy1);
+
+        gridLayout_20->addWidget(email_tent, 1, 2, 1, 1);
+
+        nom_tent = new QLineEdit(emp_form_3);
+        nom_tent->setObjectName("nom_tent");
+        sizePolicy1.setHeightForWidth(nom_tent->sizePolicy().hasHeightForWidth());
+        nom_tent->setSizePolicy(sizePolicy1);
+        nom_tent->setMinimumSize(QSize(0, 0));
+
+        gridLayout_20->addWidget(nom_tent, 0, 0, 1, 2);
+
+        store_type_tent = new QComboBox(emp_form_3);
+        store_type_tent->addItem(QString());
+        store_type_tent->addItem(QString());
+        store_type_tent->addItem(QString());
+        store_type_tent->addItem(QString());
+        store_type_tent->addItem(QString());
+        store_type_tent->addItem(QString());
+        store_type_tent->addItem(QString());
+        store_type_tent->addItem(QString());
+        store_type_tent->addItem(QString());
+        store_type_tent->setObjectName("store_type_tent");
+        sizePolicy1.setHeightForWidth(store_type_tent->sizePolicy().hasHeightForWidth());
+        store_type_tent->setSizePolicy(sizePolicy1);
+
+        gridLayout_20->addWidget(store_type_tent, 2, 0, 1, 2);
+
+        reset_tent = new QPushButton(emp_form_3);
+        reset_tent->setObjectName("reset_tent");
+        sizePolicy1.setHeightForWidth(reset_tent->sizePolicy().hasHeightForWidth());
+        reset_tent->setSizePolicy(sizePolicy1);
+
+        gridLayout_20->addWidget(reset_tent, 14, 1, 1, 2);
+
+        zone_tent = new QComboBox(emp_form_3);
+        zone_tent->addItem(QString());
+        zone_tent->addItem(QString());
+        zone_tent->addItem(QString());
+        zone_tent->addItem(QString());
+        zone_tent->addItem(QString());
+        zone_tent->setObjectName("zone_tent");
+        sizePolicy1.setHeightForWidth(zone_tent->sizePolicy().hasHeightForWidth());
+        zone_tent->setSizePolicy(sizePolicy1);
+
+        gridLayout_20->addWidget(zone_tent, 2, 2, 1, 1);
+
+        monthly_tent = new QLineEdit(emp_form_3);
+        monthly_tent->setObjectName("monthly_tent");
+        sizePolicy1.setHeightForWidth(monthly_tent->sizePolicy().hasHeightForWidth());
+        monthly_tent->setSizePolicy(sizePolicy1);
+
+        gridLayout_20->addWidget(monthly_tent, 4, 0, 1, 2);
+
+        verticalSpacer_2 = new QSpacerItem(286, 135, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
+
+        gridLayout_20->addItem(verticalSpacer_2, 8, 0, 1, 3);
+
+        update_tent = new QPushButton(emp_form_3);
+        update_tent->setObjectName("update_tent");
+        sizePolicy1.setHeightForWidth(update_tent->sizePolicy().hasHeightForWidth());
+        update_tent->setSizePolicy(sizePolicy1);
+
+        gridLayout_20->addWidget(update_tent, 14, 0, 1, 1);
+
+        from_tent = new QDateEdit(emp_form_3);
+        from_tent->setObjectName("from_tent");
+        sizePolicy1.setHeightForWidth(from_tent->sizePolicy().hasHeightForWidth());
+        from_tent->setSizePolicy(sizePolicy1);
+
+        gridLayout_20->addWidget(from_tent, 5, 0, 1, 3);
 
         payment_tent = new QComboBox(emp_form_3);
+        payment_tent->addItem(QString());
+        payment_tent->addItem(QString());
         payment_tent->addItem(QString());
         payment_tent->addItem(QString());
         payment_tent->setObjectName("payment_tent");
 
         gridLayout_20->addWidget(payment_tent, 4, 2, 1, 1);
 
+        tel_tent = new QLineEdit(emp_form_3);
+        tel_tent->setObjectName("tel_tent");
+        sizePolicy1.setHeightForWidth(tel_tent->sizePolicy().hasHeightForWidth());
+        tel_tent->setSizePolicy(sizePolicy1);
 
-        gridLayout_19->addWidget(emp_form_3, 1, 1, 1, 1);
+        gridLayout_20->addWidget(tel_tent, 0, 2, 1, 1);
 
-        tabWidget_5->addTab(tab_5, QString());
+        activity_level_tent = new QComboBox(emp_form_3);
+        activity_level_tent->addItem(QString());
+        activity_level_tent->addItem(QString());
+        activity_level_tent->addItem(QString());
+        activity_level_tent->addItem(QString());
+        activity_level_tent->setObjectName("activity_level_tent");
+
+        gridLayout_20->addWidget(activity_level_tent, 7, 0, 1, 3);
+
+        add_tent = new QPushButton(emp_form_3);
+        add_tent->setObjectName("add_tent");
+        sizePolicy1.setHeightForWidth(add_tent->sizePolicy().hasHeightForWidth());
+        add_tent->setSizePolicy(sizePolicy1);
+
+        gridLayout_20->addWidget(add_tent, 9, 0, 1, 3);
+
+
+        gridLayout_19->addWidget(emp_form_3, 0, 1, 2, 1);
+
+        searchform_emp_3 = new QWidget(tab_5);
+        searchform_emp_3->setObjectName("searchform_emp_3");
+        sizePolicy1.setHeightForWidth(searchform_emp_3->sizePolicy().hasHeightForWidth());
+        searchform_emp_3->setSizePolicy(sizePolicy1);
+        grid5_3 = new QHBoxLayout(searchform_emp_3);
+        grid5_3->setObjectName("grid5_3");
+        refresh_tab = new QToolButton(searchform_emp_3);
+        refresh_tab->setObjectName("refresh_tab");
+        sizePolicy2.setHeightForWidth(refresh_tab->sizePolicy().hasHeightForWidth());
+        refresh_tab->setSizePolicy(sizePolicy2);
+        refresh_tab->setIcon(icon);
+
+        grid5_3->addWidget(refresh_tab);
+
+        search_box_tent = new QLineEdit(searchform_emp_3);
+        search_box_tent->setObjectName("search_box_tent");
+
+        grid5_3->addWidget(search_box_tent);
+
+        search_tent = new QToolButton(searchform_emp_3);
+        search_tent->setObjectName("search_tent");
+        search_tent->setIcon(icon2);
+
+        grid5_3->addWidget(search_tent);
+
+
+        gridLayout_19->addWidget(searchform_emp_3, 0, 0, 1, 1);
+
+        tabWidget_tent->addTab(tab_5, QString());
         tab_6 = new QWidget();
         tab_6->setObjectName("tab_6");
-        tabWidget_5->addTab(tab_6, QString());
+        gridLayout_28 = new QGridLayout(tab_6);
+        gridLayout_28->setObjectName("gridLayout_28");
+        chart_widget_tent_one = new QWidget(tab_6);
+        chart_widget_tent_one->setObjectName("chart_widget_tent_one");
+
+        gridLayout_28->addWidget(chart_widget_tent_one, 0, 0, 1, 1);
+
+        chart_widget_tent_three = new QWidget(tab_6);
+        chart_widget_tent_three->setObjectName("chart_widget_tent_three");
+
+        gridLayout_28->addWidget(chart_widget_tent_three, 0, 1, 1, 1);
+
+        tabWidget_tent->addTab(tab_6, QString());
         tab_7 = new QWidget();
         tab_7->setObjectName("tab_7");
-        tabWidget_5->addTab(tab_7, QString());
+        sizePolicy4.setHeightForWidth(tab_7->sizePolicy().hasHeightForWidth());
+        tab_7->setSizePolicy(sizePolicy4);
+        gridLayout_31 = new QGridLayout(tab_7);
+        gridLayout_31->setObjectName("gridLayout_31");
+        widget = new QWidget(tab_7);
+        widget->setObjectName("widget");
+        widget->setMaximumSize(QSize(241, 16777215));
+        gridLayout_27 = new QGridLayout(widget);
+        gridLayout_27->setObjectName("gridLayout_27");
+        space_tent = new QLineEdit(widget);
+        space_tent->setObjectName("space_tent");
 
-        gridLayout_24->addWidget(tabWidget_5, 0, 0, 1, 1);
+        gridLayout_27->addWidget(space_tent, 0, 0, 1, 1);
+
+        nivact_tent = new QComboBox(widget);
+        nivact_tent->addItem(QString());
+        nivact_tent->addItem(QString());
+        nivact_tent->addItem(QString());
+        nivact_tent->addItem(QString());
+        nivact_tent->setObjectName("nivact_tent");
+
+        gridLayout_27->addWidget(nivact_tent, 1, 0, 1, 1);
+
+        type_boutique_pred_tent = new QComboBox(widget);
+        type_boutique_pred_tent->addItem(QString());
+        type_boutique_pred_tent->addItem(QString());
+        type_boutique_pred_tent->addItem(QString());
+        type_boutique_pred_tent->addItem(QString());
+        type_boutique_pred_tent->addItem(QString());
+        type_boutique_pred_tent->addItem(QString());
+        type_boutique_pred_tent->addItem(QString());
+        type_boutique_pred_tent->addItem(QString());
+        type_boutique_pred_tent->addItem(QString());
+        type_boutique_pred_tent->setObjectName("type_boutique_pred_tent");
+
+        gridLayout_27->addWidget(type_boutique_pred_tent, 2, 0, 1, 1);
+
+        gridLayout_26 = new QGridLayout();
+        gridLayout_26->setObjectName("gridLayout_26");
+        zone_d_tent = new QCheckBox(widget);
+        zone_d_tent->setObjectName("zone_d_tent");
+
+        gridLayout_26->addWidget(zone_d_tent, 1, 1, 1, 1);
+
+        zone_a_tent = new QCheckBox(widget);
+        zone_a_tent->setObjectName("zone_a_tent");
+
+        gridLayout_26->addWidget(zone_a_tent, 0, 0, 1, 1);
+
+        zone_c_tent = new QCheckBox(widget);
+        zone_c_tent->setObjectName("zone_c_tent");
+
+        gridLayout_26->addWidget(zone_c_tent, 1, 0, 1, 1);
+
+        zone_b_tent = new QCheckBox(widget);
+        zone_b_tent->setObjectName("zone_b_tent");
+
+        gridLayout_26->addWidget(zone_b_tent, 0, 1, 1, 1);
+
+
+        gridLayout_27->addLayout(gridLayout_26, 3, 0, 1, 1);
+
+        verticalSpacer_3 = new QSpacerItem(20, 148, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
+
+        gridLayout_27->addItem(verticalSpacer_3, 4, 0, 1, 1);
+
+        prediction_value_tent = new QLabel(widget);
+        prediction_value_tent->setObjectName("prediction_value_tent");
+        prediction_value_tent->setMinimumSize(QSize(0, 41));
+
+        gridLayout_27->addWidget(prediction_value_tent, 5, 0, 1, 1);
+
+        horizontalLayout = new QHBoxLayout();
+        horizontalLayout->setObjectName("horizontalLayout");
+        predict_tent = new QPushButton(widget);
+        predict_tent->setObjectName("predict_tent");
+
+        horizontalLayout->addWidget(predict_tent);
+
+        clear_pred_tent = new QPushButton(widget);
+        clear_pred_tent->setObjectName("clear_pred_tent");
+
+        horizontalLayout->addWidget(clear_pred_tent);
+
+
+        gridLayout_27->addLayout(horizontalLayout, 6, 0, 1, 1);
+
+
+        gridLayout_31->addWidget(widget, 0, 1, 1, 1);
+
+        widget_2 = new QWidget(tab_7);
+        widget_2->setObjectName("widget_2");
+        gridLayout_30 = new QGridLayout(widget_2);
+        gridLayout_30->setObjectName("gridLayout_30");
+        horizontalLayout_2 = new QHBoxLayout();
+        horizontalLayout_2->setObjectName("horizontalLayout_2");
+        delete_pred_tent = new QPushButton(widget_2);
+        delete_pred_tent->setObjectName("delete_pred_tent");
+
+        horizontalLayout_2->addWidget(delete_pred_tent);
+
+        delete_all_pred_tent = new QPushButton(widget_2);
+        delete_all_pred_tent->setObjectName("delete_all_pred_tent");
+
+        horizontalLayout_2->addWidget(delete_all_pred_tent);
+
+        refresh_pred_tent = new QPushButton(widget_2);
+        refresh_pred_tent->setObjectName("refresh_pred_tent");
+
+        horizontalLayout_2->addWidget(refresh_pred_tent);
+
+
+        gridLayout_30->addLayout(horizontalLayout_2, 1, 0, 1, 1);
+
+        prediction_history_tent = new QTableWidget(widget_2);
+        if (prediction_history_tent->columnCount() < 6)
+            prediction_history_tent->setColumnCount(6);
+        QTableWidgetItem *__qtablewidgetitem47 = new QTableWidgetItem();
+        prediction_history_tent->setHorizontalHeaderItem(0, __qtablewidgetitem47);
+        QTableWidgetItem *__qtablewidgetitem48 = new QTableWidgetItem();
+        prediction_history_tent->setHorizontalHeaderItem(1, __qtablewidgetitem48);
+        QTableWidgetItem *__qtablewidgetitem49 = new QTableWidgetItem();
+        prediction_history_tent->setHorizontalHeaderItem(2, __qtablewidgetitem49);
+        QTableWidgetItem *__qtablewidgetitem50 = new QTableWidgetItem();
+        prediction_history_tent->setHorizontalHeaderItem(3, __qtablewidgetitem50);
+        QTableWidgetItem *__qtablewidgetitem51 = new QTableWidgetItem();
+        prediction_history_tent->setHorizontalHeaderItem(4, __qtablewidgetitem51);
+        QTableWidgetItem *__qtablewidgetitem52 = new QTableWidgetItem();
+        prediction_history_tent->setHorizontalHeaderItem(5, __qtablewidgetitem52);
+        prediction_history_tent->setObjectName("prediction_history_tent");
+        prediction_history_tent->setFrameShape(QFrame::Shape::NoFrame);
+        prediction_history_tent->setAutoScroll(true);
+        prediction_history_tent->setSelectionBehavior(QAbstractItemView::SelectionBehavior::SelectRows);
+        prediction_history_tent->setVerticalScrollMode(QAbstractItemView::ScrollMode::ScrollPerItem);
+        prediction_history_tent->setShowGrid(false);
+        prediction_history_tent->setGridStyle(Qt::PenStyle::NoPen);
+        prediction_history_tent->setSortingEnabled(true);
+        prediction_history_tent->setWordWrap(true);
+        prediction_history_tent->setCornerButtonEnabled(false);
+        prediction_history_tent->setRowCount(0);
+        prediction_history_tent->horizontalHeader()->setCascadingSectionResizes(false);
+        prediction_history_tent->horizontalHeader()->setStretchLastSection(true);
+        prediction_history_tent->verticalHeader()->setVisible(false);
+        prediction_history_tent->verticalHeader()->setHighlightSections(false);
+        prediction_history_tent->verticalHeader()->setProperty("showSortIndicator", QVariant(true));
+
+        gridLayout_30->addWidget(prediction_history_tent, 0, 0, 1, 1);
+
+
+        gridLayout_31->addWidget(widget_2, 0, 0, 1, 1);
+
+        tabWidget_tent->addTab(tab_7, QString());
+
+        gridLayout_24->addWidget(tabWidget_tent, 1, 0, 1, 1);
 
         container->addWidget(tenants_page);
 
         grid3->addWidget(container, 1, 2, 1, 1);
 
+        sidebar = new QWidget(main_page);
+        sidebar->setObjectName("sidebar");
+        sizePolicy3.setHeightForWidth(sidebar->sizePolicy().hasHeightForWidth());
+        sidebar->setSizePolicy(sizePolicy3);
+        v0 = new QVBoxLayout(sidebar);
+        v0->setObjectName("v0");
+        logo = new QLabel(sidebar);
+        logo->setObjectName("logo");
+        sizePolicy2.setHeightForWidth(logo->sizePolicy().hasHeightForWidth());
+        logo->setSizePolicy(sizePolicy2);
+        logo->setPixmap(QPixmap(QString::fromUtf8("icons/logo.svg")));
+        logo->setScaledContents(true);
+        logo->setAlignment(Qt::AlignmentFlag::AlignCenter);
+
+        v0->addWidget(logo);
+
+        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
+
+        v0->addItem(verticalSpacer);
+
+        sidebar_btn_1 = new QPushButton(sidebar);
+        sidebar_btn_1->setObjectName("sidebar_btn_1");
+
+        v0->addWidget(sidebar_btn_1);
+
+        sidebar_btn_3 = new QPushButton(sidebar);
+        sidebar_btn_3->setObjectName("sidebar_btn_3");
+
+        v0->addWidget(sidebar_btn_3);
+
+        sidebar_btn_4 = new QPushButton(sidebar);
+        sidebar_btn_4->setObjectName("sidebar_btn_4");
+
+        v0->addWidget(sidebar_btn_4);
+
+        sidebar_btn_5 = new QPushButton(sidebar);
+        sidebar_btn_5->setObjectName("sidebar_btn_5");
+
+        v0->addWidget(sidebar_btn_5);
+
+        sidebar_btn_2 = new QPushButton(sidebar);
+        sidebar_btn_2->setObjectName("sidebar_btn_2");
+
+        v0->addWidget(sidebar_btn_2);
+
+        sidebar_btn_6 = new QPushButton(sidebar);
+        sidebar_btn_6->setObjectName("sidebar_btn_6");
+
+        v0->addWidget(sidebar_btn_6);
+
+
+        grid3->addWidget(sidebar, 0, 0, 2, 1);
+
+        topbar = new QWidget(main_page);
+        topbar->setObjectName("topbar");
+        sizePolicy1.setHeightForWidth(topbar->sizePolicy().hasHeightForWidth());
+        topbar->setSizePolicy(sizePolicy1);
+        h0 = new QHBoxLayout(topbar);
+        h0->setObjectName("h0");
+        sidebar_btn = new QToolButton(topbar);
+        sidebar_btn->setObjectName("sidebar_btn");
+
+        h0->addWidget(sidebar_btn);
+
+        title = new QLabel(topbar);
+        title->setObjectName("title");
+        sizePolicy4.setHeightForWidth(title->sizePolicy().hasHeightForWidth());
+        title->setSizePolicy(sizePolicy4);
+
+        h0->addWidget(title);
+
+        profile_btn = new QToolButton(topbar);
+        profile_btn->setObjectName("profile_btn");
+
+        h0->addWidget(profile_btn);
+
+
+        grid3->addWidget(topbar, 0, 1, 1, 2);
+
         stackedWidget->addWidget(main_page);
 
         grid0->addWidget(stackedWidget, 0, 0, 1, 1);
-
-        profile_section = new QWidget(centralwidget);
-        profile_section->setObjectName("profile_section");
-        QSizePolicy sizePolicy6(QSizePolicy::Policy::Maximum, QSizePolicy::Policy::Maximum);
-        sizePolicy6.setHorizontalStretch(0);
-        sizePolicy6.setVerticalStretch(0);
-        sizePolicy6.setHeightForWidth(profile_section->sizePolicy().hasHeightForWidth());
-        profile_section->setSizePolicy(sizePolicy6);
-        profile_section->setMinimumSize(QSize(0, 0));
-        profile_section->setMaximumSize(QSize(0, 0));
-        verticalLayout_13 = new QVBoxLayout(profile_section);
-        verticalLayout_13->setSpacing(2);
-        verticalLayout_13->setObjectName("verticalLayout_13");
-        verticalLayout_13->setContentsMargins(2, 2, 2, 2);
-        nom_role = new QTextBrowser(profile_section);
-        nom_role->setObjectName("nom_role");
-        sizePolicy2.setHeightForWidth(nom_role->sizePolicy().hasHeightForWidth());
-        nom_role->setSizePolicy(sizePolicy2);
-        nom_role->setStyleSheet(QString::fromUtf8("max-height:50px;"));
-
-        verticalLayout_13->addWidget(nom_role);
-
-        settings_btn = new QPushButton(profile_section);
-        settings_btn->setObjectName("settings_btn");
-
-        verticalLayout_13->addWidget(settings_btn);
-
-        logout_btn = new QPushButton(profile_section);
-        logout_btn->setObjectName("logout_btn");
-
-        verticalLayout_13->addWidget(logout_btn);
-
-
-        grid0->addWidget(profile_section, 0, 1, 1, 1);
 
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
@@ -2494,10 +2690,10 @@ public:
         stackedWidget->setCurrentIndex(1);
         container->setCurrentIndex(5);
         tabWidget->setCurrentIndex(0);
-        tabWidget_3->setCurrentIndex(2);
+        tabWidget_3->setCurrentIndex(1);
         tabWidget_4->setCurrentIndex(0);
         tabWidget_2->setCurrentIndex(0);
-        tabWidget_5->setCurrentIndex(0);
+        tabWidget_tent->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -2506,22 +2702,23 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
+        nom_role->setHtml(QCoreApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"hr { height: 1px; border-width: 0; }\n"
+"li.unchecked::marker { content: \"\\2610\"; }\n"
+"li.checked::marker { content: \"\\2612\"; }\n"
+"</style></head><body style=\" font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Ahmed Amine</p>\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt; font-style:italic;\">Role</span></p></body></html>", nullptr));
+        settings_btn->setText(QCoreApplication::translate("MainWindow", "profile", nullptr));
+        logout_btn->setText(QCoreApplication::translate("MainWindow", "logout", nullptr));
         logo_label->setText(QString());
         username->setPlaceholderText(QCoreApplication::translate("MainWindow", "  User Name", nullptr));
         password->setPlaceholderText(QCoreApplication::translate("MainWindow", "  Password", nullptr));
         login_btn->setText(QCoreApplication::translate("MainWindow", "L o g  I n", nullptr));
         forgot_password_btn->setText(QCoreApplication::translate("MainWindow", "forget password?", nullptr));
         login_btn_2->setText(QCoreApplication::translate("MainWindow", "L o g  I n With Camera", nullptr));
-        sidebar_btn->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
-        title->setText(QCoreApplication::translate("MainWindow", "Employers Mangement", nullptr));
-        profile_btn->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
-        logo->setText(QString());
-        sidebar_btn_1->setText(QCoreApplication::translate("MainWindow", "Employers", nullptr));
-        sidebar_btn_3->setText(QCoreApplication::translate("MainWindow", "Tenants", nullptr));
-        sidebar_btn_4->setText(QCoreApplication::translate("MainWindow", "Shops", nullptr));
-        sidebar_btn_5->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
-        sidebar_btn_2->setText(QCoreApplication::translate("MainWindow", "Services", nullptr));
-        sidebar_btn_6->setText(QCoreApplication::translate("MainWindow", "Complaints", nullptr));
         resetfilter_emp->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
         unselect_btn->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
         emp_search_btn->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
@@ -2813,43 +3010,98 @@ public:
 
         tabWidget_2->setTabText(tabWidget_2->indexOf(tab), QCoreApplication::translate("MainWindow", "Read", nullptr));
         tabWidget_2->setTabText(tabWidget_2->indexOf(tab_4), QCoreApplication::translate("MainWindow", "Statistics", nullptr));
-        refresh_tab->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
-        emp_search_btn_3->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
-        import_emp_3->setText(QCoreApplication::translate("MainWindow", "Send Email", nullptr));
-        export_emp_3->setText(QCoreApplication::translate("MainWindow", "Export", nullptr));
+        auto_mail_tent->setText(QCoreApplication::translate("MainWindow", "Send Email", nullptr));
+        export_tent->setText(QCoreApplication::translate("MainWindow", "Export", nullptr));
         delete_tent->setText(QCoreApplication::translate("MainWindow", "Delete", nullptr));
+        rented_tent->setPlaceholderText(QCoreApplication::translate("MainWindow", "Rented Area (m\302\262)", nullptr));
         email_tent->setPlaceholderText(QCoreApplication::translate("MainWindow", "Email", nullptr));
-        add_btn_tent->setText(QCoreApplication::translate("MainWindow", "Add", nullptr));
-        zone_tent->setItemText(0, QCoreApplication::translate("MainWindow", "Zone (Block)", nullptr));
-
-        store_type_tent->setItemText(0, QCoreApplication::translate("MainWindow", "Store Type", nullptr));
-
-        label_10->setText(QCoreApplication::translate("MainWindow", "To", nullptr));
-        tel_tent->setPlaceholderText(QCoreApplication::translate("MainWindow", "Telephone", nullptr));
-        monthly_tent->setPlaceholderText(QCoreApplication::translate("MainWindow", " Monthly Rent", nullptr));
-        label_2->setText(QCoreApplication::translate("MainWindow", "From", nullptr));
-        reset_tent->setText(QCoreApplication::translate("MainWindow", "Reset", nullptr));
-        update_tent->setText(QCoreApplication::translate("MainWindow", "Update", nullptr));
         nom_tent->setText(QString());
         nom_tent->setPlaceholderText(QCoreApplication::translate("MainWindow", "Name", nullptr));
-        rented_tent->setPlaceholderText(QCoreApplication::translate("MainWindow", "Rented Area (m\302\262)", nullptr));
-        payment_tent->setItemText(0, QCoreApplication::translate("MainWindow", "Payment Status", nullptr));
-        payment_tent->setItemText(1, QCoreApplication::translate("MainWindow", "done", nullptr));
+        store_type_tent->setItemText(0, QCoreApplication::translate("MainWindow", "Store Type", nullptr));
+        store_type_tent->setItemText(1, QCoreApplication::translate("MainWindow", "Books", nullptr));
+        store_type_tent->setItemText(2, QCoreApplication::translate("MainWindow", "Clothing", nullptr));
+        store_type_tent->setItemText(3, QCoreApplication::translate("MainWindow", "Cosmetics", nullptr));
+        store_type_tent->setItemText(4, QCoreApplication::translate("MainWindow", "Electronics", nullptr));
+        store_type_tent->setItemText(5, QCoreApplication::translate("MainWindow", "Food Court", nullptr));
+        store_type_tent->setItemText(6, QCoreApplication::translate("MainWindow", "Home Decor", nullptr));
+        store_type_tent->setItemText(7, QCoreApplication::translate("MainWindow", "Jewelry", nullptr));
+        store_type_tent->setItemText(8, QCoreApplication::translate("MainWindow", "Toys", nullptr));
 
-        tabWidget_5->setTabText(tabWidget_5->indexOf(tab_5), QCoreApplication::translate("MainWindow", "List Tenants", nullptr));
-        tabWidget_5->setTabText(tabWidget_5->indexOf(tab_6), QCoreApplication::translate("MainWindow", "Statistics", nullptr));
-        tabWidget_5->setTabText(tabWidget_5->indexOf(tab_7), QCoreApplication::translate("MainWindow", "Recommendation System", nullptr));
-        nom_role->setHtml(QCoreApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"hr { height: 1px; border-width: 0; }\n"
-"li.unchecked::marker { content: \"\\2610\"; }\n"
-"li.checked::marker { content: \"\\2612\"; }\n"
-"</style></head><body style=\" font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Ahmed Amine</p>\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt; font-style:italic;\">Role</span></p></body></html>", nullptr));
-        settings_btn->setText(QCoreApplication::translate("MainWindow", "profile", nullptr));
-        logout_btn->setText(QCoreApplication::translate("MainWindow", "logout", nullptr));
+        reset_tent->setText(QCoreApplication::translate("MainWindow", "Reset", nullptr));
+        zone_tent->setItemText(0, QCoreApplication::translate("MainWindow", "Zone", nullptr));
+        zone_tent->setItemText(1, QCoreApplication::translate("MainWindow", "A", nullptr));
+        zone_tent->setItemText(2, QCoreApplication::translate("MainWindow", "B", nullptr));
+        zone_tent->setItemText(3, QCoreApplication::translate("MainWindow", "C", nullptr));
+        zone_tent->setItemText(4, QCoreApplication::translate("MainWindow", "D", nullptr));
+
+        monthly_tent->setPlaceholderText(QCoreApplication::translate("MainWindow", " Monthly Rent", nullptr));
+        update_tent->setText(QCoreApplication::translate("MainWindow", "Update", nullptr));
+        payment_tent->setItemText(0, QCoreApplication::translate("MainWindow", "Payment Status", nullptr));
+        payment_tent->setItemText(1, QCoreApplication::translate("MainWindow", "Done", nullptr));
+        payment_tent->setItemText(2, QCoreApplication::translate("MainWindow", "Pending", nullptr));
+        payment_tent->setItemText(3, QCoreApplication::translate("MainWindow", "Late", nullptr));
+
+        tel_tent->setPlaceholderText(QCoreApplication::translate("MainWindow", "Telephone", nullptr));
+        activity_level_tent->setItemText(0, QCoreApplication::translate("MainWindow", "Activity Level", nullptr));
+        activity_level_tent->setItemText(1, QCoreApplication::translate("MainWindow", "High", nullptr));
+        activity_level_tent->setItemText(2, QCoreApplication::translate("MainWindow", "Medium", nullptr));
+        activity_level_tent->setItemText(3, QCoreApplication::translate("MainWindow", "Low", nullptr));
+
+        add_tent->setText(QCoreApplication::translate("MainWindow", "Add", nullptr));
+        refresh_tab->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
+        search_box_tent->setPlaceholderText(QCoreApplication::translate("MainWindow", "Select a column header to enable sorting or set it as the active filter criteria.", nullptr));
+        search_tent->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
+        tabWidget_tent->setTabText(tabWidget_tent->indexOf(tab_5), QCoreApplication::translate("MainWindow", "List Tenants", nullptr));
+        tabWidget_tent->setTabText(tabWidget_tent->indexOf(tab_6), QCoreApplication::translate("MainWindow", "Statistics", nullptr));
+        space_tent->setPlaceholderText(QCoreApplication::translate("MainWindow", "200 m\302\262", nullptr));
+        nivact_tent->setItemText(0, QCoreApplication::translate("MainWindow", "Niveau d'activite", nullptr));
+        nivact_tent->setItemText(1, QCoreApplication::translate("MainWindow", "Low", nullptr));
+        nivact_tent->setItemText(2, QCoreApplication::translate("MainWindow", "Medium", nullptr));
+        nivact_tent->setItemText(3, QCoreApplication::translate("MainWindow", "High", nullptr));
+
+        type_boutique_pred_tent->setItemText(0, QCoreApplication::translate("MainWindow", "Type Boutique", nullptr));
+        type_boutique_pred_tent->setItemText(1, QCoreApplication::translate("MainWindow", "Food Court", nullptr));
+        type_boutique_pred_tent->setItemText(2, QCoreApplication::translate("MainWindow", "Home Decor", nullptr));
+        type_boutique_pred_tent->setItemText(3, QCoreApplication::translate("MainWindow", "Electronics", nullptr));
+        type_boutique_pred_tent->setItemText(4, QCoreApplication::translate("MainWindow", "Cosmetics", nullptr));
+        type_boutique_pred_tent->setItemText(5, QCoreApplication::translate("MainWindow", "Clothing", nullptr));
+        type_boutique_pred_tent->setItemText(6, QCoreApplication::translate("MainWindow", "Toys", nullptr));
+        type_boutique_pred_tent->setItemText(7, QCoreApplication::translate("MainWindow", "Jewlery", nullptr));
+        type_boutique_pred_tent->setItemText(8, QCoreApplication::translate("MainWindow", "Books", nullptr));
+
+        zone_d_tent->setText(QCoreApplication::translate("MainWindow", "Block D", nullptr));
+        zone_a_tent->setText(QCoreApplication::translate("MainWindow", "Block A", nullptr));
+        zone_c_tent->setText(QCoreApplication::translate("MainWindow", "Block C", nullptr));
+        zone_b_tent->setText(QCoreApplication::translate("MainWindow", "Block B", nullptr));
+        prediction_value_tent->setText(QCoreApplication::translate("MainWindow", "\360\237\224\216", nullptr));
+        predict_tent->setText(QCoreApplication::translate("MainWindow", "Suggest", nullptr));
+        clear_pred_tent->setText(QCoreApplication::translate("MainWindow", "Clear", nullptr));
+        delete_pred_tent->setText(QCoreApplication::translate("MainWindow", "Delete", nullptr));
+        delete_all_pred_tent->setText(QCoreApplication::translate("MainWindow", "Delete All", nullptr));
+        refresh_pred_tent->setText(QCoreApplication::translate("MainWindow", "Refresh", nullptr));
+        QTableWidgetItem *___qtablewidgetitem44 = prediction_history_tent->horizontalHeaderItem(0);
+        ___qtablewidgetitem44->setText(QCoreApplication::translate("MainWindow", "Space (m\302\262)", nullptr));
+        QTableWidgetItem *___qtablewidgetitem45 = prediction_history_tent->horizontalHeaderItem(1);
+        ___qtablewidgetitem45->setText(QCoreApplication::translate("MainWindow", "Activity Level", nullptr));
+        QTableWidgetItem *___qtablewidgetitem46 = prediction_history_tent->horizontalHeaderItem(2);
+        ___qtablewidgetitem46->setText(QCoreApplication::translate("MainWindow", "Shop Type", nullptr));
+        QTableWidgetItem *___qtablewidgetitem47 = prediction_history_tent->horizontalHeaderItem(3);
+        ___qtablewidgetitem47->setText(QCoreApplication::translate("MainWindow", "Zone", nullptr));
+        QTableWidgetItem *___qtablewidgetitem48 = prediction_history_tent->horizontalHeaderItem(4);
+        ___qtablewidgetitem48->setText(QCoreApplication::translate("MainWindow", "Predicted Rent", nullptr));
+        QTableWidgetItem *___qtablewidgetitem49 = prediction_history_tent->horizontalHeaderItem(5);
+        ___qtablewidgetitem49->setText(QCoreApplication::translate("MainWindow", "Prediction Date", nullptr));
+        tabWidget_tent->setTabText(tabWidget_tent->indexOf(tab_7), QCoreApplication::translate("MainWindow", "Recommendation System", nullptr));
+        logo->setText(QString());
+        sidebar_btn_1->setText(QCoreApplication::translate("MainWindow", "Employers", nullptr));
+        sidebar_btn_3->setText(QCoreApplication::translate("MainWindow", "Tenants", nullptr));
+        sidebar_btn_4->setText(QCoreApplication::translate("MainWindow", "Shops", nullptr));
+        sidebar_btn_5->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
+        sidebar_btn_2->setText(QCoreApplication::translate("MainWindow", "Services", nullptr));
+        sidebar_btn_6->setText(QCoreApplication::translate("MainWindow", "Complaints", nullptr));
+        sidebar_btn->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
+        title->setText(QCoreApplication::translate("MainWindow", "Employers Mangement", nullptr));
+        profile_btn->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
     } // retranslateUi
 
 };

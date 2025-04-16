@@ -33,6 +33,83 @@
     <property name="spacing">
      <number>0</number>
     </property>
+    <item row="0" column="1">
+     <widget class="QWidget" name="profile_section" native="true">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_13">
+       <property name="spacing">
+        <number>2</number>
+       </property>
+       <property name="leftMargin">
+        <number>2</number>
+       </property>
+       <property name="topMargin">
+        <number>2</number>
+       </property>
+       <property name="rightMargin">
+        <number>2</number>
+       </property>
+       <property name="bottomMargin">
+        <number>2</number>
+       </property>
+       <item>
+        <widget class="QTextBrowser" name="nom_role">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">max-height:50px;</string>
+         </property>
+         <property name="html">
+          <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Ahmed Amine&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; font-style:italic;&quot;&gt;Role&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="settings_btn">
+         <property name="text">
+          <string>profile</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="logout_btn">
+         <property name="text">
+          <string>logout</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
     <item row="0" column="0">
      <widget class="QStackedWidget" name="stackedWidget">
       <property name="styleSheet">
@@ -310,142 +387,6 @@
         <property name="spacing">
          <number>0</number>
         </property>
-        <item row="0" column="1" colspan="2">
-         <widget class="QWidget" name="topbar" native="true">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <layout class="QHBoxLayout" name="h0">
-           <item>
-            <widget class="QToolButton" name="sidebar_btn">
-             <property name="text">
-              <string>...</string>
-             </property>
-             <property name="icon">
-              <iconset>
-               <normaloff>icons/sidebar.svg</normaloff>icons/sidebar.svg</iconset>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLabel" name="title">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="text">
-              <string>Employers Mangement</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QToolButton" name="profile_btn">
-             <property name="text">
-              <string>...</string>
-             </property>
-             <property name="icon">
-              <iconset>
-               <normaloff>icons/pfp.jpg</normaloff>icons/pfp.jpg</iconset>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </widget>
-        </item>
-        <item row="0" column="0" rowspan="2">
-         <widget class="QWidget" name="sidebar" native="true">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <layout class="QVBoxLayout" name="v0">
-           <item>
-            <widget class="QLabel" name="logo">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="text">
-              <string/>
-             </property>
-             <property name="pixmap">
-              <pixmap>icons/logo.svg</pixmap>
-             </property>
-             <property name="scaledContents">
-              <bool>true</bool>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignmentFlag::AlignCenter</set>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <spacer name="verticalSpacer">
-             <property name="orientation">
-              <enum>Qt::Orientation::Vertical</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>20</width>
-               <height>40</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item>
-            <widget class="QPushButton" name="sidebar_btn_1">
-             <property name="text">
-              <string>Employers</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="sidebar_btn_3">
-             <property name="text">
-              <string>Tenants</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="sidebar_btn_4">
-             <property name="text">
-              <string>Shops</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="sidebar_btn_5">
-             <property name="text">
-              <string>PushButton</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="sidebar_btn_2">
-             <property name="text">
-              <string>Services</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="sidebar_btn_6">
-             <property name="text">
-              <string>Complaints</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </widget>
-        </item>
         <item row="1" column="2">
          <widget class="QStackedWidget" name="container">
           <property name="sizePolicy">
@@ -1117,7 +1058,7 @@
                <string notr="true"/>
               </property>
               <property name="currentIndex">
-               <number>2</number>
+               <number>1</number>
               </property>
               <widget class="QWidget" name="Add">
                <attribute name="title">
@@ -4966,8 +4907,8 @@ color: #FFFFFF;
             </sizepolicy>
            </property>
            <layout class="QGridLayout" name="gridLayout_24">
-            <item row="0" column="0">
-             <widget class="QTabWidget" name="tabWidget_5">
+            <item row="1" column="0">
+             <widget class="QTabWidget" name="tabWidget_tent">
               <property name="currentIndex">
                <number>0</number>
               </property>
@@ -4976,47 +4917,6 @@ color: #FFFFFF;
                 <string>List Tenants</string>
                </attribute>
                <layout class="QGridLayout" name="gridLayout_19">
-                <item row="0" column="0" colspan="2">
-                 <widget class="QWidget" name="searchform_emp_3" native="true">
-                  <property name="sizePolicy">
-                   <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-                    <horstretch>0</horstretch>
-                    <verstretch>0</verstretch>
-                   </sizepolicy>
-                  </property>
-                  <layout class="QHBoxLayout" name="grid5_3">
-                   <item>
-                    <widget class="QToolButton" name="refresh_tab">
-                     <property name="sizePolicy">
-                      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                       <horstretch>0</horstretch>
-                       <verstretch>0</verstretch>
-                      </sizepolicy>
-                     </property>
-                     <property name="text">
-                      <string>...</string>
-                     </property>
-                     <property name="icon">
-                      <iconset theme="QIcon::ThemeIcon::SyncSynchronizing"/>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QLineEdit" name="searchbox_emp_3"/>
-                   </item>
-                   <item>
-                    <widget class="QToolButton" name="emp_search_btn_3">
-                     <property name="text">
-                      <string>...</string>
-                     </property>
-                     <property name="icon">
-                      <iconset theme="QIcon::ThemeIcon::EditFind"/>
-                     </property>
-                    </widget>
-                   </item>
-                  </layout>
-                 </widget>
-                </item>
                 <item row="1" column="0">
                  <widget class="QWidget" name="list_emp_3" native="true">
                   <property name="sizePolicy">
@@ -5025,9 +4925,9 @@ color: #FFFFFF;
                     <verstretch>0</verstretch>
                    </sizepolicy>
                   </property>
-                  <layout class="QGridLayout" name="grid6_3">
+                  <layout class="QGridLayout" name="gridLayout_29">
                    <item row="1" column="2">
-                    <widget class="QPushButton" name="import_emp_3">
+                    <widget class="QPushButton" name="auto_mail_tent">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                        <horstretch>0</horstretch>
@@ -5039,8 +4939,34 @@ color: #FFFFFF;
                      </property>
                     </widget>
                    </item>
+                   <item row="1" column="1">
+                    <widget class="QPushButton" name="export_tent">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="text">
+                      <string>Export</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="0">
+                    <widget class="QPushButton" name="delete_tent">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="text">
+                      <string>Delete</string>
+                     </property>
+                    </widget>
+                   </item>
                    <item row="0" column="0" colspan="3">
-                    <widget class="QTableWidget" name="table_emp_3">
+                    <widget class="QTableWidget" name="table_tent">
                      <property name="font">
                       <font>
                        <family>黑体</family>
@@ -5074,7 +5000,7 @@ color: #FFFFFF;
                       <bool>true</bool>
                      </property>
                      <property name="wordWrap">
-                      <bool>true</bool>
+                      <bool>false</bool>
                      </property>
                      <property name="cornerButtonEnabled">
                       <bool>false</bool>
@@ -5115,36 +5041,10 @@ color: #FFFFFF;
                      <row/>
                     </widget>
                    </item>
-                   <item row="1" column="1">
-                    <widget class="QPushButton" name="export_emp_3">
-                     <property name="sizePolicy">
-                      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-                       <horstretch>0</horstretch>
-                       <verstretch>0</verstretch>
-                      </sizepolicy>
-                     </property>
-                     <property name="text">
-                      <string>Export</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="1" column="0">
-                    <widget class="QPushButton" name="delete_tent">
-                     <property name="sizePolicy">
-                      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-                       <horstretch>0</horstretch>
-                       <verstretch>0</verstretch>
-                      </sizepolicy>
-                     </property>
-                     <property name="text">
-                      <string>Delete</string>
-                     </property>
-                    </widget>
-                   </item>
                   </layout>
                  </widget>
                 </item>
-                <item row="1" column="1">
+                <item row="0" column="1" rowspan="2">
                  <widget class="QWidget" name="emp_form_3" native="true">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
@@ -5152,8 +5052,37 @@ color: #FFFFFF;
                     <verstretch>0</verstretch>
                    </sizepolicy>
                   </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>281</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
                   <layout class="QGridLayout" name="gridLayout_20">
-                   <item row="1" column="0" colspan="3">
+                   <item row="6" column="0" colspan="3">
+                    <widget class="QDateEdit" name="to_tent">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="0" colspan="2">
+                    <widget class="QLineEdit" name="rented_tent">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="placeholderText">
+                      <string>Rented Area (m²)</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="2">
                     <widget class="QLineEdit" name="email_tent">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
@@ -5166,149 +5095,7 @@ color: #FFFFFF;
                      </property>
                     </widget>
                    </item>
-                   <item row="8" column="2">
-                    <widget class="QPushButton" name="add_btn_tent">
-                     <property name="sizePolicy">
-                      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-                       <horstretch>0</horstretch>
-                       <verstretch>0</verstretch>
-                      </sizepolicy>
-                     </property>
-                     <property name="text">
-                      <string>Add</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="6" column="1" colspan="2">
-                    <widget class="QDateEdit" name="to_tent">
-                     <property name="sizePolicy">
-                      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-                       <horstretch>0</horstretch>
-                       <verstretch>0</verstretch>
-                      </sizepolicy>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="2" column="2">
-                    <widget class="QComboBox" name="zone_tent">
-                     <property name="sizePolicy">
-                      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-                       <horstretch>0</horstretch>
-                       <verstretch>0</verstretch>
-                      </sizepolicy>
-                     </property>
-                     <item>
-                      <property name="text">
-                       <string>Zone (Block)</string>
-                      </property>
-                     </item>
-                    </widget>
-                   </item>
-                   <item row="2" column="1">
-                    <widget class="QComboBox" name="store_type_tent">
-                     <property name="sizePolicy">
-                      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-                       <horstretch>0</horstretch>
-                       <verstretch>0</verstretch>
-                      </sizepolicy>
-                     </property>
-                     <item>
-                      <property name="text">
-                       <string>Store Type</string>
-                      </property>
-                     </item>
-                    </widget>
-                   </item>
-                   <item row="6" column="0">
-                    <widget class="QLabel" name="label_10">
-                     <property name="text">
-                      <string>To</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="2" column="0">
-                    <widget class="QLineEdit" name="tel_tent">
-                     <property name="sizePolicy">
-                      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-                       <horstretch>0</horstretch>
-                       <verstretch>0</verstretch>
-                      </sizepolicy>
-                     </property>
-                     <property name="placeholderText">
-                      <string>Telephone</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="4" column="1">
-                    <widget class="QLineEdit" name="monthly_tent">
-                     <property name="sizePolicy">
-                      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-                       <horstretch>0</horstretch>
-                       <verstretch>0</verstretch>
-                      </sizepolicy>
-                     </property>
-                     <property name="placeholderText">
-                      <string> Monthly Rent</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="5" column="0">
-                    <widget class="QLabel" name="label_2">
-                     <property name="text">
-                      <string>From</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="8" column="1">
-                    <widget class="QPushButton" name="reset_tent">
-                     <property name="sizePolicy">
-                      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-                       <horstretch>0</horstretch>
-                       <verstretch>0</verstretch>
-                      </sizepolicy>
-                     </property>
-                     <property name="text">
-                      <string>Reset</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="8" column="0">
-                    <widget class="QPushButton" name="update_tent">
-                     <property name="sizePolicy">
-                      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-                       <horstretch>0</horstretch>
-                       <verstretch>0</verstretch>
-                      </sizepolicy>
-                     </property>
-                     <property name="text">
-                      <string>Update</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="7" column="0" colspan="3">
-                    <spacer name="verticalSpacer_2">
-                     <property name="orientation">
-                      <enum>Qt::Orientation::Vertical</enum>
-                     </property>
-                     <property name="sizeHint" stdset="0">
-                      <size>
-                       <width>378</width>
-                       <height>173</height>
-                      </size>
-                     </property>
-                    </spacer>
-                   </item>
-                   <item row="5" column="1" colspan="2">
-                    <widget class="QDateEdit" name="from_tent">
-                     <property name="sizePolicy">
-                      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-                       <horstretch>0</horstretch>
-                       <verstretch>0</verstretch>
-                      </sizepolicy>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="0" column="0" colspan="3">
+                   <item row="0" column="0" colspan="2">
                     <widget class="QLineEdit" name="nom_tent">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
@@ -5330,8 +5117,111 @@ color: #FFFFFF;
                      </property>
                     </widget>
                    </item>
-                   <item row="4" column="0">
-                    <widget class="QLineEdit" name="rented_tent">
+                   <item row="2" column="0" colspan="2">
+                    <widget class="QComboBox" name="store_type_tent">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <item>
+                      <property name="text">
+                       <string>Store Type</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>Books</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>Clothing</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>Cosmetics</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>Electronics</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>Food Court</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>Home Decor</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>Jewelry</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>Toys</string>
+                      </property>
+                     </item>
+                    </widget>
+                   </item>
+                   <item row="14" column="1" colspan="2">
+                    <widget class="QPushButton" name="reset_tent">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="text">
+                      <string>Reset</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="2">
+                    <widget class="QComboBox" name="zone_tent">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <item>
+                      <property name="text">
+                       <string>Zone</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>A</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>B</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>C</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>D</string>
+                      </property>
+                     </item>
+                    </widget>
+                   </item>
+                   <item row="4" column="0" colspan="2">
+                    <widget class="QLineEdit" name="monthly_tent">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                        <horstretch>0</horstretch>
@@ -5339,7 +5229,43 @@ color: #FFFFFF;
                       </sizepolicy>
                      </property>
                      <property name="placeholderText">
-                      <string>Rented Area (m²)</string>
+                      <string> Monthly Rent</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="8" column="0" colspan="3">
+                    <spacer name="verticalSpacer_2">
+                     <property name="orientation">
+                      <enum>Qt::Orientation::Vertical</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>286</width>
+                       <height>135</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item row="14" column="0">
+                    <widget class="QPushButton" name="update_tent">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="text">
+                      <string>Update</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="5" column="0" colspan="3">
+                    <widget class="QDateEdit" name="from_tent">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
                      </property>
                     </widget>
                    </item>
@@ -5352,9 +5278,114 @@ color: #FFFFFF;
                      </item>
                      <item>
                       <property name="text">
-                       <string>done</string>
+                       <string>Done</string>
                       </property>
                      </item>
+                     <item>
+                      <property name="text">
+                       <string>Pending</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>Late</string>
+                      </property>
+                     </item>
+                    </widget>
+                   </item>
+                   <item row="0" column="2">
+                    <widget class="QLineEdit" name="tel_tent">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="placeholderText">
+                      <string>Telephone</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="7" column="0" colspan="3">
+                    <widget class="QComboBox" name="activity_level_tent">
+                     <item>
+                      <property name="text">
+                       <string>Activity Level</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>High</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>Medium</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>Low</string>
+                      </property>
+                     </item>
+                    </widget>
+                   </item>
+                   <item row="9" column="0" colspan="3">
+                    <widget class="QPushButton" name="add_tent">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="text">
+                      <string>Add</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item row="0" column="0">
+                 <widget class="QWidget" name="searchform_emp_3" native="true">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <layout class="QHBoxLayout" name="grid5_3">
+                   <item>
+                    <widget class="QToolButton" name="refresh_tab">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="text">
+                      <string>...</string>
+                     </property>
+                     <property name="icon">
+                      <iconset theme="QIcon::ThemeIcon::SyncSynchronizing"/>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLineEdit" name="search_box_tent">
+                     <property name="placeholderText">
+                      <string>Select a column header to enable sorting or set it as the active filter criteria.</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QToolButton" name="search_tent">
+                     <property name="text">
+                      <string>...</string>
+                     </property>
+                     <property name="icon">
+                      <iconset theme="QIcon::ThemeIcon::EditFind"/>
+                     </property>
                     </widget>
                    </item>
                   </layout>
@@ -5366,11 +5397,305 @@ color: #FFFFFF;
                <attribute name="title">
                 <string>Statistics</string>
                </attribute>
+               <layout class="QGridLayout" name="gridLayout_28">
+                <item row="0" column="0">
+                 <widget class="QWidget" name="chart_widget_tent_one" native="true"/>
+                </item>
+                <item row="0" column="1">
+                 <widget class="QWidget" name="chart_widget_tent_three" native="true"/>
+                </item>
+               </layout>
               </widget>
               <widget class="QWidget" name="tab_7">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
                <attribute name="title">
                 <string>Recommendation System</string>
                </attribute>
+               <layout class="QGridLayout" name="gridLayout_31">
+                <item row="0" column="1">
+                 <widget class="QWidget" name="widget" native="true">
+                  <property name="maximumSize">
+                   <size>
+                    <width>241</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <layout class="QGridLayout" name="gridLayout_27">
+                   <item row="0" column="0">
+                    <widget class="QLineEdit" name="space_tent">
+                     <property name="placeholderText">
+                      <string>200 m²</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="0">
+                    <widget class="QComboBox" name="nivact_tent">
+                     <item>
+                      <property name="text">
+                       <string>Niveau d'activite</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>Low</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>Medium</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>High</string>
+                      </property>
+                     </item>
+                    </widget>
+                   </item>
+                   <item row="2" column="0">
+                    <widget class="QComboBox" name="type_boutique_pred_tent">
+                     <item>
+                      <property name="text">
+                       <string>Type Boutique</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>Food Court</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>Home Decor</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>Electronics</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>Cosmetics</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>Clothing</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>Toys</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>Jewlery</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>Books</string>
+                      </property>
+                     </item>
+                    </widget>
+                   </item>
+                   <item row="3" column="0">
+                    <layout class="QGridLayout" name="gridLayout_26">
+                     <item row="1" column="1">
+                      <widget class="QCheckBox" name="zone_d_tent">
+                       <property name="text">
+                        <string>Block D</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="0">
+                      <widget class="QCheckBox" name="zone_a_tent">
+                       <property name="text">
+                        <string>Block A</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="0">
+                      <widget class="QCheckBox" name="zone_c_tent">
+                       <property name="text">
+                        <string>Block C</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="1">
+                      <widget class="QCheckBox" name="zone_b_tent">
+                       <property name="text">
+                        <string>Block B</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                   <item row="4" column="0">
+                    <spacer name="verticalSpacer_3">
+                     <property name="orientation">
+                      <enum>Qt::Orientation::Vertical</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>20</width>
+                       <height>148</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item row="5" column="0">
+                    <widget class="QLabel" name="prediction_value_tent">
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>41</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string>🔎</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="6" column="0">
+                    <layout class="QHBoxLayout" name="horizontalLayout">
+                     <item>
+                      <widget class="QPushButton" name="predict_tent">
+                       <property name="text">
+                        <string>Suggest</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QPushButton" name="clear_pred_tent">
+                       <property name="text">
+                        <string>Clear</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item row="0" column="0">
+                 <widget class="QWidget" name="widget_2" native="true">
+                  <layout class="QGridLayout" name="gridLayout_30">
+                   <item row="1" column="0">
+                    <layout class="QHBoxLayout" name="horizontalLayout_2">
+                     <item>
+                      <widget class="QPushButton" name="delete_pred_tent">
+                       <property name="text">
+                        <string>Delete</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QPushButton" name="delete_all_pred_tent">
+                       <property name="text">
+                        <string>Delete All</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QPushButton" name="refresh_pred_tent">
+                       <property name="text">
+                        <string>Refresh</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                   <item row="0" column="0">
+                    <widget class="QTableWidget" name="prediction_history_tent">
+                     <property name="frameShape">
+                      <enum>QFrame::Shape::NoFrame</enum>
+                     </property>
+                     <property name="autoScroll">
+                      <bool>true</bool>
+                     </property>
+                     <property name="selectionBehavior">
+                      <enum>QAbstractItemView::SelectionBehavior::SelectRows</enum>
+                     </property>
+                     <property name="verticalScrollMode">
+                      <enum>QAbstractItemView::ScrollMode::ScrollPerItem</enum>
+                     </property>
+                     <property name="showGrid">
+                      <bool>false</bool>
+                     </property>
+                     <property name="gridStyle">
+                      <enum>Qt::PenStyle::NoPen</enum>
+                     </property>
+                     <property name="sortingEnabled">
+                      <bool>true</bool>
+                     </property>
+                     <property name="wordWrap">
+                      <bool>true</bool>
+                     </property>
+                     <property name="cornerButtonEnabled">
+                      <bool>false</bool>
+                     </property>
+                     <property name="rowCount">
+                      <number>0</number>
+                     </property>
+                     <attribute name="horizontalHeaderCascadingSectionResizes">
+                      <bool>false</bool>
+                     </attribute>
+                     <attribute name="horizontalHeaderStretchLastSection">
+                      <bool>true</bool>
+                     </attribute>
+                     <attribute name="verticalHeaderVisible">
+                      <bool>false</bool>
+                     </attribute>
+                     <attribute name="verticalHeaderHighlightSections">
+                      <bool>false</bool>
+                     </attribute>
+                     <attribute name="verticalHeaderShowSortIndicator" stdset="0">
+                      <bool>true</bool>
+                     </attribute>
+                     <column>
+                      <property name="text">
+                       <string>Space (m²)</string>
+                      </property>
+                     </column>
+                     <column>
+                      <property name="text">
+                       <string>Activity Level</string>
+                      </property>
+                     </column>
+                     <column>
+                      <property name="text">
+                       <string>Shop Type</string>
+                      </property>
+                     </column>
+                     <column>
+                      <property name="text">
+                       <string>Zone</string>
+                      </property>
+                     </column>
+                     <column>
+                      <property name="text">
+                       <string>Predicted Rent</string>
+                      </property>
+                     </column>
+                     <column>
+                      <property name="text">
+                       <string>Prediction Date</string>
+                      </property>
+                     </column>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+               </layout>
               </widget>
              </widget>
             </item>
@@ -5378,85 +5703,136 @@ color: #FFFFFF;
           </widget>
          </widget>
         </item>
+        <item row="0" column="0" rowspan="2">
+         <widget class="QWidget" name="sidebar" native="true">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <layout class="QVBoxLayout" name="v0">
+           <item>
+            <widget class="QLabel" name="logo">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="pixmap">
+              <pixmap>icons/logo.svg</pixmap>
+             </property>
+             <property name="scaledContents">
+              <bool>true</bool>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignmentFlag::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="verticalSpacer">
+             <property name="orientation">
+              <enum>Qt::Orientation::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QPushButton" name="sidebar_btn_1">
+             <property name="text">
+              <string>Employers</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="sidebar_btn_3">
+             <property name="text">
+              <string>Tenants</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="sidebar_btn_4">
+             <property name="text">
+              <string>Shops</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="sidebar_btn_5">
+             <property name="text">
+              <string>PushButton</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="sidebar_btn_2">
+             <property name="text">
+              <string>Services</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="sidebar_btn_6">
+             <property name="text">
+              <string>Complaints</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="0" column="1" colspan="2">
+         <widget class="QWidget" name="topbar" native="true">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <layout class="QHBoxLayout" name="h0">
+           <item>
+            <widget class="QToolButton" name="sidebar_btn">
+             <property name="text">
+              <string>...</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="title">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Employers Mangement</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QToolButton" name="profile_btn">
+             <property name="text">
+              <string>...</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
        </layout>
       </widget>
-     </widget>
-    </item>
-    <item row="0" column="1">
-     <widget class="QWidget" name="profile_section" native="true">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="minimumSize">
-       <size>
-        <width>0</width>
-        <height>0</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>0</width>
-        <height>0</height>
-       </size>
-      </property>
-      <layout class="QVBoxLayout" name="verticalLayout_13">
-       <property name="spacing">
-        <number>2</number>
-       </property>
-       <property name="leftMargin">
-        <number>2</number>
-       </property>
-       <property name="topMargin">
-        <number>2</number>
-       </property>
-       <property name="rightMargin">
-        <number>2</number>
-       </property>
-       <property name="bottomMargin">
-        <number>2</number>
-       </property>
-       <item>
-        <widget class="QTextBrowser" name="nom_role">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">max-height:50px;</string>
-         </property>
-         <property name="html">
-          <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-hr { height: 1px; border-width: 0; }
-li.unchecked::marker { content: &quot;\2610&quot;; }
-li.checked::marker { content: &quot;\2612&quot;; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Ahmed Amine&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; font-style:italic;&quot;&gt;Role&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="settings_btn">
-         <property name="text">
-          <string>profile</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="logout_btn">
-         <property name="text">
-          <string>logout</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
      </widget>
     </item>
    </layout>
