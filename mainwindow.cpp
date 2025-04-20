@@ -32,18 +32,23 @@ MainWindow::MainWindow(QWidget *parent)
     ui->profile_section->move(this->width() - 140, 65);
     ui->profile_section->hide();
     ui->profile_section->installEventFilter(this);
-    ui->profile_btn->setIcon(QIcon("C:\\Users\\Taha\\Desktop\\mallify\\icons\\pfp.jpg"));
-    ui->sidebar_btn->setIcon(
-        QIcon("C:\\Users\\Taha\\Desktop\\mallify\\icons\\logo_sidebar_light.png"));
-    ui->logo->setPixmap(
-        QPixmap("C:\\Users\\Taha\\Desktop\\mallify\\icons\\logo_sidebar_light.png"));
-    ui->logo_label->setPixmap(
-        QPixmap("C:\\Users\\Taha\\Desktop\\mallify\\icons\\logo_light.png"));
     ui->profile_pic->setAcceptDrops(true);
     ui->profile_pic->setAlignment(Qt::AlignCenter);
     ui->title->setAcceptDrops(true);
     setAcceptDrops(true);
 
+    QFile file("C:\\Users\\moham\\Desktop\\mallify\\light.qss");
+    if (file.open(QFile::ReadOnly)) {
+        qApp->setStyleSheet(file.readAll());
+        file.close();
+    }
+
+    ui->profile_btn->setIcon(QIcon("C:\\Users\\Taha\\Desktop\\mallify\\icons\\pfp.jpg"));
+    ui->sidebar_btn->setIcon(QIcon("C:\\Users\\Taha\\Desktop\\mallify\\icons\\logo_sidebar_light.png"));
+    ui->logo->setPixmap(QPixmap("C:\\Users\\Taha\\Desktop\\mallify\\icons\\logo_sidebar_light.png"));
+    ui->logo_label->setPixmap(QPixmap("C:\\Users\\Taha\\Desktop\\mallify\\icons\\logo_light.png"));
+
+    //===============Tenant UI Settings & Conditions=========================//
     ui->prediction_history_tent->setSelectionBehavior(QAbstractItemView::SelectRows);
     ui->prediction_history_tent->setEditTriggers(QAbstractItemView::NoEditTriggers);
 
@@ -55,21 +60,12 @@ MainWindow::MainWindow(QWidget *parent)
 
     connect(ui->table_tent->horizontalHeader(), &QHeaderView::sectionClicked, this, [](int index) { selectedHeaderColumnTent = index; });
     connect(ui->table_tent->horizontalHeader(), &QHeaderView::sectionDoubleClicked, this, [this](int i) {
-        ui->table_tent->sortByColumn(i, (ui->table_tent->horizontalHeader()->sortIndicatorOrder() == Qt::AscendingOrder)
-                                      ? Qt::DescendingOrder
-                                      : Qt::AscendingOrder);
+        ui->table_tent->sortByColumn(i, (ui->table_tent->horizontalHeader()->sortIndicatorOrder() == Qt::AscendingOrder)? Qt::DescendingOrder: Qt::AscendingOrder);
     });
-
-    QFile file("C:\\Users\\moham\\Desktop\\mallify\\light.qss");
 
     ui->nom_tent->setValidator(new QRegularExpressionValidator(QRegularExpression("^[A-Za-z ]+$"), this));
     ui->tel_tent->setValidator(new QRegularExpressionValidator(QRegularExpression(R"(^\+?[0-9]{8,15}$)"), this));
     ui->email_tent->setValidator(new QRegularExpressionValidator(QRegularExpression(R"(^\S+@\S+\.\S+$)"), this));
-
-    if (file.open(QFile::ReadOnly)) {
-        qApp->setStyleSheet(file.readAll());
-        file.close();
-    }
 }
 
 MainWindow::~MainWindow()
@@ -149,7 +145,7 @@ void MainWindow::on_settings_btn_clicked()
     ui->title->setText("Profile");
 }
 
-//=========================================================================================================================/
+//===============Tenant Changes=========================//
 
 void MainWindow::on_sidebar_btn_3_clicked() {
     ui->container->setCurrentIndex(5);
@@ -310,7 +306,6 @@ void MainWindow::on_update_tent_clicked() {
     int row = selectedItems.first()->row();
 
     int id = ui->table_tent->item(row, 0)->text().toInt();
-    qDebug() << "ID " << id;
 
     QString name = ui->nom_tent->text();
     QString email = ui->email_tent->text();
@@ -478,7 +473,7 @@ void MainWindow::sendEmail(const QString &to, const QString &subject, const QStr
     if (!f.open(QIODevice::WriteOnly | QIODevice::Text)) return;
 
     QTextStream s(&f);
-    s << "From: email@gmail.com\n";
+    s << "From: taha.medien1@gmail.com\n";
     s << "To: " << to << "\n";
     s << "Subject: " << subject << "\n";
     s << "Content-Type: text/html; charset=UTF-8\n";
@@ -487,9 +482,9 @@ void MainWindow::sendEmail(const QString &to, const QString &subject, const QStr
     f.close();
 
     QString w = QString("curl.exe -v --url smtps://smtp.gmail.com:465 "
-                        "--mail-from \"email@gmail.com\" "
+                        "--mail-from \"taha.medien1@gmail.com\" "
                         "--mail-rcpt \"%1\" "
-                        "--user \"email@gmail.com:mailkey\" "
+                        "--user \"taha.medien1@gmail.com:plwpgdoeepxkkleo\" "
                         "--upload-file \"%2\"").arg(to, customPath);
 
     QProcess x;
@@ -519,12 +514,6 @@ void MainWindow::on_auto_mail_tent_clicked() {
         }
 
         int daysRemaining = currentDate.daysTo(leaseEndDate);
-
-        // qDebug() << "======================================";
-        // qDebug() << daysRemaining << "days remaming";
-        // qDebug() << "name = " << ":" << name;
-        // qDebug() << "emai = " << ":" << email;
-        // qDebug() << "======================================";
 
         if (daysRemaining <= 7) {
             QString htmlBody = QString(

@@ -56,6 +56,8 @@ private slots:
 
     void on_sidebar_btn_3_clicked();
 
+    //Tenant Changes
+
     void on_add_tent_clicked();
 
     void on_refresh_tab_clicked();
@@ -87,7 +89,6 @@ private slots:
     void on_delete_pred_tent_clicked();
 
     void on_delete_all_pred_tent_clicked();
-
 
     void on_refresh_pred_tent_clicked();
 

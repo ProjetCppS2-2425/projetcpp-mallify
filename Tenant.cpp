@@ -128,7 +128,7 @@ bool Tenant::exportTableTentToCSV(const QString &filePath) {
 
     QSqlQuery query("SELECT * FROM tenant");
 
-    QSqlRecord record = query.record(); //Header
+    QSqlRecord record = query.record();
     for (int i = 0; i < record.count(); ++i) {
         out << record.fieldName(i);
         if (i < record.count() - 1)
@@ -137,7 +137,7 @@ bool Tenant::exportTableTentToCSV(const QString &filePath) {
     out << "\n";
 
     while (query.next()) {
-        for (int i = 0; i < record.count(); ++i) { //Data Rows
+        for (int i = 0; i < record.count(); ++i) {
             out << query.value(i).toString();
             if (i < record.count() - 1)
                 out << ",";
