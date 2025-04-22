@@ -43,6 +43,7 @@ bool Tenant::ajouter() {
     q.bindValue(":ps", payment_status);
     q.bindValue(":a", activity_level);
 
+
     return q.exec();
 }
 
@@ -80,8 +81,16 @@ bool Tenant::update() {
 QSqlQueryModel* Tenant::fetch() {
     auto *m = new QSqlQueryModel();
     m->setQuery("SELECT id, tenant_name, email, phone, shop_type, rented_area, zone, monthly_rent, lease_start_date, lease_end_date, payment_status, activity_level FROM Tenant");
+
+    if (m->lastError().isValid()) {
+        qDebug() << "SQL Error:" << m->lastError().text();
+    } else {
+        qDebug() << "Query executed successfully. Rows fetched:" << m->rowCount();
+    }
+
     return m;
 }
+
 
 std::list<std::pair<QString, int>> Tenant::getPaymentStatusWithCounts() {
     QSqlQuery query;

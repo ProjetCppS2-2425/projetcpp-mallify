@@ -1,24 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
-#include <QRegularExpression>
-#include <QMessageBox>
-#include <QSqlQuery>
-#include <QSqlError>
-
-#include <QJsonDocument>
-#include <QJsonObject>
-
-#include <QNetworkAccessManager>
-#include <QNetworkRequest>
-#include <QNetworkReply>
-
-#include <QtCharts>
-
-#include <list>
-
-#include "tenant.h"
-
 static int selectedHeaderColumnTent = 0;
 
 MainWindow::MainWindow(QWidget *parent)
@@ -26,28 +8,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    ui->profile_section->setParent(this);
-    ui->profile_section->setWindowFlags(Qt::FramelessWindowHint | Qt::SubWindow);
-    ui->profile_section->setFixedSize(140, 120);
-    ui->profile_section->move(this->width() - 140, 65);
-    ui->profile_section->hide();
-    ui->profile_section->installEventFilter(this);
-    ui->profile_pic->setAcceptDrops(true);
-    ui->profile_pic->setAlignment(Qt::AlignCenter);
-    ui->title->setAcceptDrops(true);
-    setAcceptDrops(true);
-
-    QFile file("C:\\Users\\moham\\Desktop\\mallify\\light.qss");
-    if (file.open(QFile::ReadOnly)) {
-        qApp->setStyleSheet(file.readAll());
-        file.close();
-    }
-
-    ui->profile_btn->setIcon(QIcon("C:\\Users\\Taha\\Desktop\\mallify\\icons\\pfp.jpg"));
-    ui->sidebar_btn->setIcon(QIcon("C:\\Users\\Taha\\Desktop\\mallify\\icons\\logo_sidebar_light.png"));
-    ui->logo->setPixmap(QPixmap("C:\\Users\\Taha\\Desktop\\mallify\\icons\\logo_sidebar_light.png"));
-    ui->logo_label->setPixmap(QPixmap("C:\\Users\\Taha\\Desktop\\mallify\\icons\\logo_light.png"));
-
+    initializeAAB6(ui);
     //===============Tenant UI Settings & Conditions=========================//
     ui->prediction_history_tent->setSelectionBehavior(QAbstractItemView::SelectRows);
     ui->prediction_history_tent->setEditTriggers(QAbstractItemView::NoEditTriggers);
@@ -72,49 +33,6 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
-void MainWindow::on_profile_btn_clicked()
-{
-    if (ui->profile_section->isVisible())
-        ui->profile_section->hide();
-    else {
-        ui->profile_section->move(this->width() - 140, ui->profile_section->y());
-        ui->profile_section->show();
-    }
-}
-void MainWindow::on_logout_btn_clicked()
-{
-    ui->stackedWidget->setCurrentIndex(0);
-}
-void MainWindow::on_login_btn_clicked()
-{
-    ui->stackedWidget->setCurrentIndex(1);
-}
-void MainWindow::on_light_mode_dropdown_currentTextChanged(const QString &arg1)
-{
-    QString filePath = (arg1.toLower() == "dark")
-    ? "C:\\Users\\1 	Q\\Desktop\\mallify\\dark.qss"
-    : "C:\\Users\\moham\\Desktop\\mallify\\light.qss";
-    QFile file(filePath);
-    if (file.open(QFile::ReadOnly)) {
-        qApp->setStyleSheet(file.readAll());
-        file.close();
-    }
-    if (arg1.toLower() == "dark") {
-        ui->sidebar_btn->setIcon(
-            QIcon("C:\\Users\\Taha\\Desktop\\mallify\\icons\\logo_sidebar_dark.png"));
-        ui->logo->setPixmap(
-            QPixmap("C:\\Users\\Taha\\Desktop\\mallify\\icons\\logo_sidebar_dark.png"));
-        ui->logo_label->setPixmap(
-            QPixmap("C:\\Users\\Taha\\Desktop\\mallify\\icons\\logo_dark.png"));
-    } else {
-        ui->sidebar_btn->setIcon(
-            QIcon("C:\\Users\\Taha\\Desktop\\mallify\\icons\\logo_sidebar_light.png"));
-        ui->logo->setPixmap(
-            QPixmap("C:\\Users\\Taha\\Desktop\\mallify\\icons\\logo_sidebar_light.png"));
-        ui->logo_label->setPixmap(
-            QPixmap("C:\\Users\\Taha\\Desktop\\mallify\\icons\\logo_light.png"));
-    }
-}
 void MainWindow::on_sidebar_btn_clicked()
 {
     ui->sidebar->setVisible(!ui->sidebar->isVisible());
@@ -129,31 +47,29 @@ void MainWindow::on_sidebar_btn_2_clicked()
     ui->container->setCurrentIndex(4);
     ui->title->setText("Service Management");
 }
-void MainWindow::on_sidebar_btn_6_clicked()
+void MainWindow::on_sidebar_btn_3_clicked()
 {
-    ui->container->setCurrentIndex(1);
-    ui->title->setText("Complaints Management");
+    ui->container->setCurrentIndex(5);
+    ui->title->setText("Tenants Management");
 }
 void MainWindow::on_sidebar_btn_4_clicked()
 {
     ui->container->setCurrentIndex(2);
     ui->title->setText("Shops Management");
 }
-void MainWindow::on_settings_btn_clicked()
+void MainWindow::on_sidebar_btn_5_clicked()
 {
-    ui->container->setCurrentIndex(3);
-    ui->title->setText("Profile");
+    ui->container->setCurrentIndex(6);
+    ui->title->setText("Transaction Management");
+}
+void MainWindow::on_sidebar_btn_6_clicked()
+{
+    ui->container->setCurrentIndex(1);
+    ui->title->setText("Complaints Management");
 }
 
-//===============Tenant Changes=========================//
-
-void MainWindow::on_sidebar_btn_3_clicked() {
-    ui->container->setCurrentIndex(5);
-    ui->title->setText("Tenants Management");
-    loadTenantData();
-}
-
-void MainWindow::on_add_tent_clicked() {
+void MainWindow::on_add_tent_clicked()
+{
     ajouter_button_clicked();
 }
 
@@ -484,7 +400,7 @@ void MainWindow::sendEmail(const QString &to, const QString &subject, const QStr
     QString w = QString("curl.exe -v --url smtps://smtp.gmail.com:465 "
                         "--mail-from \"taha.medien1@gmail.com\" "
                         "--mail-rcpt \"%1\" "
-                        "--user \"taha.medien1@gmail.com:plwpgdoeepxkkleo\" "
+                        "--user \"taha.medien1@gmail.com:ahtatwvmnsjbxnqixhtx\" "
                         "--upload-file \"%2\"").arg(to, customPath);
 
     QProcess x;
