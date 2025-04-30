@@ -578,3 +578,91 @@ void MainWindow::on_delete_all_pred_tent_clicked() {
 void MainWindow::on_refresh_pred_tent_clicked() {
     ui->prediction_history_tent->clearSelection();
 }
+
+//============================= Arduino Taha & Ayoub ======================
+
+void MainWindow::handleDataReceived(const QByteArray &data) {
+    QSqlQuery sq;
+    QSqlQuery q;
+
+    QString message = QString::fromUtf8(data).trimmed();
+    qDebug() << "Received from Arduino:" << message;
+
+    int firstColon = message.indexOf(':');
+    int secondColon = message.indexOf(':', firstColon + 1);
+    int thirdColon = message.indexOf(':', secondColon + 1);
+
+    QString canalType = message.left(firstColon);
+    if (canalType == "Request") {
+        QString serviceName = message.mid(firstColon + 1, secondColon - (firstColon + 1));
+        QString shopIdStr = message.mid(secondColon + 1, thirdColon - (secondColon + 1));
+        int shop_id = shopIdStr.toInt();
+        QString urgency = message.mid(thirdColon + 1);
+
+        qDebug() << "Button press detected!";
+
+        sq.prepare("SELECT ID FROM SERVICE WHERE STATUS = 'available' AND NAME = :serv_name AND ENTRY_TYPE IS NULL");
+        sq.bindValue(":serv_name", serviceName);
+
+        if (sq.exec()) {
+            if (sq.next()) {
+                int id = sq.value(0).toInt();
+                qDebug() << "Found ID:" << id;
+
+                q.prepare("UPDATE SERVICE SET ENTRY_TYPE = :entry_type, ID_SHOP = :id_shop, UREGENT = :urg WHERE ID = :service_id");
+                q.bindValue(":entry_type", "Request");
+                q.bindValue(":service_id", id);
+                q.bindValue(":id_shop", shop_id);
+                q.bindValue(":urg", urgency);
+
+                if (!q.exec()) {
+                    qDebug() << "Update failed:" << q.lastError().text();
+                }
+            } else {
+                qDebug() << "No available service found for" << serviceName;
+                QByteArray message = "RESPOND:" + serviceName.toUtf8() + ":NotFound";
+                arduino->sendData(message);
+            }
+        } else {
+            qDebug() << "Query failed:" << sq.lastError().text();
+        }
+    }
+
+    if (message == "HistoryReq") {
+        qDebug() << "No available service found for" << message;
+
+        QSqlQuery query;
+
+        query.prepare("SELECT name, uregent FROM service WHERE id_shop = :id_shop AND ENTRY_Type = 'Request'");
+
+        query.bindValue(":id_shop", 1);
+
+        if (query.exec()) {
+            QStringList historyEntries;
+
+            while (query.next()) {
+                QString serviceName = query.value(0).toString();
+                QString urgency = query.value(1).toBool() ? "URG" : "NOR";
+                historyEntries << serviceName + ":" + urgency;
+            }
+
+            QByteArray historyMessage = "HISTORY:" + historyEntries.join(",").toUtf8() + "\n";
+            arduino->sendData(historyMessage);
+
+        }
+    }
+}
+
+void MainWindow::handleError(const QString &error) {
+    QMessageBox::warning(this, "Serial Error", error);
+}
+
+void MainWindow::updateConnectionStatus(bool connected) {
+    qDebug() << "Serial port connection status changed to:"
+             << (connected ? "Connected" : "Disconnected");
+
+    if (connected) {
+        qDebug() << "Connected to port:" << arduino->serial->portName();
+        qDebug() << "Baud rate:" << arduino->serial->baudRate();
+    }
+}
