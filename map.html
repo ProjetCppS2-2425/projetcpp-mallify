@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Select Location</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256‑XQoYMqMTK8LvdxXYG3t5sywGmOzN3ZZp3lNovaGHNi0="
+    crossorigin=""
+  />
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256‑o+5I0mH1Qsp6+NuqOi2v5Vm+G27DpYghh/VpAlsGJZA="
+    crossorigin=""
+  ></script>
+  <script src="qrc:///qtwebchannel/qwebchannel.js"></script>
+  <style>
+    html, body, #map { height:100%; margin:0; padding:0; }
+  </style>
+</head>
+<body>
+<div id="map"></div>
+<script>
+  let map = L.map('map').setView([  36.8065,10.1815 ], 13); // Tunis center
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '&copy; OpenStreetMap'
+  }).addTo(map);
+
+  var marker;
+  function onMapClick(e) {
+    if (marker) map.removeLayer(marker);
+    marker = L.marker(e.latlng).addTo(map);
+
+    // Reverse‑geocode via Nominatim
+    fetch(`https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${e.latlng.lat}&lon=${e.latlng.lng}`)
+      .then(res=>res.json())
+      .then(data=>{
+        let address = data.display_name || '';
+        // send back to Qt
+        if (window.channelObject) {
+          window.channelObject.addressSelected(address);
+        }
+      });
+  }
+  map.on('click', onMapClick);
+
+  // Setup QWebChannel bridge
+  new QWebChannel(qt.webChannelTransport, function(channel) {
+    window.channelObject = channel.objects.bridge;
+  });
+</script>
+</body>
+</html>
